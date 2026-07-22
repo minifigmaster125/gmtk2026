@@ -22,6 +22,7 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
+"res://addons/": "gray",
 "res://assets/": "orange",
 "res://components/": "green",
 "res://museum/": "purple"
