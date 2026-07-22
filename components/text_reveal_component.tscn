@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://rimi72si0p0k"]
+
+[ext_resource type="Script" uid="uid://g4bjy0rnedm2" path="res://components/text_reveal_component.gd" id="1_1ic4c"]
+
+[node name="TextRevealComponent" type="Control" unique_id=1045825756]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1ic4c")
