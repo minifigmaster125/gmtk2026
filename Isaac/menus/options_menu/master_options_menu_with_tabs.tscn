@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cgaew380j0ean"]
 
 [ext_resource type="Script" uid="uid://dms8axyum8y2s" path="res://Isaac/menus/options_menu/master_options_menu_with_tabs.gd" id="1_nm1kj"]
+[ext_resource type="FontFile" uid="uid://bbe5lsha2awc" path="res://Isaac/fonts/Axolotl.ttf" id="1_uxac0"]
 [ext_resource type="PackedScene" uid="uid://bswqlauawkquy" path="res://Isaac/menus/options_menu/input/input_options_menu.tscn" id="2_rl77d"]
 [ext_resource type="PackedScene" uid="uid://66hfsmk3sopr" path="res://Isaac/menus/options_menu/input/input_extras_menu.tscn" id="3_fdq0g"]
 [ext_resource type="PackedScene" uid="uid://bkajc6efk3y4v" path="res://Isaac/menus/options_menu/audio/audio_options_menu.tscn" id="4_u60g6"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_uxac0")
 tab_alignment = 1
 current_tab = 0
 script = ExtResource("1_nm1kj")

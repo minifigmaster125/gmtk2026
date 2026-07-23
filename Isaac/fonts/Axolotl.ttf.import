@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://d1asw7fqcud4t"
-path="res://.godot/imported/Spellbinding-Demo.ttf-5d0244b6e0a05a6a6e85321d21b5f393.fontdata"
+uid="uid://bbe5lsha2awc"
+path="res://.godot/imported/Axolotl.ttf-40a9869faf9ab8a60442ff5bdcfc2756.fontdata"
 
 [deps]
 
-source_file="res://Isaac/Spellbinding-Demo.ttf"
-dest_files=["res://.godot/imported/Spellbinding-Demo.ttf-5d0244b6e0a05a6a6e85321d21b5f393.fontdata"]
+source_file="res://Isaac/fonts/Axolotl.ttf"
+dest_files=["res://.godot/imported/Axolotl.ttf-40a9869faf9ab8a60442ff5bdcfc2756.fontdata"]
 
 [params]
 
