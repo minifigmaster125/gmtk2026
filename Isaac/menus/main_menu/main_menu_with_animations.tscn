@@ -322,7 +322,7 @@ graph_offset = Vector2(-180.277, 49)
 
 [node name="MainMenu" unique_id=2084566378 instance=ExtResource("1_vt8wa")]
 script = ExtResource("2_5j2r0")
-game_scene_path = "res://addons/maaacks_game_template/examples/scenes/game_scene/game_ui.tscn"
+game_scene_path = "uid://ck74pbk747v5r"
 options_packed_scene = ExtResource("3_wgbxo")
 credits_packed_scene = ExtResource("4_wjegv")
 
@@ -330,8 +330,9 @@ credits_packed_scene = ExtResource("4_wjegv")
 modulate = Color(0.97858685, 0.97858685, 0.97858685, 1)
 self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
 layout_mode = 0
-offset_right = 243.0
-offset_bottom = 129.0
+offset_top = 16.0
+offset_right = 250.14
+offset_bottom = 135.38501
 theme_override_constants/margin_left = 123
 theme_override_constants/margin_top = -6
 
@@ -343,6 +344,8 @@ stretch_mode = 4
 
 [node name="BackgroundTextureRect" parent="." index="1" unique_id=1025367827]
 modulate = Color(1, 1, 1, 0.7647059)
+offset_top = -140.0
+offset_bottom = 209.0
 texture = ExtResource("7_uscbo")
 expand_mode = 4
 
@@ -361,8 +364,8 @@ theme_override_constants/margin_top = 43
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
-offset_top = -22.0
-offset_bottom = 36.0
+offset_top = -18.0
+offset_bottom = 69.0
 theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
 theme_override_fonts/font = ExtResource("5_wjegv")
 theme_override_font_sizes/font_size = 22
@@ -376,8 +379,8 @@ theme_override_constants/margin_top = 124
 modulate = Color(1, 1, 1, 0)
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
-offset_top = -56.0
-offset_bottom = -37.0
+offset_top = -41.0
+offset_bottom = -18.0
 theme_override_fonts/font = ExtResource("6_sixn6")
 theme_override_font_sizes/font_size = 17
 text = "Created by Minifigmaster, PandaFarmer, and Automatoney"
