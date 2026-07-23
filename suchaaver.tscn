@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c34qy1bvchy88" path="res://player/player.tscn" id="1_vc6p7"]
 [ext_resource type="Texture2D" uid="uid://f3xyoxdv1tk8" path="res://assets/textures/texture_atlas.png" id="2_yj8gk"]
+[ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="3_qn20g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qn20g"]
 resource_name = "main"
@@ -27,3 +28,6 @@ tile_set = SubResource("TileSet_aoea4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=73753022]
 position = Vector2(152, 80)
+
+[node name="Count" parent="." unique_id=191791242 instance=ExtResource("3_qn20g")]
+position = Vector2(152, 56)

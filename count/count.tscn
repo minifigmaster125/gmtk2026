@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://kg0urtaf46hp"]
+
+[ext_resource type="Texture2D" uid="uid://ciuxyaoktugh5" path="res://icon.svg" id="1_31cna"]
+[ext_resource type="Script" uid="uid://cp0t3ep36dmqr" path="res://count/count.gd" id="1_xplku"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aoea4"]
+size = Vector2(136.53334, 136.53334)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64dco"]
+size = Vector2(80, 80)
+
+[node name="Count" type="CharacterBody2D" unique_id=191791242]
+script = ExtResource("1_xplku")
+interest_rate = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=867446343]
+position = Vector2(8, 8)
+scale = Vector2(0.1171875, 0.1171875)
+shape = SubResource("RectangleShape2D_aoea4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1175152472]
+modulate = Color(0.93386513, 0.4550972, 0.4369269, 1)
+position = Vector2(8, 8)
+scale = Vector2(0.1171875, 0.1171875)
+texture = ExtResource("1_31cna")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=385662585]
+texture_filter = 1
+offset_left = 16.0
+offset_top = -8.0
+offset_right = 20.0
+offset_bottom = 10.0
+fill_mode = 3
+show_percentage = false
+
+[node name="InterestArea2D" type="Area2D" parent="." unique_id=1297958067]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InterestArea2D" unique_id=2036241871]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_64dco")
