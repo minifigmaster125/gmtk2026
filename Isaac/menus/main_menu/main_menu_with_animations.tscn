@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://hw46n5d17p0h"]
 
-[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_j35wl"]
-[ext_resource type="Script" uid="uid://bylx527sd8ad5" path="res://Isaac/menus_isaac/main_menu/main_menu_with_animations.gd" id="2_4nvqg"]
-[ext_resource type="PackedScene" uid="uid://dum2pujhh1w4g" path="res://addons/maaacks_game_template/examples/scenes/windows/main_menu_options_window.tscn" id="3_i74de"]
-[ext_resource type="PackedScene" uid="uid://c5pfkjxskjc60" path="res://addons/maaacks_game_template/examples/scenes/windows/main_menu_credits_window.tscn" id="4_nb8yx"]
-[ext_resource type="FontFile" uid="uid://d1asw7fqcud4t" path="res://Isaac/Spellbinding-Demo.ttf" id="5_t6iva"]
-[ext_resource type="FontFile" uid="uid://bbe5lsha2awc" path="res://Isaac/Axolotl.ttf" id="5_wdhd3"]
-[ext_resource type="Texture2D" uid="uid://dy61jooyo20li" path="res://Isaac/PixelAssets/Wolfenstein Castle_Pixeled.png" id="7_8nb0s"]
-[ext_resource type="Texture2D" uid="uid://dujinup1b8roa" path="res://Isaac/PixelAssets/bloodmoon_Pixeled.png" id="8_hekhs"]
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_vt8wa"]
+[ext_resource type="Script" uid="uid://bylx527sd8ad5" path="res://Isaac/menus/main_menu/main_menu_with_animations.gd" id="2_5j2r0"]
+[ext_resource type="PackedScene" uid="uid://dum2pujhh1w4g" path="res://addons/maaacks_game_template/examples/scenes/windows/main_menu_options_window.tscn" id="3_wgbxo"]
+[ext_resource type="PackedScene" uid="uid://c5pfkjxskjc60" path="res://addons/maaacks_game_template/examples/scenes/windows/main_menu_credits_window.tscn" id="4_wjegv"]
+[ext_resource type="FontFile" uid="uid://d1asw7fqcud4t" path="res://Isaac/Spellbinding-Demo.ttf" id="5_sixn6"]
+[ext_resource type="FontFile" uid="uid://bbe5lsha2awc" path="res://Isaac/Axolotl.ttf" id="6_h7iuh"]
+[ext_resource type="Script" uid="uid://0y8ubpg47ovn" path="res://Isaac/scripts/button_on_enter_sound.gd" id="7_5j2r0"]
+[ext_resource type="Texture2D" uid="uid://dy61jooyo20li" path="res://Isaac/pixel_assets/Wolfenstein Castle_Pixeled.png" id="7_uscbo"]
+[ext_resource type="AudioStream" uid="uid://5ehlwqcg0hok" path="res://Isaac/audio/button_on_enter.mp3" id="7_wgbxo"]
+[ext_resource type="Texture2D" uid="uid://dujinup1b8roa" path="res://Isaac/pixel_assets/bloodmoon_Pixeled.png" id="8_ymviv"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -317,11 +319,11 @@ states/Start/position = Vector2(82, 123)
 transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "OpenSubMenu", SubResource("14"), "Start", "Intro", SubResource("AnimationNodeStateMachineTransition_j0orr"), "OpenSubMenu", "OpenMainMenu", SubResource("AnimationNodeStateMachineTransition_63dxc")]
 graph_offset = Vector2(-180.277, 49)
 
-[node name="MainMenu" unique_id=2084566378 instance=ExtResource("1_j35wl")]
-script = ExtResource("2_4nvqg")
+[node name="MainMenu" unique_id=2084566378 instance=ExtResource("1_vt8wa")]
+script = ExtResource("2_5j2r0")
 game_scene_path = "res://addons/maaacks_game_template/examples/scenes/game_scene/game_ui.tscn"
-options_packed_scene = ExtResource("3_i74de")
-credits_packed_scene = ExtResource("4_nb8yx")
+options_packed_scene = ExtResource("3_wgbxo")
+credits_packed_scene = ExtResource("4_wjegv")
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1108772180]
 libraries/ = SubResource("AnimationLibrary_2kqig")
@@ -335,9 +337,11 @@ parameters/conditions/intro_done = false
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
+offset_top = -22.0
+offset_bottom = 36.0
 theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
-theme_override_fonts/font = ExtResource("5_t6iva")
-theme_override_font_sizes/font_size = 34
+theme_override_fonts/font = ExtResource("5_sixn6")
+theme_override_font_sizes/font_size = 13
 text = "Down, For the Count"
 auto_update = false
 
@@ -345,50 +349,82 @@ auto_update = false
 modulate = Color(1, 1, 1, 0)
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
-theme_override_fonts/font = ExtResource("5_wdhd3")
+offset_top = -56.0
+offset_bottom = -37.0
+theme_override_fonts/font = ExtResource("6_h7iuh")
+theme_override_font_sizes/font_size = 14
 text = "Created by Minifigmaster, PandaFarmer, and Automatoney"
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" parent_id_path=PackedInt32Array(1532800992) index="0" unique_id=580041505]
 modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0" unique_id=1691719897]
+offset_top = -97.0
+offset_bottom = 23.0
+null_focus_enabled = false
+joypad_enabled = false
+mouse_hidden_enabled = false
 lock = true
 
 [node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0" unique_id=1434444510]
 theme_override_colors/font_color = Color(0.7359886, 0.71171945, 0.6930666, 1)
-theme_override_fonts/font = ExtResource("5_t6iva")
+theme_override_fonts/font = ExtResource("5_sixn6")
+theme_override_font_sizes/font_size = 6
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/NewGameButton" index="0" unique_id=1960033805]
+stream = ExtResource("7_wgbxo")
+script = ExtResource("7_5j2r0")
 
 [node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1" unique_id=1028226159]
 theme_override_colors/font_color = Color(0.7359886, 0.71171945, 0.6930666, 1)
-theme_override_fonts/font = ExtResource("5_t6iva")
+theme_override_fonts/font = ExtResource("5_sixn6")
+theme_override_font_sizes/font_size = 6
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/OptionsButton" index="0" unique_id=1071290379]
+stream = ExtResource("7_wgbxo")
+script = ExtResource("7_5j2r0")
 
 [node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2" unique_id=1695433230]
 theme_override_colors/font_color = Color(0.7359886, 0.71171945, 0.6930666, 1)
-theme_override_fonts/font = ExtResource("5_t6iva")
+theme_override_fonts/font = ExtResource("5_sixn6")
+theme_override_font_sizes/font_size = 6
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/CreditsButton" index="0" unique_id=580014359]
+stream = ExtResource("7_wgbxo")
+script = ExtResource("7_5j2r0")
 
 [node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3" unique_id=1226331361]
 theme_override_colors/font_color = Color(0.7359886, 0.71171945, 0.6930666, 1)
-theme_override_fonts/font = ExtResource("5_t6iva")
+theme_override_fonts/font = ExtResource("5_sixn6")
+theme_override_font_sizes/font_size = 6
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ExitButton" index="0" unique_id=845665655]
+stream = ExtResource("7_wgbxo")
+script = ExtResource("7_5j2r0")
 
 [node name="WolfensteinCastlePixeled" type="Sprite2D" parent="MenuContainer" parent_id_path=PackedInt32Array(785053879) index="3" unique_id=1162527542]
-self_modulate = Color(1, 1, 1, 0.6627451)
+self_modulate = Color(1, 1, 1, 0.8)
 z_index = -1
-position = Vector2(576, 323.75)
-scale = Vector2(3.84, 3.2424998)
-texture = ExtResource("7_8nb0s")
+position = Vector2(160.00002, 90)
+scale = Vector2(2.1333334, 1.8000001)
+texture = ExtResource("7_uscbo")
 
 [node name="BloodmoonPixeled" type="Sprite2D" parent="MenuContainer" parent_id_path=PackedInt32Array(785053879) index="4" unique_id=282678232]
-modulate = Color(1, 1, 1, 0.38039216)
-z_index = -1
-position = Vector2(369.00003, 73)
-scale = Vector2(3.3849995, 2.7900002)
-texture = ExtResource("8_hekhs")
+modulate = Color(1.3266667, 1.3266667, 1.3266667, 1)
+z_index = -2
+position = Vector2(83.5, 32.000004)
+scale = Vector2(2.233333, 1.866667)
+texture = ExtResource("8_ymviv")
 
 [node name="VersionContainer" parent="VersionMargin" parent_id_path=PackedInt32Array(115503069) index="0" unique_id=645412385]
 modulate = Color(1, 1, 1, 0)
 
 [node name="VersionLabel" parent="VersionMargin/VersionContainer" index="0" unique_id=321873498]
-theme_override_fonts/font = ExtResource("5_wdhd3")
+offset_left = -82.0
+offset_top = -17.0
+offset_right = 6.0
+offset_bottom = 9.0
+theme_override_fonts/font = ExtResource("6_h7iuh")
 
 [node name="ExitConfirmation" parent="." index="5" unique_id=1903054312]
 ignore_siblings = false

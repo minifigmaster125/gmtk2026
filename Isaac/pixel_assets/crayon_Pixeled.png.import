@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dujinup1b8roa"
-path="res://.godot/imported/bloodmoon_Pixeled.png-5d8314690500d84f4bf9587e13b2e714.ctex"
+uid="uid://cdugvy88ie6vo"
+path="res://.godot/imported/crayon_Pixeled.png-025a6d15e277c77dcc1687c6e40bafad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Isaac/PixelAssets/bloodmoon_Pixeled.png"
-dest_files=["res://.godot/imported/bloodmoon_Pixeled.png-5d8314690500d84f4bf9587e13b2e714.ctex"]
+source_file="res://Isaac/pixel_assets/crayon_Pixeled.png"
+dest_files=["res://.godot/imported/crayon_Pixeled.png-025a6d15e277c77dcc1687c6e40bafad.ctex"]
 
 [params]
 
