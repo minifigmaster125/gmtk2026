@@ -326,23 +326,25 @@ game_scene_path = "res://addons/maaacks_game_template/examples/scenes/game_scene
 options_packed_scene = ExtResource("3_wgbxo")
 credits_packed_scene = ExtResource("4_wjegv")
 
-[node name="BackgroundTextureRect" parent="." index="0" unique_id=1025367827]
-texture = ExtResource("7_uscbo")
-expand_mode = 4
-
-[node name="MarginContainer" type="MarginContainer" parent="." index="1" unique_id=936590978]
-modulate = Color(1.4391514, 1.4391514, 1.4391514, 0.6509804)
+[node name="MarginContainer" type="MarginContainer" parent="." index="0" unique_id=936590978]
+modulate = Color(0.97858685, 0.97858685, 0.97858685, 1)
 self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/margin_left = 103
-theme_override_constants/margin_top = 8
+offset_right = 243.0
+offset_bottom = 129.0
+theme_override_constants/margin_left = 123
+theme_override_constants/margin_top = -6
 
 [node name="BloodmoonPiexeled" type="TextureRect" parent="MarginContainer" index="0" unique_id=2046438072]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture = ExtResource("8_ymviv")
+stretch_mode = 4
+
+[node name="BackgroundTextureRect" parent="." index="1" unique_id=1025367827]
+modulate = Color(1, 1, 1, 0.7647059)
+texture = ExtResource("7_uscbo")
+expand_mode = 4
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="2" unique_id=1108772180]
 libraries/ = SubResource("AnimationLibrary_2kqig")
@@ -352,7 +354,10 @@ tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
 
-[node name="TitleContainer" parent="MenuContainer/TitleMargin" parent_id_path=PackedInt32Array(1189822984) index="0" unique_id=704939549]
+[node name="TitleMargin" parent="MenuContainer" parent_id_path=PackedInt32Array(785053879) index="0" unique_id=1189822984]
+theme_override_constants/margin_top = 43
+
+[node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0" unique_id=704939549]
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
@@ -364,7 +369,10 @@ theme_override_font_sizes/font_size = 22
 text = "Down, For the Count"
 auto_update = false
 
-[node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" parent_id_path=PackedInt32Array(893436372) index="0" unique_id=523889664]
+[node name="SubTitleMargin" parent="MenuContainer" parent_id_path=PackedInt32Array(785053879) index="1" unique_id=893436372]
+theme_override_constants/margin_top = 124
+
+[node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" index="0" unique_id=523889664]
 modulate = Color(1, 1, 1, 0)
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
