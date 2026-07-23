@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 const _tile_size: Vector2 = Vector2(16,16)
 var _sprite_node_pos_tween: Tween
@@ -12,12 +13,16 @@ func _physics_process(_delta: float) -> void:
 	if !_sprite_node_pos_tween or !_sprite_node_pos_tween.is_running():
 		if Input.is_action_pressed("ui_up") and !_up.is_colliding():
 			_move(Vector2(0, -1))
+			return
 		if Input.is_action_pressed("ui_down") and !_down.is_colliding():
 			_move(Vector2(0, 1))
+			return
 		if Input.is_action_pressed("ui_left") and !_left.is_colliding():
 			_move(Vector2(-1, 0))
+			return
 		if Input.is_action_pressed("ui_right") and !_right.is_colliding():
 			_move(Vector2(1, 0))
+			return
 
 func _move(dir: Vector2):
 	global_position += dir * _tile_size
@@ -27,4 +32,4 @@ func _move(dir: Vector2):
 		_sprite_node_pos_tween.kill()
 	_sprite_node_pos_tween = create_tween()
 	_sprite_node_pos_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-	_sprite_node_pos_tween.tween_property($Sprite2D, "global_position", global_position, 0.2)
+	_sprite_node_pos_tween.tween_property($Sprite2D, "global_position", global_position, 0.25)
