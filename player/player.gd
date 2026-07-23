@@ -11,16 +11,16 @@ var _sprite_node_pos_tween: Tween
 
 func _physics_process(_delta: float) -> void:
 	if !_sprite_node_pos_tween or !_sprite_node_pos_tween.is_running():
-		if (Input.is_action_pressed("ui_up") or Input.is_action_just_pressed("ui_up_")) and !_up.is_colliding():
+		if (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_up_")) and !_up.is_colliding():
 			_move(Vector2(0, -1))
 			return
-		if (Input.is_action_pressed("ui_down") or Input.is_action_just_pressed("ui_down_")) and !_down.is_colliding():
+		if (Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_down_")) and !_down.is_colliding():
 			_move(Vector2(0, 1))
 			return
-		if (Input.is_action_pressed("ui_left") or Input.is_action_just_pressed("ui_left_")) and !_left.is_colliding():
+		if (Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_left_")) and !_left.is_colliding():
 			_move(Vector2(-1, 0))
 			return
-		if (Input.is_action_pressed("ui_right") or Input.is_action_just_pressed("ui_right_")) and !_right.is_colliding():
+		if (Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_right_")) and !_right.is_colliding():
 			_move(Vector2(1, 0))
 			return
 
