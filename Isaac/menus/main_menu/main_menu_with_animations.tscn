@@ -326,10 +326,28 @@ game_scene_path = "res://addons/maaacks_game_template/examples/scenes/game_scene
 options_packed_scene = ExtResource("3_wgbxo")
 credits_packed_scene = ExtResource("4_wjegv")
 
-[node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=1108772180]
+[node name="BackgroundTextureRect" parent="." index="0" unique_id=1025367827]
+texture = ExtResource("7_uscbo")
+expand_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="." index="1" unique_id=936590978]
+modulate = Color(1.4391514, 1.4391514, 1.4391514, 0.6509804)
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 103
+theme_override_constants/margin_top = 8
+
+[node name="BloodmoonPiexeled" type="TextureRect" parent="MarginContainer" index="0" unique_id=2046438072]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("8_ymviv")
+
+[node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="2" unique_id=1108772180]
 libraries/ = SubResource("AnimationLibrary_2kqig")
 
-[node name="MenuAnimationTree" type="AnimationTree" parent="." index="2" unique_id=1302768903]
+[node name="MenuAnimationTree" type="AnimationTree" parent="." index="3" unique_id=1302768903]
 tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
@@ -342,7 +360,7 @@ offset_top = -22.0
 offset_bottom = 36.0
 theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
 theme_override_fonts/font = ExtResource("5_wjegv")
-theme_override_font_sizes/font_size = 13
+theme_override_font_sizes/font_size = 22
 text = "Down, For the Count"
 auto_update = false
 
@@ -353,7 +371,7 @@ modulate = Color(1, 1, 1, 0)
 offset_top = -56.0
 offset_bottom = -37.0
 theme_override_fonts/font = ExtResource("6_sixn6")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 17
 text = "Created by Minifigmaster, PandaFarmer, and Automatoney"
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" parent_id_path=PackedInt32Array(1532800992) index="0" unique_id=580041505]
@@ -370,7 +388,7 @@ lock = true
 [node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0" unique_id=1434444510]
 theme_override_colors/font_color = Color(0.7359886, 0.71171945, 0.6930666, 1)
 theme_override_fonts/font = ExtResource("5_wjegv")
-theme_override_font_sizes/font_size = 6
+theme_override_font_sizes/font_size = 12
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/NewGameButton" index="0" unique_id=1960033805]
 stream = ExtResource("7_wgbxo")
@@ -379,7 +397,7 @@ script = ExtResource("7_5j2r0")
 [node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1" unique_id=1028226159]
 theme_override_colors/font_color = Color(0.7359886, 0.71171945, 0.6930666, 1)
 theme_override_fonts/font = ExtResource("5_wjegv")
-theme_override_font_sizes/font_size = 6
+theme_override_font_sizes/font_size = 12
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/OptionsButton" index="0" unique_id=1071290379]
 stream = ExtResource("7_wgbxo")
@@ -388,7 +406,7 @@ script = ExtResource("7_5j2r0")
 [node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2" unique_id=1695433230]
 theme_override_colors/font_color = Color(0.7359886, 0.71171945, 0.6930666, 1)
 theme_override_fonts/font = ExtResource("5_wjegv")
-theme_override_font_sizes/font_size = 6
+theme_override_font_sizes/font_size = 12
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/CreditsButton" index="0" unique_id=580014359]
 stream = ExtResource("7_wgbxo")
@@ -397,13 +415,14 @@ script = ExtResource("7_5j2r0")
 [node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3" unique_id=1226331361]
 theme_override_colors/font_color = Color(0.7359886, 0.71171945, 0.6930666, 1)
 theme_override_fonts/font = ExtResource("5_wjegv")
-theme_override_font_sizes/font_size = 6
+theme_override_font_sizes/font_size = 12
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ExitButton" index="0" unique_id=845665655]
 stream = ExtResource("7_wgbxo")
 script = ExtResource("7_5j2r0")
 
 [node name="WolfensteinCastlePixeled" type="Sprite2D" parent="MenuContainer" parent_id_path=PackedInt32Array(785053879) index="3" unique_id=1162527542]
+visible = false
 self_modulate = Color(1, 1, 1, 0.8)
 z_index = -1
 position = Vector2(160.00002, 90)
@@ -411,6 +430,7 @@ scale = Vector2(2.1333334, 1.8000001)
 texture = ExtResource("7_uscbo")
 
 [node name="BloodmoonPixeled" type="Sprite2D" parent="MenuContainer" parent_id_path=PackedInt32Array(785053879) index="4" unique_id=282678232]
+visible = false
 modulate = Color(1.3266667, 1.3266667, 1.3266667, 1)
 z_index = -2
 position = Vector2(83.5, 32.000004)
@@ -427,10 +447,10 @@ offset_right = 6.0
 offset_bottom = 9.0
 theme_override_fonts/font = ExtResource("6_sixn6")
 
-[node name="ExitConfirmation" parent="." index="5" unique_id=1903054312]
+[node name="ExitConfirmation" parent="." index="6" unique_id=1903054312]
 ignore_siblings = false
 
-[node name="MouseFilter" type="Control" parent="." index="6" unique_id=26695112]
+[node name="MouseFilter" type="Control" parent="." index="7" unique_id=26695112]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -440,7 +460,7 @@ grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_lock_ = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7" unique_id=1026103203]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8" unique_id=1026103203]
 stream = ExtResource("11_wjegv")
 volume_db = -3.291
 autoplay = true
