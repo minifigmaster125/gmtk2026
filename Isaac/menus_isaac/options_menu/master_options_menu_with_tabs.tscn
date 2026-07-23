@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cgaew380j0ean"]
+
+[ext_resource type="Script" uid="uid://dms8axyum8y2s" path="res://Isaac/menus_isaac/options_menu/master_options_menu_with_tabs.gd" id="1_nm1kj"]
+[ext_resource type="PackedScene" uid="uid://bswqlauawkquy" path="res://Isaac/menus_isaac/options_menu/input/input_options_menu.tscn" id="2_rl77d"]
+[ext_resource type="PackedScene" uid="uid://66hfsmk3sopr" path="res://Isaac/menus_isaac/options_menu/input/input_extras_menu.tscn" id="3_fdq0g"]
+[ext_resource type="PackedScene" uid="uid://bkajc6efk3y4v" path="res://Isaac/menus_isaac/options_menu/audio/audio_options_menu.tscn" id="4_u60g6"]
+[ext_resource type="PackedScene" uid="uid://cofp1bescn4qd" path="res://Isaac/menus_isaac/options_menu/video/video_options_menu_with_extras.tscn" id="5_kh43v"]
+
+[node name="MasterOptionsMenu" type="TabContainer" unique_id=1117884934]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 1
+current_tab = 0
+script = ExtResource("1_nm1kj")
+
+[node name="Controls" parent="." unique_id=659681694 instance=ExtResource("2_rl77d")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Inputs" parent="." unique_id=1292920546 instance=ExtResource("3_fdq0g")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Audio" parent="." unique_id=1810546106 instance=ExtResource("4_u60g6")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Video" parent="." unique_id=1205827585 instance=ExtResource("5_kh43v")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
