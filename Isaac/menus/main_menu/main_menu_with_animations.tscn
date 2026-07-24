@@ -8,9 +8,9 @@
 [ext_resource type="FontFile" uid="uid://bbe5lsha2awc" path="res://Isaac/fonts/Axolotl.ttf" id="6_sixn6"]
 [ext_resource type="Script" uid="uid://0y8ubpg47ovn" path="res://Isaac/scripts/button_on_enter_sound.gd" id="7_5j2r0"]
 [ext_resource type="Texture2D" uid="uid://dy61jooyo20li" path="res://Isaac/pixel_assets/Wolfenstein Castle_Pixeled.png" id="7_uscbo"]
-[ext_resource type="AudioStream" uid="uid://5ehlwqcg0hok" path="res://Isaac/audio/button_on_enter.mp3" id="7_wgbxo"]
+[ext_resource type="AudioStream" uid="uid://5ehlwqcg0hok" path="res://Isaac/audio/prompts/button_on_enter.mp3" id="7_wgbxo"]
 [ext_resource type="Texture2D" uid="uid://dujinup1b8roa" path="res://Isaac/pixel_assets/bloodmoon_Pixeled.png" id="8_ymviv"]
-[ext_resource type="AudioStream" uid="uid://c0oqg88b7cdue" path="res://Isaac/audio/menu_music.mp3" id="11_wjegv"]
+[ext_resource type="AudioStream" uid="uid://c0oqg88b7cdue" path="res://Isaac/audio/background/menu_music.mp3" id="11_wjegv"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
