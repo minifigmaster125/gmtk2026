@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-InteractionMetricSingleton="*uid://nk82lqvj8goq"
+GameManager="*uid://jn6hhiu1uea0"
 
 [display]
 

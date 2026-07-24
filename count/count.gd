@@ -12,14 +12,13 @@ var _interested := false
 func _ready() -> void:
 	interest_area.body_entered.connect(_on_body_entered)
 	interest_area.body_exited.connect(_on_body_exited)
-	if InteractionMetricSingleton.has_state(character_name):
-		interest_progress.value = InteractionMetricSingleton.get_state(character_name)
+	if GameManager.has_interaction_metric(character_name):
+		interest_progress.value = GameManager.get_interaction_metric(character_name)
 
 func _process(delta: float):
 	if _interested:
 		interest_progress.value += interest_rate * delta
-		InteractionMetricSingleton.set_state(character_name, interest_progress.value)
-
+		GameManager.set_interaction_metric(character_name, interest_progress.value)
 
 func _on_body_entered(body: Node2D):
 	if body is Player:
