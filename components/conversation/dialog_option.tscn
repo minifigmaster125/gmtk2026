@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bev4vvr38h868"]
+
+[node name="DialogOption" type="Button" unique_id=1758117125]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 12
+text = "Unset dialog option"
+alignment = 0
+text_overrun_behavior = 3

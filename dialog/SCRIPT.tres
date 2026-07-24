@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="DialogTreeCollection" format=3 uid="uid://ym75ne43k0ed"]
+
+[ext_resource type="Script" uid="uid://dfsw2sdnstg1s" path="res://dialog/dialog_tree_collection.gd" id="1_wnf1w"]
+[ext_resource type="Script" uid="uid://cio25mowqx3qd" path="res://dialog/dialog_state.gd" id="2_k2gsb"]
+
+[sub_resource type="Resource" id="Resource_ulqtn"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_A"
+choices = Array[String](["asdfjilk"])
+short_choices = Array[String](["asdfjilk"])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = ["commands"]
+
+[sub_resource type="Resource" id="Resource_8cglv"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_A"
+choices = Array[String](["upiopououi"])
+short_choices = Array[String](["upiopououi"])
+states = Array[ExtResource("2_k2gsb")]([null])
+
+[sub_resource type="Resource" id="Resource_qvos8"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+choices = Array[String](["CCC"])
+short_choices = Array[String](["CCC"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_8cglv")])
+
+[sub_resource type="Resource" id="Resource_0yc67"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+choices = Array[String](["Hello The Count, I think you are an interesting person, or whatever you are, and I hope to get to know you more over the course of the weekend.", "BBB"])
+short_choices = Array[String](["Hello The Count, I think you are an interesting person, or whatever you are, and I hope to get to know you more over the course of the weekend.", "BBB"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ulqtn"), SubResource("Resource_qvos8")])
+
+[sub_resource type="Resource" id="Resource_jgjeo"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_A"
+choices = Array[String](["I am saying two things, with a pause.
+But this is said without a pause"])
+short_choices = Array[String](["I am saying two things, with a pause."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_0yc67")])
+
+[sub_resource type="Resource" id="Resource_xofoe"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_A"
+choices = Array[String](["Hello I am The Count, and this is conversation A"])
+short_choices = Array[String](["Hello I am The Count, and this is conversation A"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jgjeo")])
+
+[sub_resource type="Resource" id="Resource_fljf2"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String](["thought1", "thought2"])
+choices = Array[String](["Hello I am the player, I do not get a choice in what to say here"])
+short_choices = Array[String](["Hello I am the player, I do not get a choice in what to say here"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_xofoe")])
+
+[resource]
+script = ExtResource("1_wnf1w")
+trees = Dictionary[String, ExtResource("2_k2gsb")]({
+"Count_A": SubResource("Resource_fljf2")
+})

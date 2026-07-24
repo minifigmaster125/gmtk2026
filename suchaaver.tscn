@@ -194,7 +194,7 @@ tile_map_data = PackedByteArray("AAAAAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAGAAAAAAAAAAA
 tile_set = SubResource("TileSet_aoea4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=73753022]
-position = Vector2(152, 80)
+position = Vector2(320, 180)
 
 [node name="Count" parent="." unique_id=191791242 instance=ExtResource("3_qn20g")]
 position = Vector2(152, 56)
