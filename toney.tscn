@@ -1,0 +1,33 @@
+[gd_scene format=4 uid="uid://c5dwi50hfng7k"]
+
+[ext_resource type="PackedScene" uid="uid://c34qy1bvchy88" path="res://player/player.tscn" id="1_wmmnv"]
+[ext_resource type="Texture2D" uid="uid://f3xyoxdv1tk8" path="res://assets/textures/texture_atlas.png" id="2_ugcom"]
+[ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="3_vus1x"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qn20g"]
+resource_name = "main"
+texture = ExtResource("2_ugcom")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_aoea4"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_qn20g")
+
+[node name="Toney" type="Node2D" unique_id=672884036]
+
+[node name="Player" parent="." unique_id=1713429650 instance=ExtResource("1_wmmnv")]
+position = Vector2(8, 8)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=74225508]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAUAAAAAAAAAAAAAAAcAAAABAAAAAAABAAcAAAABAAAAAAACAAcAAAABAAAAAAADAAcAAAABAAAAAAAEAAcAAAABAAAAAAAFAAcAAAABAAAAAAAGAAcAAAABAAAAAAAHAAcAAAABAAAAAAAIAAcAAAABAAAAAAAJAAcAAAABAAAAAAAKAAcAAAABAAAAAAALAAcAAAABAAAAAAAMAAcAAAABAAAAAAANAAYAAAABAAAAAGANAAUAAAABAAAAAGANAAQAAAABAAAAAGANAAMAAAABAAAAAGANAAIAAAABAAAAAGANAAEAAAABAAAAAGANAAAAAAABAAAAAGA=")
+tile_set = SubResource("TileSet_aoea4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=73753022]
+position = Vector2(320, 180)
+
+[node name="Count" parent="." unique_id=191791242 instance=ExtResource("3_vus1x")]
+position = Vector2(152, 56)

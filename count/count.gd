@@ -7,6 +7,9 @@ extends CharacterBody2D
 @onready var interest_area = $InterestArea2D as Area2D
 @onready var interest_progress := $ProgressBar as ProgressBar
 
+var dialog_scene = preload("res://components/conversation/dialog_control.tscn")
+var dialog_instance = null
+
 var _interested := false
 
 func _ready() -> void:
@@ -23,6 +26,12 @@ func _process(delta: float):
 func _on_body_entered(body: Node2D):
 	if body is Player:
 		_interested = true
+		dialog_instance = dialog_scene.instantiate()
+		get_tree().root.add_child(dialog_instance)
+		dialog_instance.recieve_conversing_event(true, "Count_A")
+
 func _on_body_exited(body: Node2D):
 	if body is Player:
 		_interested = false
+		if dialog_instance != null:
+			dialog_instance._exit_pressed()

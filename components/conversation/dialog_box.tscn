@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dh4xld0x8ansm"]
+
+[ext_resource type="Script" uid="uid://bxcbk77cxidxy" path="res://components/conversation/dialog_box.gd" id="1_6se2g"]
+
+[node name="DialogBox" type="HBoxContainer" unique_id=1000713501]
+anchors_preset = -1
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("1_6se2g")
+
+[node name="margin" type="MarginContainer" parent="." unique_id=1445363654]
+custom_minimum_size = Vector2(1481, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 220
+theme_override_constants/margin_bottom = 20
+
+[node name="speech" type="RichTextLabel" parent="margin" unique_id=567565057]
+clip_contents = false
+layout_mode = 2
+theme_override_constants/outline_size = 18
+bbcode_enabled = true
+fit_content = true
