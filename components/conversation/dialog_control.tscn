@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cuhink404aisk"]
 
 [ext_resource type="Script" uid="uid://dekeuetigcvd5" path="res://components/conversation/dialog_control.gd" id="1_kei4r"]
+[ext_resource type="Texture2D" uid="uid://b2361sprifknm" path="res://assets/images/puppet.png" id="2_qxr4x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt76e"]
 bg_color = Color(0.537833, 0.53, 1, 0.278431)
@@ -14,6 +15,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kei4r")
+
+[node name="portrait" type="TextureRect" parent="." unique_id=2123965217]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = -160.0
+grow_horizontal = 0
+texture = ExtResource("2_qxr4x")
+expand_mode = 3
+stretch_mode = 4
 
 [node name="exit" type="Button" parent="." unique_id=1555581384]
 layout_mode = 1
