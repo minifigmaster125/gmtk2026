@@ -79,3 +79,7 @@ func _moving_state():
 	if body.get_slide_collision_count() > 0:
 		collision.record_collision(step)
 		shuffle.toggle()
+		
+#goals.enqueue(Vector2(320, 96))
+#goals.enqueue(Vector2(320, 224))
+#goals.enqueue(Vector2(96, 224))
