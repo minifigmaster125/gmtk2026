@@ -3,6 +3,8 @@ class_name DialogBox extends Control
 
 const dialog_box: PackedScene = preload("dialog_box.tscn")
 
+@export var base_margin := 100
+
 var margin: MarginContainer
 var speech: RichTextLabel
 
@@ -46,8 +48,8 @@ func _update_fields():
 		speech.clear()
 		speech.append_text("[" + ta + "]" + text + "[/" + ta + "]")
 
-		var l = 200
-		var r = 200
+		var l = base_margin
+		var r = base_margin
 		if alignment == 0:
 			l = 0
 		elif alignment == 2:

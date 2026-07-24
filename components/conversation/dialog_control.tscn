@@ -12,6 +12,7 @@ layout_mode = 3
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -240.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kei4r")
@@ -21,8 +22,9 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -120.0
-offset_top = -160.0
+offset_top = -140.0
+offset_right = 240.0
+offset_bottom = 180.0
 grow_horizontal = 0
 texture = ExtResource("2_qxr4x")
 expand_mode = 3
@@ -54,6 +56,18 @@ vertical_scroll_mode = 4
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="DialogBox" parent="logScroll/logContainer" unique_id=1000713501 instance_placeholder="res://components/conversation/dialog_box.tscn"]
+custom_minimum_size = Vector2(1865, 0)
+custom_maximum_size = Vector2(400, -1)
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+[node name="DialogBox2" parent="logScroll/logContainer" unique_id=277577379 instance_placeholder="res://components/conversation/dialog_box.tscn"]
+custom_minimum_size = Vector2(1865, 0)
+layout_mode = 2
+alignment = 2
+alignment = 2
+
 [node name="options" type="VBoxContainer" parent="." unique_id=1705974653]
 layout_mode = 1
 anchors_preset = -1
@@ -63,3 +77,9 @@ anchor_right = 0.9
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="DialogOption" parent="options" unique_id=1758117125 instance_placeholder="res://components/conversation/dialog_option.tscn"]
+layout_mode = 2
+
+[node name="DialogOption2" parent="options" unique_id=1307370344 instance_placeholder="res://components/conversation/dialog_option.tscn"]
+layout_mode = 2

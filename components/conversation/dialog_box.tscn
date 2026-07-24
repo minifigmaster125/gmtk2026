@@ -3,23 +3,32 @@
 [ext_resource type="Script" uid="uid://bxcbk77cxidxy" path="res://components/conversation/dialog_box.gd" id="1_6se2g"]
 
 [node name="DialogBox" type="HBoxContainer" unique_id=1000713501]
+custom_minimum_size = Vector2(1875, 0)
 anchors_preset = -1
 anchor_right = 1.0
+offset_left = -617.5
+offset_right = 617.5
+offset_bottom = 41.0
 grow_horizontal = 2
 script = ExtResource("1_6se2g")
 
 [node name="margin" type="MarginContainer" parent="." unique_id=1445363654]
-custom_minimum_size = Vector2(1481, 0)
+custom_minimum_size = Vector2(1875, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 220
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 12
 
 [node name="speech" type="RichTextLabel" parent="margin" unique_id=567565057]
 clip_contents = false
 layout_mode = 2
-theme_override_constants/outline_size = 18
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
 bbcode_enabled = true
 fit_content = true
