@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdugvy88ie6vo"
-path="res://.godot/imported/crayon_Pixeled.png-025a6d15e277c77dcc1687c6e40bafad.ctex"
+path="res://.godot/imported/crayon_Pixeled.png-6f2403a965bbb8f84ed8f9cdeb33986e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Isaac/pixel_assets/crayon_Pixeled.png"
-dest_files=["res://.godot/imported/crayon_Pixeled.png-025a6d15e277c77dcc1687c6e40bafad.ctex"]
+source_file="res://Isaac/pixel_assets/main_menu/crayon_Pixeled.png"
+dest_files=["res://.godot/imported/crayon_Pixeled.png-6f2403a965bbb8f84ed8f9cdeb33986e.ctex"]
 
 [params]
 

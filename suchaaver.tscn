@@ -192,6 +192,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qn20g")
 sources/1 = SubResource("TileSetAtlasSource_2phry")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ph1nn"]
+load_path = "res://.godot/imported/Wall.png-0e77142e50d91f81edceec9ca6e736cd.ctex"
+
 [node name="Suchaaver" type="Node2D" unique_id=672884036]
 
 [node name="Player" parent="." unique_id=1713429650 instance=ExtResource("1_vc6p7")]
@@ -248,3 +251,7 @@ script = ExtResource("12_55yqu")
 script = ExtResource("5_ph1nn")
 direction = NodePath("../direction_component")
 metadata/_custom_type_script = "uid://wm6m5im6k8bf"
+
+[node name="Wall" type="Sprite2D" parent="." unique_id=1478960954]
+position = Vector2(66, 240)
+texture = SubResource("CompressedTexture2D_ph1nn")
