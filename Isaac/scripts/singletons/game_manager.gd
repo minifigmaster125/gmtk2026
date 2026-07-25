@@ -9,6 +9,8 @@ var mood:float = 1.0
 
 var mood_breakdown = []
 
+var conversation_stages:Dictionary = {}
+
 func _ready():
 	if FileAccess.file_exists(FILE):
 		states = FileAccess.open(FILE, FileAccess.READ).get_var()
@@ -51,6 +53,17 @@ func get_interaction_metric(key:String) -> int:
 
 func set_interaction_metric(key:String, value:int):
 	states[key] = value
+	
+func set_conversation_stage(key:String, value:int):
+	self.conversation_stages[key] = value
+	
+func get_conversation_stage(key:String) -> int:
+	return self.conversation_stages.get(key, 1)
+
+func conversation_completed(convo:String):
+	var name = convo.substr(0, convo.length()-1)
+	var stage = convo.substr(convo.length()-1, convo.length()).to_int()
+	self.set_conversation_stage(name, stage+1)
 
 func save():
 	FileAccess.open(FILE, FileAccess.WRITE).store_var(states)

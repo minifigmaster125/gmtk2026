@@ -17,20 +17,39 @@ func _process(_delta):
 func build():
 	var collection = DialogTreeCollection.new()
 	var trees: Dictionary[String, DialogState] = {}
-	trees["Count_A"] = DialogState.create(
+	trees["Count_A3"] = DialogState.create(
+		'Player',
+		[],
+		['Hello, Count A, third Counversation'],
+		['Hello, Count A, third Counversation'],
+		[
+			DialogState.create(
+				'Count_A3',
+				[],
+				['Lemme get your number 👀'],
+				['Lemme get your number 👀'],
+				[
+					null
+				],
+				[],
+			),
+		],
+		[],
+	)
+	trees["Count_A1"] = DialogState.create(
 		'Player',
 		['thought1', 'thought2'],
 		['Hello I am the player, I do not get a choice in what to say here'],
 		['Hello I am the player, I do not get a choice in what to say here'],
 		[
 			DialogState.create(
-				'Count_A',
+				'Count_A1',
 				[],
-				['Hello I am The Count, and this is conversation A'],
-				['Hello I am The Count, and this is conversation A'],
+				['Hello I am The Count A, and this is conversation 1'],
+				['Hello I am The Count A, and this is conversation 1'],
 				[
 					DialogState.create(
-						'Count_A',
+						'Count_A1',
 						[],
 						['I am saying two things, with a pause.'],
 						['I am saying two things, with a pause.\nBut this is said without a pause'],
@@ -42,7 +61,7 @@ func build():
 								['Hello The Count, I think you are an interesting person, or whatever you are, and I hope to get to know you more over the course of the weekend.', 'BBB'],
 								[
 									DialogState.create(
-										'Count_A',
+										'Count_A1',
 										[],
 										['asdfjilk'],
 										['asdfjilk'],
@@ -58,7 +77,7 @@ func build():
 										['CCC'],
 										[
 											DialogState.create(
-												'Count_A',
+												'Count_A1',
 												[],
 												['upiopououi'],
 												['upiopououi'],
@@ -76,6 +95,139 @@ func build():
 						],
 						[],
 					),
+				],
+				[],
+			),
+		],
+		[],
+	)
+	trees["Count_C1"] = DialogState.create(
+		'Player',
+		['thought1', 'thought2'],
+		['Hello I am the player, I do not get a choice in what to say here'],
+		['Hello I am the player, I do not get a choice in what to say here'],
+		[
+			DialogState.create(
+				'Count_C1',
+				[],
+				['Hello I am The Count C, and this is conversation 1'],
+				['Hello I am The Count C, and this is conversation 1'],
+				[
+					null
+				],
+				[],
+			),
+		],
+		[],
+	)
+	trees["Count_C3"] = DialogState.create(
+		'Player',
+		[],
+		['Hello, Count C, third Counversation'],
+		['Hello, Count C, third Counversation'],
+		[
+			DialogState.create(
+				'Count_C3',
+				[],
+				['Lemme get your number 👀'],
+				['Lemme get your number 👀'],
+				[
+					null
+				],
+				[],
+			),
+		],
+		[],
+	)
+	trees["Count_A2"] = DialogState.create(
+		'Player',
+		[],
+		['Hello, Count A, Second Counversation'],
+		['Hello, Count A, Second Counversation'],
+		[
+			DialogState.create(
+				'Count_A2',
+				[],
+				['Hello again'],
+				['Hello again'],
+				[
+					null
+				],
+				[],
+			),
+		],
+		[],
+	)
+	trees["Count_C2"] = DialogState.create(
+		'Player',
+		[],
+		['Hello, Count C, Second Counversation'],
+		['Hello, Count C, Second Counversation'],
+		[
+			DialogState.create(
+				'Count_C2',
+				[],
+				['Hello again'],
+				['Hello again'],
+				[
+					null
+				],
+				[],
+			),
+		],
+		[],
+	)
+	trees["Count_B3"] = DialogState.create(
+		'Player',
+		[],
+		['Hello, Count B, third Counversation'],
+		['Hello, Count B, third Counversation'],
+		[
+			DialogState.create(
+				'Count_B3',
+				[],
+				['Lemme get your number 👀'],
+				['Lemme get your number 👀'],
+				[
+					null
+				],
+				[],
+			),
+		],
+		[],
+	)
+	trees["Count_B1"] = DialogState.create(
+		'Player',
+		['thought1', 'thought2'],
+		['Hello I am the player, I do not get a choice in what to say here'],
+		['Hello I am the player, I do not get a choice in what to say here'],
+		[
+			DialogState.create(
+				'Count_B1',
+				[],
+				['Hello I am The Count B, and this is conversation 1'],
+				['Hello I am The Count B, and this is conversation 1'],
+				[
+					null
+				],
+				[],
+			),
+		],
+		[],
+	)
+	trees["Count_B2"] = DialogState.create(
+		'Player',
+		[],
+		['Hello, Count B, Second Counversation'],
+		['Hello, Count B, Second Counversation'],
+		[
+			DialogState.create(
+				'Count_B2',
+				[],
+				['Hello again'],
+				['Hello again'],
+				[
+					null
 				],
 				[],
 			),

@@ -29,7 +29,7 @@ func _process(delta):
 	# 	goals.clear_queue()
 	# 	goals.queue_targets()
 
-	print("target global position: " + var_to_str(goals.peek()))
+	#print("target global position: " + var_to_str(goals.peek()))
 	match state:
 
 		State.IDLE:
