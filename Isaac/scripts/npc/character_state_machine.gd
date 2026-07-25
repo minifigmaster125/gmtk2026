@@ -30,7 +30,12 @@ func _process(delta):
 	_update_time_since(delta)
 	collision.update(delta)
 	
+	if time_since["target_reset"] > target_reset_interval:
+		current_goal = goals.peek()
+		time_since["target_reset"] = 0.0
+
 	print("target global position: " + var_to_str(goals.peek()))
+
 
 	match state:
 
@@ -48,16 +53,20 @@ func _update_time_since(delta):
 func _idle_state():
 	print("IDLE")
 
-	if goals.has_goal():
+	# if goals.has_goal():
+	if time_since["moving"] > move_interval:
 		current_goal = goals.peek()
 		state = State.MOVING
+		time_since["moving"] = 0.0
 
 
 func _moving_state(delta : float):
 	print("MOVING")
 	# if current_goal == Vector2.INF:
-	# 	state = State.IDLE
-	# 	return
+	if time_since["idle"] > idle_interval:
+		state = State.IDLE
+		time_since["idle"] = 0.0
+		return
 	print("hasgoal: " + var_to_str(goals.has_goal()))
 
 	var body := get_parent() as CharacterBody2D
@@ -108,13 +117,6 @@ func _moving_state(delta : float):
 
 	direction.set_from_vector(step)
 	movement.move_direction(step)
-
-# 	@export var target_reset_interval := 4.0
-# @export var idle_interval := 5.0
-# @export var move_interval := 5.0
-# @export var directional_change_interval := 1.3
-
-# var time_since = {"target_reset":0.0, "idle":0.0, "move":0.0, "directional_change":0.0}
 
 	# Collision recovery
 	# print("slide_collision_count: " + var_to_str(body.get_slide_collision_count()))

@@ -1,0 +1,77 @@
+[gd_scene format=4 uid="uid://ctyme0ldvc87v"]
+
+[ext_resource type="PackedScene" uid="uid://c34qy1bvchy88" path="res://player/player.tscn" id="1_wmmnv"]
+[ext_resource type="Texture2D" uid="uid://f3xyoxdv1tk8" path="res://assets/textures/texture_atlas.png" id="2_ugcom"]
+[ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="3_vus1x"]
+[ext_resource type="PackedScene" uid="uid://ctsnp0ylkjcnj" path="res://components/anxiety/anxiety_display.tscn" id="4_vus1x"]
+[ext_resource type="Script" uid="uid://koirfpdc81qp" path="res://mood_display.gd" id="5_g12r7"]
+[ext_resource type="PackedScene" uid="uid://bditfi3icunh2" path="res://components/anxiety/mood_field.tscn" id="5_vus1x"]
+[ext_resource type="TileSet" uid="uid://bclogxhrugtlt" path="res://components/anxiety/mood_map_tileset.tres" id="6_fy5l6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qn20g"]
+resource_name = "main"
+texture = ExtResource("2_ugcom")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_aoea4"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_qn20g")
+
+[node name="Toney" type="Node2D" unique_id=672884036]
+
+[node name="Player" parent="." unique_id=1713429650 node_paths=PackedStringArray("_mood_field") instance=ExtResource("1_wmmnv")]
+position = Vector2(8, 8)
+_mood_field = NodePath("../MoodField")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=74225508]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAUAAAAAAAAAAAAAAAcAAAABAAAAAAABAAcAAAABAAAAAAACAAcAAAABAAAAAAADAAcAAAABAAAAAAAEAAcAAAABAAAAAAAFAAcAAAABAAAAAAAGAAcAAAABAAAAAAAHAAcAAAABAAAAAAAIAAcAAAABAAAAAAAJAAcAAAABAAAAAAAKAAcAAAABAAAAAAALAAcAAAABAAAAAAAMAAcAAAABAAAAAAANAAYAAAABAAAAAGANAAUAAAABAAAAAGANAAQAAAABAAAAAGANAAMAAAABAAAAAGANAAIAAAABAAAAAGANAAEAAAABAAAAAGANAAAAAAABAAAAAGA=")
+tile_set = SubResource("TileSet_aoea4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=73753022]
+position = Vector2(320, 180)
+
+[node name="Count" parent="." unique_id=191791242 groups=["mood_affecting"] instance=ExtResource("3_vus1x")]
+position = Vector2(152, 56)
+
+[node name="Control" type="Control" parent="." unique_id=555987813]
+propagate_maximum_size = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1558829872]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.0
+offset_right = 25.0
+offset_bottom = 24.0
+grow_horizontal = 2
+
+[node name="anxiety_display" parent="Control/VBoxContainer" unique_id=85946941 instance=ExtResource("4_vus1x")]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="mood_display" type="VBoxContainer" parent="Control/VBoxContainer" unique_id=708985822]
+layout_mode = 2
+alignment = 1
+script = ExtResource("5_g12r7")
+
+[node name="MoodField" parent="." unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer") instance=ExtResource("5_vus1x")]
+visible = false
+mood_map_layer = NodePath("../MoodMap")
+
+[node name="MoodMap" type="TileMapLayer" parent="." unique_id=834711439]
+visible = false
+tile_map_data = PackedByteArray("AAABAAAAAAABAAAAAAACAAEAAAABAAAAAAABAAIAAAABAAAAAAAAAAIAAAABAAAAAAACAAMAAAAAAAAAAAADAAIAAAACAAAAAAADAAMAAAACAAAAAAAEAAMAAAACAAAAAAAFAAIAAAACAAAAAAAEAAEAAAACAAAAAAAFAAEAAAACAAAAAAAEAAAAAAACAAAAAAAFAAAAAAACAAAAAAACAAIAAAABAAAAAAAEAAIAAAACAAAAAAADAAEAAAACAAAAAAADAAAAAAADAAAAAAAAAAAAAAABAAAAAAAAAAEAAAABAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAAFAAMAAAACAAAAAAAGAAMAAAACAAAAAAAGAAIAAAACAAAAAAAGAAEAAAACAAAAAAACAAAAAAADAAAAAAABAAEAAAABAAAAAAAGAAAAAAACAAAAAAAAAAQAAAACAAAAAAABAAQAAAACAAAAAAACAAQAAAACAAAAAAADAAQAAAACAAAAAAAEAAQAAAACAAAAAAAFAAQAAAACAAAAAAAGAAQAAAACAAAAAAAHAAQAAAACAAAAAAAHAAMAAAACAAAAAAAHAAIAAAACAAAAAAAHAAEAAAACAAAAAAAHAAAAAAACAAAAAAAIAAAAAAACAAAAAAAIAAEAAAACAAAAAAAIAAIAAAACAAAAAAAIAAMAAAACAAAAAAAIAAQAAAACAAAAAAAIAAUAAAACAAAAAAAHAAUAAAACAAAAAAAGAAUAAAACAAAAAAAFAAUAAAACAAAAAAAEAAUAAAACAAAAAAADAAUAAAACAAAAAAACAAUAAAACAAAAAAABAAUAAAACAAAAAAAAAAUAAAACAAAAAAA=")
+tile_set = ExtResource("6_fy5l6")
