@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="3_qn20g"]
 [ext_resource type="Script" uid="uid://wm6m5im6k8bf" path="res://Isaac/scripts/animations/sprite_directional_animation_component.gd" id="5_ph1nn"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ph1nn"]
+load_path = "res://.godot/imported/Wall.png-0e77142e50d91f81edceec9ca6e736cd.ctex"
+
 [node name="Suchaaver" type="Node2D" unique_id=672884036]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=74225508]
@@ -30,3 +33,7 @@ interest_rate = 20
 script = ExtResource("5_ph1nn")
 direction = NodePath("../direction_component")
 metadata/_custom_type_script = "uid://wm6m5im6k8bf"
+
+[node name="Wall" type="Sprite2D" parent="." unique_id=1478960954]
+position = Vector2(66, 240)
+texture = SubResource("CompressedTexture2D_ph1nn")

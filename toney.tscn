@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="3_vus1x"]
 [ext_resource type="PackedScene" uid="uid://ctsnp0ylkjcnj" path="res://components/anxiety/anxiety_display.tscn" id="4_vus1x"]
 [ext_resource type="PackedScene" uid="uid://bditfi3icunh2" path="res://components/anxiety/mood_field.tscn" id="5_vus1x"]
+[ext_resource type="TileSet" uid="uid://bclogxhrugtlt" path="res://components/anxiety/mood_map_tileset.tres" id="6_fy5l6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qn20g"]
 resource_name = "main"
@@ -59,4 +60,10 @@ grow_horizontal = 2
 [node name="anxiety_display" parent="Control/VBoxContainer" unique_id=85946941 instance=ExtResource("4_vus1x")]
 layout_mode = 2
 
-[node name="MoodField" parent="." unique_id=1876993409 instance=ExtResource("5_vus1x")]
+[node name="MoodField" parent="." unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer") instance=ExtResource("5_vus1x")]
+mood_map_layer = NodePath("../MoodMap")
+
+[node name="MoodMap" type="TileMapLayer" parent="." unique_id=834711439]
+visible = false
+tile_map_data = PackedByteArray("AAABAAAAAAABAAAAAAACAAEAAAABAAAAAAABAAIAAAABAAAAAAAAAAIAAAABAAAAAAACAAMAAAAAAAAAAAADAAIAAAACAAAAAAADAAMAAAACAAAAAAAEAAMAAAACAAAAAAAFAAIAAAACAAAAAAAEAAEAAAACAAAAAAAFAAEAAAACAAAAAAAEAAAAAAACAAAAAAAFAAAAAAACAAAAAAACAAIAAAABAAAAAAAEAAIAAAACAAAAAAADAAEAAAACAAAAAAADAAAAAAADAAAAAAAAAAAAAAABAAAAAAAAAAEAAAABAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAAFAAMAAAACAAAAAAAGAAMAAAACAAAAAAAGAAIAAAACAAAAAAAGAAEAAAACAAAAAAACAAAAAAADAAAAAAABAAEAAAABAAAAAAAGAAAAAAACAAAAAAAAAAQAAAACAAAAAAABAAQAAAACAAAAAAACAAQAAAACAAAAAAADAAQAAAACAAAAAAAEAAQAAAACAAAAAAAFAAQAAAACAAAAAAAGAAQAAAACAAAAAAAHAAQAAAACAAAAAAAHAAMAAAACAAAAAAAHAAIAAAACAAAAAAAHAAEAAAACAAAAAAAHAAAAAAACAAAAAAAIAAAAAAACAAAAAAAIAAEAAAACAAAAAAAIAAIAAAACAAAAAAAIAAMAAAACAAAAAAAIAAQAAAACAAAAAAAIAAUAAAACAAAAAAAHAAUAAAACAAAAAAAGAAUAAAACAAAAAAAFAAUAAAACAAAAAAAEAAUAAAACAAAAAAADAAUAAAACAAAAAAACAAUAAAACAAAAAAABAAUAAAACAAAAAAAAAAUAAAACAAAAAAA=")
+tile_set = ExtResource("6_fy5l6")

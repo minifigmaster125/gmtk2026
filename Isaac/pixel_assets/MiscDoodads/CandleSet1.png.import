@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy61jooyo20li"
-path="res://.godot/imported/Wolfenstein Castle_Pixeled.png-d1bc589a8e465e8b7db3c822d56158ec.ctex"
+uid="uid://dpl7igd5t5s5t"
+path="res://.godot/imported/CandleSet1.png-21955129f37d3df4ee425a41ffe190a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Isaac/pixel_assets/Wolfenstein Castle_Pixeled.png"
-dest_files=["res://.godot/imported/Wolfenstein Castle_Pixeled.png-d1bc589a8e465e8b7db3c822d56158ec.ctex"]
+source_file="res://Isaac/pixel_assets/MiscDoodads/CandleSet1.png"
+dest_files=["res://.godot/imported/CandleSet1.png-21955129f37d3df4ee425a41ffe190a6.ctex"]
 
 [params]
 
