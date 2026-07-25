@@ -20,3 +20,9 @@ position = Vector2(32, 32)
 
 [node name="Count" parent="." index="5" unique_id=191791242 instance=ExtResource("4_kx6l7")]
 position = Vector2(448, 192)
+
+[node name="goal_queue_component" parent="Count" index="8" unique_id=168673157 node_paths=PackedStringArray("target_nodes")]
+target_nodes = [NodePath("../../Player")]
+
+[editable path="Player"]
+[editable path="Count"]

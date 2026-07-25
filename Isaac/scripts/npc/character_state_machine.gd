@@ -25,9 +25,11 @@ func _process(delta):
 	collision.update(delta)
 
 	if polling.update(delta):
+		print("polling")
 		goals.clear_queue()
 		goals.queue_targets()
 
+	print("target global position: " + var_to_str(goals.peek()))
 	match state:
 
 		State.IDLE:
@@ -45,14 +47,14 @@ func _idle_state():
 	if goals.has_goal():
 		current_goal = goals.peek()
 		state = State.MOVING
-	#print("target global position: " + var_to_str(goals.peek().global_position))
+	
 
 func _moving_state():
 	# print("MOVING")
 	if current_goal == Vector2.INF:
 		state = State.IDLE
 		return
-	# print("hasgoal: " + var_to_str(goals.has_goal()))
+	print("hasgoal: " + var_to_str(goals.has_goal()))
 	# Apply optional focus bias
 	if focus:
 		current_goal = focus.choose(current_goal)
@@ -82,10 +84,10 @@ func _moving_state():
 	movement.move_direction(step)
 
 	# Collision recovery
-	print("slide_collision_count: " + var_to_str(body.get_slide_collision_count()))
-	if body.get_slide_collision_count() > 0:
-		collision.record_collision(step)
-		shuffle.toggle()
+	# print("slide_collision_count: " + var_to_str(body.get_slide_collision_count()))
+	# if body.get_slide_collision_count() > 0:
+	collision.record_collision(step)
+	shuffle.toggle()
 		
 #goals.enqueue(Vector2(320, 96))
 #goals.enqueue(Vector2(320, 224))

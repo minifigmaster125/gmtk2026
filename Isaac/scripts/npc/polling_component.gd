@@ -1,7 +1,7 @@
 extends Node
 class_name PollingComponent
 
-@export var interval := 0.2
+@export var interval := 4.0
 
 var timer := 0.0
 

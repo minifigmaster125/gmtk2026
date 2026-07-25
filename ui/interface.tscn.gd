@@ -9,11 +9,11 @@ func _ready():
 	assert(level_timer != null)
 
 func _process(_delta: float) -> void:
-	print(level_timer.time_left)
+	# print(level_timer.time_left)
 	level_timer_label.text = format_time(level_timer.time_left)
 
 func format_time(seconds: float) -> String:
-	print(seconds)
+	# print(seconds)
 	var mins: int = int(seconds) / 60
 	var secs: int = int(seconds) % 60
 	var msec: int = int((seconds - int(seconds)) * 100)
