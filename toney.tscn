@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://f3xyoxdv1tk8" path="res://assets/textures/texture_atlas.png" id="2_ugcom"]
 [ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="3_vus1x"]
 [ext_resource type="PackedScene" uid="uid://ctsnp0ylkjcnj" path="res://components/anxiety/anxiety_display.tscn" id="4_vus1x"]
+[ext_resource type="Script" uid="uid://koirfpdc81qp" path="res://mood_display.gd" id="5_g12r7"]
 [ext_resource type="PackedScene" uid="uid://bditfi3icunh2" path="res://components/anxiety/mood_field.tscn" id="5_vus1x"]
 [ext_resource type="TileSet" uid="uid://bclogxhrugtlt" path="res://components/anxiety/mood_map_tileset.tres" id="6_fy5l6"]
 
@@ -59,8 +60,15 @@ grow_horizontal = 2
 
 [node name="anxiety_display" parent="Control/VBoxContainer" unique_id=85946941 instance=ExtResource("4_vus1x")]
 layout_mode = 2
+horizontal_alignment = 1
+
+[node name="mood_display" type="VBoxContainer" parent="Control/VBoxContainer" unique_id=708985822]
+layout_mode = 2
+alignment = 1
+script = ExtResource("5_g12r7")
 
 [node name="MoodField" parent="." unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer") instance=ExtResource("5_vus1x")]
+visible = false
 mood_map_layer = NodePath("../MoodMap")
 
 [node name="MoodMap" type="TileMapLayer" parent="." unique_id=834711439]

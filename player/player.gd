@@ -37,11 +37,13 @@ func _physics_process(_delta: float) -> void:
 			return
 
 func _move(dir: Vector2):
+	var sprite_old_pos = _sprite.global_position
 	global_position += dir * _tile_size
-	_sprite.global_position -= dir * _tile_size
+	var sprite_new_pos = _sprite.global_position
+	_sprite.global_position = sprite_old_pos
 
 	if _sprite_node_pos_tween:
 		_sprite_node_pos_tween.kill()
 	_sprite_node_pos_tween = create_tween()
 	_sprite_node_pos_tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
-	_sprite_node_pos_tween.tween_property(_sprite, "global_position", global_position, 0.25)
+	_sprite_node_pos_tween.tween_property(_sprite, "global_position", sprite_new_pos, 0.25)

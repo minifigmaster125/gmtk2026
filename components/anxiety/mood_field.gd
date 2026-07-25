@@ -34,6 +34,7 @@ func _process(delta: float) -> void:
 func update_mood(player_position: Vector2):
 	var pos = pos_to_xy(player_position)
 	GameManager.set_mood(get_mood_at(pos))
+	GameManager.set_mood_breakdown(get_mood_breakdown_at(pos))
 
 func pos_to_xy(pos: Vector2) -> Vector2i:
 	@warning_ignore("narrowing_conversion")
@@ -51,6 +52,16 @@ func tile_id_to_mood(id: int) -> float:
 			return 2.0
 		_:
 			return 1.0
+
+func get_mood_breakdown_at(pos: Vector2i) -> Variant:
+	var base_value := 1.0
+	var result = []
+	if mood_map_layer:
+		base_value = tile_id_to_mood(mood_map_layer.get_cell_atlas_coords(pos).x)
+		result.append({name="Environment", value=base_value})
+	if pos in dynamic_mood_map:
+		result.append({name="Count", value=dynamic_mood_map.get(pos)})
+	return result
 
 func get_mood_at(pos: Vector2i) -> float:
 	var base_value := 1.0

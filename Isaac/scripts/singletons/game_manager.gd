@@ -7,6 +7,7 @@ var anxiety:float = 800.0
 
 var mood:float = 1.0
 
+var mood_breakdown = []
 
 func _ready():
 	if FileAccess.file_exists(FILE):
@@ -31,6 +32,12 @@ func tick_anxiety(amt: float) -> float:
 	
 func get_mood():
 	return mood
+	
+func get_mood_breakdown():
+	return mood_breakdown
+	
+func set_mood_breakdown(breakdown):
+	self.mood_breakdown = breakdown
 	
 func set_mood(amt: float) -> float:
 	self.mood = amt

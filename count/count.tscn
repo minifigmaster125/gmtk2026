@@ -2,6 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://ciuxyaoktugh5" path="res://icon.svg" id="1_31cna"]
 [ext_resource type="Script" uid="uid://cp0t3ep36dmqr" path="res://count/count.gd" id="1_xplku"]
+[ext_resource type="Script" uid="uid://dakntcktnmrm5" path="res://Isaac/scripts/npc/character_state_machine.gd" id="3_hk5s0"]
+[ext_resource type="Script" uid="uid://c4b0e0scbnf1m" path="res://Isaac/scripts/npc/collision_recovery_component.gd" id="4_5q66o"]
+[ext_resource type="Script" uid="uid://87b428uuxxir" path="res://Isaac/scripts/npc/direction_component.gd" id="5_sh2vg"]
+[ext_resource type="Script" uid="uid://1t2nypng8hgr" path="res://Isaac/scripts/npc/focus_bias_component.gd" id="6_w65jb"]
+[ext_resource type="Script" uid="uid://bku376mfdjmt3" path="res://Isaac/scripts/npc/goal_queue_component.gd" id="7_1lo26"]
+[ext_resource type="Script" uid="uid://cukwqvfmevd4l" path="res://Isaac/scripts/npc/movement_component.gd" id="8_isry1"]
+[ext_resource type="Script" uid="uid://kwwmwsr8qoxf" path="res://Isaac/scripts/npc/polling_component.gd" id="9_o0sm2"]
+[ext_resource type="Script" uid="uid://ckf2pwiq2cw7w" path="res://Isaac/scripts/npc/shuffle_component.gd" id="10_w5tcn"]
 [ext_resource type="Script" uid="uid://dfxagt3t46gbe" path="res://components/anxiety/mood_config.gd" id="2_o8fo6"]
 
 [sub_resource type="Resource" id="Resource_g12r7"]
@@ -21,27 +29,58 @@ interest_rate = 10
 mood_config = SubResource("Resource_g12r7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=867446343]
-position = Vector2(8, 8)
+position = Vector2(16, 16)
 scale = Vector2(0.1171875, 0.1171875)
 shape = SubResource("RectangleShape2D_aoea4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1175152472]
 modulate = Color(0.93386513, 0.4550972, 0.4369269, 1)
-position = Vector2(8, 8)
+position = Vector2(16, 16)
 scale = Vector2(0.1171875, 0.1171875)
 texture = ExtResource("1_31cna")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=385662585]
 texture_filter = 1
-offset_left = 16.0
-offset_top = -8.0
-offset_right = 20.0
-offset_bottom = 10.0
+offset_left = 24.0
+offset_right = 28.0
+offset_bottom = 18.0
 fill_mode = 3
 show_percentage = false
 
 [node name="InterestArea2D" type="Area2D" parent="." unique_id=1297958067]
+position = Vector2(8, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InterestArea2D" unique_id=2036241871]
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_64dco")
+
+[node name="character_state_machine" type="Node" parent="." unique_id=746445310 node_paths=PackedStringArray("direction", "movement", "goals", "collision", "shuffle", "polling", "focus")]
+script = ExtResource("3_hk5s0")
+direction = NodePath("../direction_component")
+movement = NodePath("../movement_component")
+goals = NodePath("../goal_queue_component")
+collision = NodePath("../collision_recovery_component")
+shuffle = NodePath("../shuffle_component")
+polling = NodePath("../polling_component")
+focus = NodePath("../focus_bias_component")
+
+[node name="collision_recovery_component" type="Node" parent="." unique_id=1746012140]
+script = ExtResource("4_5q66o")
+
+[node name="direction_component" type="Node" parent="." unique_id=234506423]
+script = ExtResource("5_sh2vg")
+
+[node name="focus_bias_component" type="Node" parent="." unique_id=540790929]
+script = ExtResource("6_w65jb")
+
+[node name="goal_queue_component" type="Node" parent="." unique_id=168673157]
+script = ExtResource("7_1lo26")
+
+[node name="movement_component" type="Node" parent="." unique_id=1422295537]
+script = ExtResource("8_isry1")
+
+[node name="polling_component" type="Node" parent="." unique_id=171284373]
+script = ExtResource("9_o0sm2")
+
+[node name="shuffle_component" type="Node" parent="." unique_id=29718513]
+script = ExtResource("10_w5tcn")
