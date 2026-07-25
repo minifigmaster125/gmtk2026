@@ -21,17 +21,17 @@ func clear_queue():
 	queue.clear()
 
 func pop_first() -> Vector2:
-	if queue.is_empty():
+	if queue.is_empty() or queue.pop_front() == null:
 		return Vector2.INF
 	return queue.pop_front().global_position
 
 func pop_last() -> Vector2:
-	if queue.is_empty():
+	if queue.is_empty() or queue.pop_back() == null:
 		return Vector2.INF
 	return queue.pop_back().global_position
 
 func peek() -> Vector2:
-	if queue.is_empty():
+	if queue.is_empty() or queue.front() == null:
 		return Vector2.INF
 	return queue.front().global_position
 
