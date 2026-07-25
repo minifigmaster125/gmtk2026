@@ -43,6 +43,10 @@ folder_colors={
 "res://museum/": "purple"
 }
 
+[global_group]
+
+mood_affecting="Nodes in this group interact with MoodField"
+
 [input]
 
 ui_up_={

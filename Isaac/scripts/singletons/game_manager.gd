@@ -3,7 +3,10 @@ extends Node
 const FILE := "user://save.dat"
 var states:Dictionary = {}
 var time:float = 360.0
-var anxiety:int = 0
+var anxiety:float = 800.0
+
+var mood:float = 1.0
+
 
 func _ready():
 	if FileAccess.file_exists(FILE):
@@ -11,6 +14,7 @@ func _ready():
 
 func _process(delta: float):
 	time -= delta
+	self.tick_anxiety(-10 * delta)
 
 func get_time() -> float:
 	return time
@@ -18,11 +22,19 @@ func get_time() -> float:
 # func set_time(_time:float):
 # 	time = _time
 
-func get_anxiety() -> int:
+func get_anxiety() -> float:
 	return anxiety
-
-func set_anxiety(_anxiety:int):
-	return _anxiety
+	
+func tick_anxiety(amt: float) -> float:
+	self.anxiety = self.anxiety + amt * mood
+	return self.anxiety
+	
+func get_mood():
+	return mood
+	
+func set_mood(amt: float) -> float:
+	self.mood = amt
+	return self.mood
 
 func has_interaction_metric(key:String) -> bool:
 	return states.has(key)

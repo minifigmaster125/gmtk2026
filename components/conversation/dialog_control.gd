@@ -29,7 +29,7 @@ func execute_tree():
 	if dialog_tree.speaker != current_partner:
 		for i in range(dialog_tree.short_choices.size()):
 			var btn = dialog_option_button.instantiate()
-			btn.add_theme_font_size_override("font_size", int(10 * 1))#Util.get_composite_text_scale()))
+			#btn.add_theme_font_size_override("font_size", int(10 * 1))#Util.get_composite_text_scale()))
 			btn.pressed.connect(func(): _dialog_selected(i))
 			btn.text = dialog_tree.short_choices[i]
 			buttonBox.add_child(btn)

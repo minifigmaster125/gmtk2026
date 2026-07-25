@@ -4,6 +4,8 @@ class_name Player
 const _tile_size: Vector2 = Vector2(32,32)
 var _sprite_node_pos_tween: Tween
 
+@export var _mood_field: MoodField
+
 @onready var _up =  $up as RayCast2D
 @onready var _down =  $down as RayCast2D
 @onready var _left =  $left as RayCast2D
@@ -11,6 +13,8 @@ var _sprite_node_pos_tween: Tween
 @onready var _sprite := $AnimatedSprite2D as AnimatedSprite2D
 
 func _physics_process(_delta: float) -> void:
+	if self._mood_field != null:
+		self._mood_field.update_mood(transform.get_origin())
 	if !_sprite_node_pos_tween or !_sprite_node_pos_tween.is_running():
 		_sprite.stop()
 		if (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_up_")) and !_up.is_colliding():
