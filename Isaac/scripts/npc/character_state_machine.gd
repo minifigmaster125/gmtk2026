@@ -24,10 +24,10 @@ var current_goal := Vector2.INF
 func _process(delta):
 	collision.update(delta)
 
-	if polling.update(delta):
-		print("polling")
-		goals.clear_queue()
-		goals.queue_targets()
+	# if polling.update(delta):
+	# 	print("polling")
+	# 	goals.clear_queue()
+	# 	goals.queue_targets()
 
 	print("target global position: " + var_to_str(goals.peek()))
 	match state:
