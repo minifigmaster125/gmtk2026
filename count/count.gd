@@ -7,6 +7,8 @@ extends CharacterBody2D
 @onready var interest_area = $InterestArea2D as Area2D
 @onready var interest_progress := $ProgressBar as ProgressBar
 
+var mood_config = "count"
+
 var dialog_scene = preload("res://components/conversation/dialog_control.tscn")
 var dialog_instance = null
 

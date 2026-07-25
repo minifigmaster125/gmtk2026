@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bditfi3icunh2"]
+
+[ext_resource type="Script" uid="uid://ls7wgpsng0t0" path="res://components/anxiety/mood_field.gd" id="1_7s3e5"]
+
+[node name="MoodField" type="Node2D" unique_id=1876993409]
+script = ExtResource("1_7s3e5")
+debug_display = true

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cuhink404aisk"]
 
 [ext_resource type="Script" uid="uid://dekeuetigcvd5" path="res://components/conversation/dialog_control.gd" id="1_kei4r"]
+[ext_resource type="Texture2D" uid="uid://dowphbjfi4ut2" path="res://assets/images/sunny.png" id="2_kwecx"]
 [ext_resource type="Texture2D" uid="uid://b2361sprifknm" path="res://assets/images/puppet.png" id="2_qxr4x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt76e"]
@@ -17,7 +18,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kei4r")
 
+[node name="sunny" type="TextureRect" parent="." unique_id=406952656]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_top = -140.0
+offset_right = 240.0
+offset_bottom = 180.0
+grow_horizontal = 0
+texture = ExtResource("2_kwecx")
+expand_mode = 3
+stretch_mode = 4
+
 [node name="portrait" type="TextureRect" parent="." unique_id=2123965217]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
