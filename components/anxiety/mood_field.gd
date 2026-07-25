@@ -28,7 +28,8 @@ func _ready() -> void:
 	build_dynamic_mood_map()
 
 func _process(delta: float) -> void:
-	pass
+	build_dynamic_mood_map()
+	queue_redraw()
 	
 func update_mood(player_position: Vector2):
 	var pos = pos_to_xy(player_position)
