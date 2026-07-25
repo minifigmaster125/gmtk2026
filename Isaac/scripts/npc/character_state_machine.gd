@@ -31,6 +31,7 @@ func _process(delta):
 	collision.update(delta)
 	
 	print("target global position: " + var_to_str(goals.peek()))
+
 	match state:
 
 		State.IDLE:

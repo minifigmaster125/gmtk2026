@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_vt8wa"]
 [ext_resource type="Script" uid="uid://bylx527sd8ad5" path="res://Isaac/menus/main_menu/main_menu_with_animations.gd" id="2_5j2r0"]
 [ext_resource type="PackedScene" uid="uid://cgaew380j0ean" path="res://Isaac/menus/options_menu/master_options_menu_with_tabs.tscn" id="3_wgbxo"]
+[ext_resource type="PackedScene" uid="uid://cnvlwx1vb28iq" path="res://components/conversation/script_reader.tscn" id="4_sixn6"]
 [ext_resource type="PackedScene" uid="uid://c5pfkjxskjc60" path="res://addons/maaacks_game_template/examples/scenes/windows/main_menu_credits_window.tscn" id="4_wjegv"]
 [ext_resource type="FontFile" uid="uid://d1asw7fqcud4t" path="res://Isaac/fonts/Spellbinding-Demo.ttf" id="5_wjegv"]
 [ext_resource type="FontFile" uid="uid://bbe5lsha2awc" path="res://Isaac/fonts/Axolotl.ttf" id="6_sixn6"]
@@ -324,6 +325,7 @@ graph_offset = Vector2(-180.277, 49)
 script = ExtResource("2_5j2r0")
 game_scene_path = "uid://ck74pbk747v5r"
 options_packed_scene = ExtResource("3_wgbxo")
+script_packed_scene = ExtResource("4_sixn6")
 credits_packed_scene = ExtResource("4_wjegv")
 
 [node name="MarginContainer" type="MarginContainer" parent="." index="0" unique_id=936590978]
@@ -414,7 +416,19 @@ theme_override_font_sizes/font_size = 12
 stream = ExtResource("7_wgbxo")
 script = ExtResource("7_5j2r0")
 
-[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2" unique_id=1695433230]
+[node name="ScriptButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2" unique_id=724117850]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7359886, 0.71171945, 0.6930666, 1)
+theme_override_fonts/font = ExtResource("5_wjegv")
+theme_override_font_sizes/font_size = 12
+text = "View Script"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ScriptButton" index="0" unique_id=900439811]
+stream = ExtResource("7_wgbxo")
+script = ExtResource("7_5j2r0")
+
+[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3" unique_id=1695433230]
 theme_override_colors/font_color = Color(0.7359886, 0.71171945, 0.6930666, 1)
 theme_override_fonts/font = ExtResource("5_wjegv")
 theme_override_font_sizes/font_size = 12
@@ -423,7 +437,7 @@ theme_override_font_sizes/font_size = 12
 stream = ExtResource("7_wgbxo")
 script = ExtResource("7_5j2r0")
 
-[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3" unique_id=1226331361]
+[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="4" unique_id=1226331361]
 theme_override_colors/font_color = Color(0.7359886, 0.71171945, 0.6930666, 1)
 theme_override_fonts/font = ExtResource("5_wjegv")
 theme_override_font_sizes/font_size = 12
@@ -478,3 +492,5 @@ autoplay = true
 mix_target = 1
 max_polyphony = 3
 parameters/looping = true
+
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ScriptButton" to="." method="_on_script_button_pressed"]

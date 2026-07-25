@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cnvlwx1vb28iq"]
+
+[ext_resource type="Script" uid="uid://cb6rc5s83ksqj" path="res://components/conversation/script_reader.gd" id="1_7gnr4"]
+
+[node name="Control" type="PanelContainer" unique_id=2054754344]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7gnr4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1320516850]
+layout_mode = 2
+alignment = 1
+
+[node name="menu" type="Button" parent="VBoxContainer" unique_id=538698887]
+custom_maximum_size = Vector2(200, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Return to main menu"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=2050191058]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="character" type="OptionButton" parent="VBoxContainer/HBoxContainer" unique_id=306595362]
+layout_mode = 2
+selected = 0
+allow_reselect = true
+item_count = 3
+popup/item_0/text = "Ada"
+popup/item_0/id = 0
+popup/item_1/text = "Orlok"
+popup/item_1/id = 1
+popup/item_2/text = "Count"
+popup/item_2/id = 2
+
+[node name="convo1" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=2029874437]
+layout_mode = 2
+text = "Conversation #1
+"
+
+[node name="convo2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1086789457]
+layout_mode = 2
+text = "Conversation #2"
+
+[node name="convo3" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1617464459]
+layout_mode = 2
+text = "Conversation #3"
+
+[node name="color" type="ColorRect" parent="VBoxContainer" unique_id=2067245745]
+custom_minimum_size = Vector2(600, 260)
+custom_maximum_size = Vector2(620, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.8156863)
+
+[node name="scrollbar" type="ScrollContainer" parent="VBoxContainer/color" unique_id=10047543]
+custom_minimum_size = Vector2(580, 260)
+custom_maximum_size = Vector2(620, -1)
+layout_mode = 0
+offset_right = 610.0
+offset_bottom = 260.0
+size_flags_horizontal = 4
+
+[node name="margin" type="MarginContainer" parent="VBoxContainer/color/scrollbar" unique_id=229107236]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="script_view" type="Label" parent="VBoxContainer/color/scrollbar/margin" unique_id=1193722402]
+custom_minimum_size = Vector2(580, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Select the conversation script you'd like to view, or return to the main menu."
+autowrap_mode = 3
