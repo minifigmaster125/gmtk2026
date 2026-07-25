@@ -22,7 +22,6 @@ func _physics_process(_delta: float) -> void:
 			_sprite.play("walk_up")
 			return
 		if (Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_down_")) and !_down.is_colliding():
-			print(global_position)
 			_move(Vector2(0, 1))
 			_sprite.play("walk_down")
 			return
