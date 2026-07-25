@@ -61,7 +61,7 @@ grow_horizontal = 2
 layout_mode = 2
 
 [node name="MoodField" parent="." unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer") instance=ExtResource("5_vus1x")]
-mood_map_layer = NodePath("")
+mood_map_layer = NodePath("../MoodMap")
 
 [node name="MoodMap" type="TileMapLayer" parent="." unique_id=834711439]
 visible = false

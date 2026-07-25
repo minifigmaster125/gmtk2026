@@ -53,9 +53,12 @@ func tile_id_to_mood(id: int) -> float:
 			return 1.0
 
 func get_mood_at(pos: Vector2i) -> float:
+	var base_value := 1.0
+	if mood_map_layer:
+		base_value = tile_id_to_mood(mood_map_layer.get_cell_atlas_coords(pos).x)
 	if pos in dynamic_mood_map:
-		return max(dynamic_mood_map.get(pos), tile_id_to_mood(mood_map_layer.get_cell_atlas_coords(pos).x))
-	return tile_id_to_mood(mood_map_layer.get_cell_atlas_coords(pos).x)
+		return max(dynamic_mood_map.get(pos), base_value)
+	return base_value
 
 ## DEBUG DISPLAY FUNCTIONS ##
 
