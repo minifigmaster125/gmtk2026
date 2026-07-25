@@ -7,6 +7,7 @@ extends Control
 @onready var buttonBox: Container = $options
 
 @onready var count_name: Label = $name
+@onready var count_subtitle: RichTextLabel = $subtitle
 
 @onready var count_a: TextureRect = $ada
 @onready var count_b: TextureRect = $orlok
@@ -75,12 +76,18 @@ func recieve_conversing_event(conversing: bool, partner: String):
 		if current_partner.begins_with("Count_A"):
 			count_a.visible = true
 			count_name.text = "Count Ada von Sunshine"
+			count_subtitle.clear()
+			count_subtitle.append_text("[i]Some programmers enjoy the daylight [/i]")
 		elif current_partner.begins_with("Count_B"):
 			count_b.visible = true
 			count_name.text = "Count Orlok von Poppyseed"
+			count_subtitle.clear()
+			count_subtitle.append_text("[i]90% felt, 0% vampire, 10% human arm [/i]")
 		elif current_partner.begins_with("Count_C"):
 			count_c.visible = true
 			count_name.text = "Count C von NotDone"
+			count_subtitle.clear()
+			count_subtitle.append_text("[i]Definitely a completed character [/i]")
 		
 		self.dialog_tree = ConversationSingleton.get_conversation(partner)
 		if self.dialog_tree == null:

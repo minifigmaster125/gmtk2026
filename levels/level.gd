@@ -12,8 +12,6 @@ func _ready():
 	assert(next_scene != null)
 	level_timer.timeout.connect(_on_level_timer_timeout)
 	level_timer.start()
-<<<<<<< HEAD
-=======
 
 func _process(delta: float) -> void:
 	var anxiety = GameManager.get_anxiety()
@@ -37,7 +35,3 @@ func _end_level() -> void:
 
 	get_tree().change_scene_to_packed(next_scene)
 	
-
-
-	
->>>>>>> b1da61be2a8dbe60a8dcfc41ec7c99ea293c66d2
