@@ -206,12 +206,8 @@ tile_set = SubResource("TileSet_aoea4")
 position = Vector2(320, 180)
 
 [node name="Count" parent="." unique_id=191791242 instance=ExtResource("3_qn20g")]
-position = Vector2(152, 56)
-script = ExtResource("5_ph1nn")
-up = null
-down = null
-left = null
-right = null
+position = Vector2(168, 73)
+interest_rate = 20
 
 [node name="character_state_machine" type="Node" parent="Count" unique_id=1374812382 node_paths=PackedStringArray("direction", "movement", "goals", "collision", "shuffle", "polling", "focus")]
 script = ExtResource("5_ndcuq")
