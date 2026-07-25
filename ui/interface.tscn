@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://6alu5r5ilodh"]
 
-[ext_resource type="Script" uid="uid://diolpinj0mrby" path="res://ui/interface.tscn.gd" id="1_glb8h"]
-[ext_resource type="PackedScene" uid="uid://ciygg4qvsywqp" path="res://components/anxiety/anxiety_display_container.tscn" id="2_h45ss"]
+[ext_resource type="Script" uid="uid://diolpinj0mrby" path="res://ui/interface.gd" id="1_6ooai"]
+[ext_resource type="PackedScene" uid="uid://ciygg4qvsywqp" path="res://components/anxiety/anxiety_display_container.tscn" id="2_1kkh5"]
 
 [node name="Interface" type="Control" unique_id=1098322984]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_glb8h")
+script = ExtResource("1_6ooai")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1684262430]
 layout_mode = 1
@@ -36,5 +36,5 @@ text = "⏱️ 20:00"
 fit_content = true
 autowrap_mode = 0
 
-[node name="anxiety_display_container" parent="." unique_id=845194437 instance=ExtResource("2_h45ss")]
+[node name="anxiety_display_container" parent="." unique_id=845194437 instance=ExtResource("2_1kkh5")]
 layout_mode = 1
