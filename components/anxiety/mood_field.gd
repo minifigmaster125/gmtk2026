@@ -12,8 +12,8 @@ func build_dynamic_mood_map():
 	var mood_nodes = get_tree().get_nodes_in_group("mood_affecting")
 	for node in mood_nodes:
 		var tf = node.get("transform")
-		var mood_config = node.get("mood_config")
-		if mood_config == "count" and tf:
+		var mood_config: MoodConfig = node.get("mood_config")
+		if mood_config.type == "count" and tf:
 			var xy = pos_to_xy(tf.origin)
 			dynamic_mood_map.set(xy, 2.0)
 			dynamic_mood_map.set(xy + Vector2i(0, 1), 2.0)
