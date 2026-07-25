@@ -3,15 +3,7 @@
 [ext_resource type="TileSet" uid="uid://bpg1vs2hkf2tw" path="res://assets/textures/main_tilset.tres" id="1_ndcuq"]
 [ext_resource type="PackedScene" uid="uid://c34qy1bvchy88" path="res://player/player.tscn" id="1_vc6p7"]
 [ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="3_qn20g"]
-[ext_resource type="Script" uid="uid://dakntcktnmrm5" path="res://Isaac/scripts/npc/character_state_machine.gd" id="5_ndcuq"]
 [ext_resource type="Script" uid="uid://wm6m5im6k8bf" path="res://Isaac/scripts/animations/sprite_directional_animation_component.gd" id="5_ph1nn"]
-[ext_resource type="Script" uid="uid://c4b0e0scbnf1m" path="res://Isaac/scripts/npc/collision_recovery_component.gd" id="6_ph1nn"]
-[ext_resource type="Script" uid="uid://87b428uuxxir" path="res://Isaac/scripts/npc/direction_component.gd" id="7_02wyt"]
-[ext_resource type="Script" uid="uid://1t2nypng8hgr" path="res://Isaac/scripts/npc/focus_bias_component.gd" id="8_gf1ci"]
-[ext_resource type="Script" uid="uid://bku376mfdjmt3" path="res://Isaac/scripts/npc/goal_queue_component.gd" id="9_mihd1"]
-[ext_resource type="Script" uid="uid://cukwqvfmevd4l" path="res://Isaac/scripts/npc/movement_component.gd" id="10_pynlf"]
-[ext_resource type="Script" uid="uid://kwwmwsr8qoxf" path="res://Isaac/scripts/npc/polling_component.gd" id="11_cw75i"]
-[ext_resource type="Script" uid="uid://ckf2pwiq2cw7w" path="res://Isaac/scripts/npc/shuffle_component.gd" id="12_55yqu"]
 
 [node name="Suchaaver" type="Node2D" unique_id=672884036]
 
@@ -26,7 +18,6 @@ tile_map_data = PackedByteArray("AAAAAAYAAAACAAAAAAABAAYAAAACAAAAAAACAAYAAAACAAA
 tile_set = ExtResource("1_ndcuq")
 
 [node name="Player" parent="." unique_id=1713429650 instance=ExtResource("1_vc6p7")]
-position = Vector2(16, 16)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=73753022]
 position = Vector2(320, 180)
@@ -34,37 +25,6 @@ position = Vector2(320, 180)
 [node name="Count" parent="." unique_id=191791242 instance=ExtResource("3_qn20g")]
 position = Vector2(168, 73)
 interest_rate = 20
-
-[node name="character_state_machine" type="Node" parent="Count" unique_id=1374812382 node_paths=PackedStringArray("direction", "movement", "goals", "collision", "shuffle", "polling", "focus")]
-script = ExtResource("5_ndcuq")
-direction = NodePath("../direction_component")
-movement = NodePath("../movement_component")
-goals = NodePath("../goal_queue_component")
-collision = NodePath("../collision_recovery_component")
-shuffle = NodePath("../shuffle_component")
-polling = NodePath("../polling_component")
-focus = NodePath("../focus_bias_component")
-
-[node name="collision_recovery_component" type="Node" parent="Count" unique_id=1718688772]
-script = ExtResource("6_ph1nn")
-
-[node name="direction_component" type="Node" parent="Count" unique_id=645020751]
-script = ExtResource("7_02wyt")
-
-[node name="focus_bias_component" type="Node" parent="Count" unique_id=1019625886]
-script = ExtResource("8_gf1ci")
-
-[node name="goal_queue_component" type="Node" parent="Count" unique_id=1895003697]
-script = ExtResource("9_mihd1")
-
-[node name="movement_component" type="Node" parent="Count" unique_id=1435596771]
-script = ExtResource("10_pynlf")
-
-[node name="polling_component" type="Node" parent="Count" unique_id=1002764638]
-script = ExtResource("11_cw75i")
-
-[node name="shuffle_component" type="Node" parent="Count" unique_id=1903115161]
-script = ExtResource("12_55yqu")
 
 [node name="SpriteDirectionalAnimationComponent" type="Sprite2D" parent="Count" unique_id=886934159 node_paths=PackedStringArray("direction")]
 script = ExtResource("5_ph1nn")
