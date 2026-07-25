@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://dakntcktnmrm5" path="res://Isaac/scripts/npc/character_state_machine.gd" id="4_dsktq"]
 [ext_resource type="Script" uid="uid://c4b0e0scbnf1m" path="res://Isaac/scripts/npc/collision_recovery_component.gd" id="5_si2vq"]
 [ext_resource type="Script" uid="uid://87b428uuxxir" path="res://Isaac/scripts/npc/direction_component.gd" id="6_ex6et"]
-[ext_resource type="Script" path="res://Isaac/scripts/npc/focus_bias_component.gd" id="7_7n2fi"]
 [ext_resource type="Script" uid="uid://bku376mfdjmt3" path="res://Isaac/scripts/npc/goal_queue_component.gd" id="8_xarj2"]
 [ext_resource type="Script" uid="uid://cukwqvfmevd4l" path="res://Isaac/scripts/npc/movement_component.gd" id="9_5nkwq"]
 [ext_resource type="Script" uid="uid://ckf2pwiq2cw7w" path="res://Isaac/scripts/npc/shuffle_component.gd" id="11_vamfc"]
@@ -52,15 +51,14 @@ movement = NodePath("../movement_component")
 goals = NodePath("../goal_queue_component")
 collision = NodePath("../collision_recovery_component")
 shuffle = NodePath("../shuffle_component")
+idle_interval = 0.1
+moving_interval = 4
 
 [node name="collision_recovery_component" type="Node" parent="." unique_id=1746012140]
 script = ExtResource("5_si2vq")
 
 [node name="direction_component" type="Node" parent="." unique_id=234506423]
 script = ExtResource("6_ex6et")
-
-[node name="focus_bias_component" type="Node" parent="." unique_id=540790929]
-script = ExtResource("7_7n2fi")
 
 [node name="goal_queue_component" type="Node" parent="." unique_id=168673157]
 script = ExtResource("8_xarj2")

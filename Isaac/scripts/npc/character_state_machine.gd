@@ -15,11 +15,11 @@ enum State {
 @export var arrival_distance := 4.0
 
 @export var target_reset_interval := 4.0
-@export var idle_interval := 5.0
-@export var move_interval := 5.0
-@export var dodging_interval := 4
+@export var idle_interval := .5
+@export var moving_interval := 3
+@export var dodging_interval := 2
 
-var time_since = {"target_reset":0.0, "idle":0.0, "move":0.0, "directional_change":0.0}
+var time_since = {"target_reset":0.0, "idle":0.0, "moving":0.0, "directional_change":0.0}
 
 var state := State.IDLE
 var current_goal := Vector2.INF
@@ -27,47 +27,47 @@ var current_goal := Vector2.INF
 var dodging = false #reduces jitter on collision
 
 func _process(delta):
-	_update_time_since(delta)
 	collision.update(delta)
 	
 	if time_since["target_reset"] > target_reset_interval:
 		current_goal = goals.peek()
 		time_since["target_reset"] = 0.0
+	else:
+		time_since["target_reset"] += delta
 
-	print("target global position: " + var_to_str(goals.peek()))
+	time_since["directional_change"] += delta
 
 
 	match state:
 
 		State.IDLE:
+			time_since["idle"] += delta
 			_idle_state()
 
 		State.MOVING:
+			time_since["moving"] += delta
 			_moving_state(delta)
-
-func _update_time_since(delta):
-	for key in time_since:
-		time_since[key] += delta
-
+	# print("time_since: " + var_to_str(time_since))
 
 func _idle_state():
-	print("IDLE")
+	# print("IDLE")
 
 	# if goals.has_goal():
-	if time_since["moving"] > move_interval:
+	if time_since["idle"] > idle_interval:
 		current_goal = goals.peek()
 		state = State.MOVING
 		time_since["moving"] = 0.0
-
+		time_since["idle"] = 0.0
 
 func _moving_state(delta : float):
-	print("MOVING")
+	# print("MOVING")
 	# if current_goal == Vector2.INF:
-	if time_since["idle"] > idle_interval:
+	if time_since["moving"] > moving_interval:
 		state = State.IDLE
+		time_since["moving"] = 0.0
 		time_since["idle"] = 0.0
 		return
-	print("hasgoal: " + var_to_str(goals.has_goal()))
+	# print("hasgoal: " + var_to_str(goals.has_goal()))
 
 	var body := get_parent() as CharacterBody2D
 
@@ -98,21 +98,10 @@ func _moving_state(delta : float):
 	elif current_cell != goal_cell:
 		step = shuffle.choose_step(current_cell, goal_cell)
 		
-	print("name: " + get_parent().name)
-	print("step: " + var_to_str(step))
-	print("dodging: " + var_to_str(dodging))
-	print("has_goal " + var_to_str(goals.has_goal()))
-
-	# var step := direction.direction_vector()
-	# if body.get_slide_collision_count() > 0:
-	# 		step = shuffle.direction_on_collision(direction.direction_vector())
-
-	# if time_since["directional_change"] > directional_change_interval:
-	# 	time_since["directional_change"] = 0.0
-	# 	if body.get_slide_collision_count() > 0:
-	# 		step = shuffle.direction_on_collision(direction.direction_vector())
-	# 	else:
-	# 		step = shuffle.choose_step(current_cell, goal_cell)
+	# print("name: " + get_parent().name)
+	# print("step: " + var_to_str(step))
+	# print("dodging: " + var_to_str(dodging))
+	# print("has_goal " + var_to_str(goals.has_goal()))
 		
 
 	direction.set_from_vector(step)
@@ -123,9 +112,3 @@ func _moving_state(delta : float):
 	if body.get_slide_collision_count() > 0:
 		collision.record_collision(step)
 	shuffle.toggle()
-
-		
-		
-#goals.enqueue(Vector2(320, 96))
-#goals.enqueue(Vector2(320, 224))
-#goals.enqueue(Vector2(96, 224))

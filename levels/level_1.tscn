@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://c34qy1bvchy88" path="res://player/player.tscn" id="3_bt44k"]
 [ext_resource type="TileSet" uid="uid://bclogxhrugtlt" path="res://components/anxiety/mood_map_tileset.tres" id="3_n46q3"]
 [ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="4_kx6l7"]
+[ext_resource type="PackedScene" uid="uid://cjrvdsm7kxb3x" path="res://waiter/waiter.tscn" id="7_gwceb"]
 
-[node name="Level1" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_vn7o3")]
+[node name="Level2" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_vn7o3")]
 player = NodePath("Player")
 next_scene = ExtResource("2_btoec")
 
@@ -39,12 +40,31 @@ character_name = "Count_B"
 [node name="Count" parent="." index="7" unique_id=191791242 groups=["mood_affecting"] instance=ExtResource("4_kx6l7")]
 position = Vector2(448, 192)
 
-[node name="goal_queue_component" parent="Count" index="8" unique_id=168673157 node_paths=PackedStringArray("target_nodes")]
+[node name="goal_queue_component" parent="Count" index="7" unique_id=168673157 node_paths=PackedStringArray("target_nodes")]
 target_nodes = [NodePath("../../Player")]
 
 [node name="MoodField" parent="." index="8" unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer")]
 visible = true
 mood_map_layer = NodePath("../MoodMapLayer")
 
+[node name="Marker1" type="Marker2D" parent="." index="9" unique_id=1111866263]
+position = Vector2(177, 66)
+
+[node name="Marker2" type="Marker2D" parent="." index="10" unique_id=772138462]
+position = Vector2(458, 66)
+
+[node name="Marker3" type="Marker2D" parent="." index="11" unique_id=1583340602]
+position = Vector2(471, 287)
+
+[node name="Marker4" type="Marker2D" parent="." index="12" unique_id=1127878185]
+position = Vector2(97, 286)
+
+[node name="Waiter" parent="." index="13" unique_id=924037808 instance=ExtResource("7_gwceb")]
+position = Vector2(134, 171)
+
+[node name="goal_queue_component" parent="Waiter" index="6" unique_id=168673157 node_paths=PackedStringArray("target_nodes")]
+target_nodes = [NodePath("../../Marker1"), NodePath("../../Marker2"), NodePath("../../Marker3"), NodePath("../../Marker4")]
+
 [editable path="Player"]
 [editable path="Count"]
+[editable path="Waiter"]
