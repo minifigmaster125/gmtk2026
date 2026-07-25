@@ -11,27 +11,27 @@ settings:
 
 contexts:
   main:
-    - match: '\s*#.*$'
-      scope: comment.line.number-sign
+	- match: '\s*#.*$'
+	  scope: comment.line.number-sign
 
-    - match: '\s*~([^~\n]+)~'
-      captures:
-        0: constant.other.symbol
-        1: markup.italic
+	- match: '\s*~([^~\n]+)~'
+	  captures:
+		0: constant.other.symbol
+		1: markup.italic
 
-    - match: '^(\s*)(.+?)(::)(.*)'
-      captures:
-        1: text.whitespace
-        2: variable.parameter
-        3: punctuation.separator.key-value
-        4: text.whitespace
+	- match: '^(\s*)(.+?)(::)(.*)'
+	  captures:
+		1: text.whitespace
+		2: variable.parameter
+		3: punctuation.separator.key-value
+		4: text.whitespace
 
-    - match: '^(\s*)(\?)(.*)'
-      captures:
-        1: text.whitespace
-        2: markup.italic
-        3: string.other
+	- match: '^(\s*)(\?)(.*)'
+	  captures:
+		1: text.whitespace
+		2: markup.italic
+		3: string.other
 
-    # Catch-all: italicize any leftover text
-    - match: '.+'
-      scope: markup.italic
+	# Catch-all: italicize any leftover text
+	- match: '.+'
+	  scope: markup.italic

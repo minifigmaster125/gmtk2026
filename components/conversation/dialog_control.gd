@@ -78,6 +78,8 @@ func _exit_pressed():
 	# Store conversation history in the node, or add a TERMINUS node for storage
 	if self.dialog_tree == null:
 		self.dialog_tree = DialogState.create("TERMINUS")
+		GameManager.conversation_completed(self.current_partner)
+		
 	self.dialog_tree.history = conversation
 	ConversationSingleton.all_trees.trees[current_partner] = self.dialog_tree
 	clear_ui()

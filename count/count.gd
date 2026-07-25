@@ -9,6 +9,9 @@ extends CharacterBody2D
 @onready var interest_progress := $ProgressBar as ProgressBar
 
 @export var mood_config: MoodConfig
+@export var DEBUG_skip_interest: bool = false
+
+@export var conversation_stage_limit: int = 2
 
 var dialog_scene = preload("res://components/conversation/dialog_control.tscn")
 var dialog_instance = null
@@ -23,10 +26,12 @@ func _ready() -> void:
 
 func _process(delta: float):
 	if _interested:
-		if dialog_instance == null and interest_progress.value == interest_progress.max_value:
+		if dialog_instance == null and (DEBUG_skip_interest or interest_progress.value == interest_progress.max_value):
 			dialog_instance = dialog_scene.instantiate()
 			get_tree().root.add_child(dialog_instance)
-			dialog_instance.recieve_conversing_event(true, character_name)
+			GameManager.get_conversation_stage(character_name)
+			var stage = min(GameManager.get_conversation_stage(character_name), conversation_stage_limit)
+			dialog_instance.recieve_conversing_event(true, character_name + str(stage))
 
 		interest_progress.value += interest_rate * delta
 		GameManager.set_interaction_metric(character_name, interest_progress.value)
