@@ -5,4 +5,3 @@ class_name Level
 
 func _ready():
 	level_timer.start()
-

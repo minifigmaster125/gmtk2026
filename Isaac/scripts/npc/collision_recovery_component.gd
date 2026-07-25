@@ -1,7 +1,7 @@
 extends Node
 class_name CollisionRecoveryComponent
 
-@export var reset_delay := 0.25
+@export var reset_delay := 1
 
 var collision_dir := Vector2.ZERO
 var timer := 0.0
