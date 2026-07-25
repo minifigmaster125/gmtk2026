@@ -6,13 +6,36 @@
 [ext_resource type="PackedScene" uid="uid://c34qy1bvchy88" path="res://player/player.tscn" id="3_bt44k"]
 [ext_resource type="TileSet" uid="uid://bclogxhrugtlt" path="res://components/anxiety/mood_map_tileset.tres" id="3_n46q3"]
 [ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="4_kx6l7"]
+[ext_resource type="Texture2D" uid="uid://f3xyoxdv1tk8" path="res://assets/textures/texture_atlas.png" id="7_gwceb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l53as"]
+atlas = ExtResource("7_gwceb")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sh2vg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l53as")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level1" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_vn7o3")]
 player = NodePath("Player")
 next_scene = ExtResource("2_btoec")
 
+[node name="Interface" parent="UI" parent_id_path=PackedInt32Array(1736348383) index="0" unique_id=1098322984]
+anchors_preset = 15
+anchor_bottom = 1.0
+
+[node name="CoverRect" parent="UI" parent_id_path=PackedInt32Array(1736348383) index="1" unique_id=337353824]
+visible = true
+
 [node name="LevelTimer" parent="." index="1" unique_id=1776961197]
-wait_time = 20.0
+wait_time = 60.0
 one_shot = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="2" unique_id=1439520737]
@@ -36,15 +59,19 @@ _mood_field = NodePath("../MoodField")
 position = Vector2(320, 96)
 character_name = "Count_B"
 
-[node name="Count" parent="." index="7" unique_id=191791242 groups=["mood_affecting"] instance=ExtResource("4_kx6l7")]
-position = Vector2(448, 192)
+[node name="AnimatedSprite2D" parent="CountB" index="12" unique_id=167535803]
+sprite_frames = SubResource("SpriteFrames_sh2vg")
 
-[node name="goal_queue_component" parent="Count" index="8" unique_id=168673157 node_paths=PackedStringArray("target_nodes")]
+[node name="CountA" parent="." index="7" unique_id=191791242 groups=["mood_affecting"] instance=ExtResource("4_kx6l7")]
+position = Vector2(448, 192)
+character_name = "Count_A"
+
+[node name="goal_queue_component" parent="CountA" index="8" unique_id=168673157 node_paths=PackedStringArray("target_nodes")]
 target_nodes = [NodePath("../../Player")]
 
 [node name="MoodField" parent="." index="8" unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer")]
-visible = true
 mood_map_layer = NodePath("../MoodMapLayer")
 
 [editable path="Player"]
-[editable path="Count"]
+[editable path="CountB"]
+[editable path="CountA"]

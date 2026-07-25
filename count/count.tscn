@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://kg0urtaf46hp"]
 
-[ext_resource type="Texture2D" uid="uid://ciuxyaoktugh5" path="res://icon.svg" id="1_31cna"]
 [ext_resource type="Script" uid="uid://cp0t3ep36dmqr" path="res://count/count.gd" id="1_xplku"]
+[ext_resource type="Script" uid="uid://dfxagt3t46gbe" path="res://components/anxiety/mood_config.gd" id="2_o8fo6"]
+[ext_resource type="Texture2D" uid="uid://csxxdh8lux63d" path="res://assets/textures/legal_count.png" id="3_5q66o"]
 [ext_resource type="Script" uid="uid://dakntcktnmrm5" path="res://Isaac/scripts/npc/character_state_machine.gd" id="3_hk5s0"]
 [ext_resource type="Script" uid="uid://c4b0e0scbnf1m" path="res://Isaac/scripts/npc/collision_recovery_component.gd" id="4_5q66o"]
 [ext_resource type="Script" uid="uid://87b428uuxxir" path="res://Isaac/scripts/npc/direction_component.gd" id="5_sh2vg"]
@@ -10,7 +11,7 @@
 [ext_resource type="Script" uid="uid://cukwqvfmevd4l" path="res://Isaac/scripts/npc/movement_component.gd" id="8_isry1"]
 [ext_resource type="Script" uid="uid://kwwmwsr8qoxf" path="res://Isaac/scripts/npc/polling_component.gd" id="9_o0sm2"]
 [ext_resource type="Script" uid="uid://ckf2pwiq2cw7w" path="res://Isaac/scripts/npc/shuffle_component.gd" id="10_w5tcn"]
-[ext_resource type="Script" uid="uid://dfxagt3t46gbe" path="res://components/anxiety/mood_config.gd" id="2_o8fo6"]
+[ext_resource type="Texture2D" uid="uid://f3xyoxdv1tk8" path="res://assets/textures/texture_atlas.png" id="12_sh2vg"]
 
 [sub_resource type="Resource" id="Resource_g12r7"]
 script = ExtResource("2_o8fo6")
@@ -18,10 +19,25 @@ type = "count"
 metadata/_custom_type_script = "uid://dfxagt3t46gbe"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aoea4"]
-size = Vector2(136.53334, 136.53334)
+size = Vector2(32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64dco"]
 size = Vector2(80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w65jb"]
+atlas = ExtResource("12_sh2vg")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aoea4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w65jb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Count" type="CharacterBody2D" unique_id=191791242]
 script = ExtResource("1_xplku")
@@ -30,14 +46,13 @@ mood_config = SubResource("Resource_g12r7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=867446343]
 position = Vector2(16, 16)
-scale = Vector2(0.1171875, 0.1171875)
 shape = SubResource("RectangleShape2D_aoea4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1175152472]
-modulate = Color(0.93386513, 0.4550972, 0.4369269, 1)
+visible = false
 position = Vector2(16, 16)
-scale = Vector2(0.1171875, 0.1171875)
-texture = ExtResource("1_31cna")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_5q66o")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=385662585]
 texture_filter = 1
@@ -84,3 +99,8 @@ script = ExtResource("9_o0sm2")
 
 [node name="shuffle_component" type="Node" parent="." unique_id=29718513]
 script = ExtResource("10_w5tcn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=167535803]
+texture_filter = 1
+position = Vector2(16, 16)
+sprite_frames = SubResource("SpriteFrames_aoea4")

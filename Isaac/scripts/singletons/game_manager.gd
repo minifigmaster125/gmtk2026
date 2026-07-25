@@ -3,13 +3,15 @@ extends Node
 const FILE := "user://save.dat"
 var states:Dictionary = {}
 var time:float = 360.0
-var anxiety:float = 80.0
+var anxiety:float = 800.0
 
 var mood:float = 1.0
 
 var mood_breakdown = []
 
 var conversation_stages:Dictionary = {}
+var target_name = "CountA"
+var current_level : Level
 
 func _ready():
 	if FileAccess.file_exists(FILE):
@@ -64,9 +66,12 @@ func conversation_completed(convo:String):
 	var name = convo.substr(0, convo.length()-1)
 	var stage = convo.substr(convo.length()-1, convo.length()).to_int()
 	self.set_conversation_stage(name, stage+1)
+	if name == "Count_A":
+		current_level.end_level()
 
 func save():
 	FileAccess.open(FILE, FileAccess.WRITE).store_var(states)
+
 	
 #example usage:
 #GameManager.<wtv function>
