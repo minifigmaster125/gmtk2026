@@ -6,6 +6,12 @@ extends Control
 
 @onready var buttonBox: Container = $options
 
+@onready var count_name: Label = $name
+
+@onready var count_a: TextureRect = $ada
+@onready var count_b: TextureRect = $orlok
+@onready var count_c: TextureRect = $count_c
+
 var conversation = []
 
 var dialog_tree: DialogState
@@ -66,6 +72,16 @@ func recieve_conversing_event(conversing: bool, partner: String):
 	if conversing:
 		# Partner is the person who was looked at
 		current_partner = partner
+		if current_partner.begins_with("Count_A"):
+			count_a.visible = true
+			count_name.text = "Count Ada von Sunshine"
+		elif current_partner.begins_with("Count_B"):
+			count_b.visible = true
+			count_name.text = "Count Orlok von Poppyseed"
+		elif current_partner.begins_with("Count_C"):
+			count_c.visible = true
+			count_name.text = "Count C von NotDone"
+		
 		self.dialog_tree = ConversationSingleton.get_conversation(partner)
 		if self.dialog_tree == null:
 			clear_ui()

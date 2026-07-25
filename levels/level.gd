@@ -29,6 +29,7 @@ func _end_level() -> void:
 	player.process_mode = Node.PROCESS_MODE_DISABLED
 
 	var tween: Tween = create_tween()
+	cover_rect.visible = true
 	tween.tween_property(cover_rect, "modulate:a", 1., 1.)
 	await tween.finished
 

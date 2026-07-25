@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dekeuetigcvd5" path="res://components/conversation/dialog_control.gd" id="1_kei4r"]
 [ext_resource type="Texture2D" uid="uid://dowphbjfi4ut2" path="res://assets/images/sunny.png" id="2_kwecx"]
 [ext_resource type="Texture2D" uid="uid://b2361sprifknm" path="res://assets/images/puppet.png" id="2_qxr4x"]
+[ext_resource type="Texture2D" uid="uid://cgfhsw0n4bfsc" path="res://assets/images/count.png" id="4_vcx14"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt76e"]
 bg_color = Color(0.537833, 0.53, 1, 0.278431)
@@ -18,7 +19,20 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kei4r")
 
-[node name="sunny" type="TextureRect" parent="." unique_id=406952656]
+[node name="name" type="Label" parent="." unique_id=934878681]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -124.0
+offset_top = -24.0
+offset_bottom = -1.0
+grow_horizontal = 0
+theme_override_constants/outline_size = 16
+text = "Title of Location"
+
+[node name="ada" type="TextureRect" parent="." unique_id=406952656]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -31,7 +45,7 @@ texture = ExtResource("2_kwecx")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="portrait" type="TextureRect" parent="." unique_id=2123965217]
+[node name="orlok" type="TextureRect" parent="." unique_id=2123965217]
 visible = false
 layout_mode = 1
 anchors_preset = 1
@@ -42,6 +56,21 @@ offset_right = 240.0
 offset_bottom = 180.0
 grow_horizontal = 0
 texture = ExtResource("2_qxr4x")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="count_c" type="TextureRect" parent="." unique_id=409529826]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -0.51049805
+offset_top = -140.0
+offset_right = 240.0
+offset_bottom = 180.0
+grow_horizontal = 0
+texture = ExtResource("4_vcx14")
 expand_mode = 3
 stretch_mode = 4
 
