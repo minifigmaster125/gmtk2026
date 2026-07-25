@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cay4i0o44ar6r"]
+
+[ext_resource type="Script" uid="uid://b43oiwtlbpbb7" path="res://levels/level.gd" id="1_t7iv1"]
+[ext_resource type="PackedScene" uid="uid://6alu5r5ilodh" path="res://ui/interface.tscn.tscn" id="2_2nifc"]
+
+[node name="Level" type="Node2D" unique_id=339098249]
+script = ExtResource("1_t7iv1")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1736348383]
+
+[node name="Interface" parent="UI" unique_id=1098322984 node_paths=PackedStringArray("level_timer") instance=ExtResource("2_2nifc")]
+level_timer = NodePath("../../LevelTimer")
+
+[node name="LevelTimer" type="Timer" parent="." unique_id=1776961197]
+unique_name_in_owner = true
+wait_time = 80.0
