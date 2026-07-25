@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpl7igd5t5s5t"
-path="res://.godot/imported/top_down_090_Pixeled.png-d5375d69b75670771970be2af0c48ac5.ctex"
+uid="uid://bg15aq8wspctw"
+path="res://.godot/imported/CandleSet2.png-26520b11bdb3999ff0fcc29b4f937c45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Isaac/pixel_assets/MiscDoodads/top_down_090_Pixeled.png"
-dest_files=["res://.godot/imported/top_down_090_Pixeled.png-d5375d69b75670771970be2af0c48ac5.ctex"]
+source_file="res://Isaac/pixel_assets/MiscDoodads/CandleSet2.png"
+dest_files=["res://.godot/imported/CandleSet2.png-26520b11bdb3999ff0fcc29b4f937c45.ctex"]
 
 [params]
 
