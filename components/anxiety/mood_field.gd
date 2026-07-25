@@ -1,39 +1,33 @@
 class_name MoodField extends Node2D
 
 @export var debug_display := false
+@export var mood_map_layer : TileMapLayer
 
 const CELL_SIZE = 32
 
-var mood_map := [[1.0]]
+var dynamic_mood_map: Dictionary
 
-func build_mood_map():
-	self.mood_map =	[
-		[0.5, 0.5, 0.5, 1.0, 1.0, 1.0, 1.0],
-		[0.5, 0.5, 0.5, 1.0, 1.0, 1.0, 1.0],
-		[1.0, 1.0, 1.0, .75, 1.0, 1.0, 1.0],
-		[-1., -1., -1., .75, 1.0, 1.0, 1.0],
-	]
-
-func _ready() -> void:
-	build_mood_map()
+func build_dynamic_mood_map():
+	dynamic_mood_map.clear()
 	var mood_nodes = get_tree().get_nodes_in_group("mood_affecting")
 	for node in mood_nodes:
 		var tf = node.get("transform")
 		var mood_config = node.get("mood_config")
 		if mood_config == "count" and tf:
 			var xy = pos_to_xy(tf.origin)
-			mood_map[xy.y-1][xy.x-1] = 1.5
-			mood_map[xy.y-1][xy.x] = 2.0
-			mood_map[xy.y-1][xy.x+1] = 1.5
-			mood_map[xy.y][xy.x-1] = 2.0
-			mood_map[xy.y][xy.x] = 2.0
-			mood_map[xy.y][xy.x+1] = 2.0
-			mood_map[xy.y+1][xy.x-1] = 1.5
-			mood_map[xy.y+1][xy.x] = 2.0
-			mood_map[xy.y+1][xy.x+1] = 1.5
-	
+			dynamic_mood_map.set(xy, 2.0)
+			dynamic_mood_map.set(xy + Vector2i(0, 1), 2.0)
+			dynamic_mood_map.set(xy + Vector2i(0, -1), 2.0)
+			dynamic_mood_map.set(xy + Vector2i(1, 0), 2.0)
+			dynamic_mood_map.set(xy + Vector2i(-1, 0), 2.0)
+			dynamic_mood_map.set(xy + Vector2i(1, 1), 1.0)
+			dynamic_mood_map.set(xy + Vector2i(1, -1), 1.0)
+			dynamic_mood_map.set(xy + Vector2i(-1, 1), 1.0)
+			dynamic_mood_map.set(xy + Vector2i(-1, -1), 1.0)
+			
+func _ready() -> void:
+	build_dynamic_mood_map()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 	
@@ -45,12 +39,26 @@ func pos_to_xy(pos: Vector2) -> Vector2i:
 	@warning_ignore("narrowing_conversion")
 	return Vector2i((pos.x - 8.0)/CELL_SIZE, (pos.y - 8.0)/CELL_SIZE)
 
+func tile_id_to_mood(id: int) -> float:
+	match id:
+		0:
+			return -1.0
+		1:
+			return .5
+		2:
+			return 1.0
+		3:
+			return 2.0
+		_:
+			return 1.0
+
 func get_mood_at(pos: Vector2i) -> float:
-	if pos.y < 0 or pos.y >= mood_map.size():
-		return 1.0
-	if pos.x < 0 or pos.x >= mood_map[pos.y].size():
-		return 1.0
-	return mood_map[pos.y][pos.x]
+	var base_value := 1.0
+	if mood_map_layer:
+		base_value = tile_id_to_mood(mood_map_layer.get_cell_atlas_coords(pos).x)
+	if pos in dynamic_mood_map:
+		return max(dynamic_mood_map.get(pos), base_value)
+	return base_value
 
 ## DEBUG DISPLAY FUNCTIONS ##
 
