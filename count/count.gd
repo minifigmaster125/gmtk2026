@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export_range(0, 20) var interest_rate := 20
 @export var character_name := "Count"
 @export var interest = 0
+@export var portrait : Texture2D
 
 @onready var interest_area = $InterestArea2D as Area2D
 @onready var interest_progress := $ProgressBar as ProgressBar
@@ -22,15 +23,17 @@ func _ready() -> void:
 
 func _process(delta: float):
 	if _interested:
+		if dialog_instance == null and interest_progress.value == interest_progress.max_value:
+			dialog_instance = dialog_scene.instantiate()
+			get_tree().root.add_child(dialog_instance)
+			dialog_instance.recieve_conversing_event(true, character_name)
+
 		interest_progress.value += interest_rate * delta
 		GameManager.set_interaction_metric(character_name, interest_progress.value)
 
 func _on_body_entered(body: Node2D):
 	if body is Player:
 		_interested = true
-		dialog_instance = dialog_scene.instantiate()
-		get_tree().root.add_child(dialog_instance)
-		dialog_instance.recieve_conversing_event(true, "Count_A")
 
 func _on_body_exited(body: Node2D):
 	if body is Player:

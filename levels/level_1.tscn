@@ -25,13 +25,18 @@ tile_set = ExtResource("3_n46q3")
 position = Vector2(32, 32)
 _mood_field = NodePath("../MoodField")
 
-[node name="Count" parent="." index="6" unique_id=191791242 groups=["mood_affecting"] instance=ExtResource("4_kx6l7")]
+[node name="CountB" parent="." index="6" unique_id=91041238 groups=["mood_affecting"] instance=ExtResource("4_kx6l7")]
+position = Vector2(320, 96)
+character_name = "Count_B"
+
+[node name="Count" parent="." index="7" unique_id=191791242 groups=["mood_affecting"] instance=ExtResource("4_kx6l7")]
 position = Vector2(448, 192)
 
 [node name="goal_queue_component" parent="Count" index="8" unique_id=168673157 node_paths=PackedStringArray("target_nodes")]
 target_nodes = [NodePath("../../Player")]
 
-[node name="MoodField" parent="." index="7" unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer")]
+[node name="MoodField" parent="." index="8" unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer")]
+visible = true
 mood_map_layer = NodePath("../MoodMapLayer")
 
 [editable path="Player"]

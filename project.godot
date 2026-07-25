@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*uid://jn6hhiu1uea0"
-<<<<<<<HEADGameManager="*uid://jn6hhiu1uea0"
 ConversationSingleton="*uid://dkdalsaipt0yh"
+MoodUtil="*uid://e8cknmvaq75v"
 
 [display]
 
