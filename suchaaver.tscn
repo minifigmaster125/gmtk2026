@@ -193,7 +193,6 @@ sources/0 = SubResource("TileSetAtlasSource_qn20g")
 sources/1 = SubResource("TileSetAtlasSource_2phry")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ph1nn"]
-load_path = "res://.godot/imported/Wall.png-0e77142e50d91f81edceec9ca6e736cd.ctex"
 
 [node name="Suchaaver" type="Node2D" unique_id=672884036]
 
@@ -202,7 +201,7 @@ position = Vector2(16, 16)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=74225508]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAAAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAUAAAAAAAAAAAAAAAcAAAABAAAAAAABAAcAAAABAAAAAAACAAcAAAABAAAAAAADAAcAAAABAAAAAAAEAAcAAAABAAAAAAAFAAcAAAABAAAAAAAGAAcAAAABAAAAAAAHAAcAAAABAAAAAAAIAAcAAAABAAAAAAAJAAcAAAABAAAAAAAKAAcAAAABAAAAAAALAAcAAAABAAAAAAAMAAcAAAABAAAAAAANAAYAAAABAAAAAGANAAUAAAABAAAAAGANAAQAAAABAAAAAGANAAMAAAABAAAAAGANAAIAAAABAAAAAGANAAEAAAABAAAAAGANAAAAAAABAAAAAGA=")
+tile_map_data = PackedByteArray("AAAAAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAUAAAAAAAAAAAAAAAcAAAABAAAAAAABAAcAAAABAAAAAAACAAcAAAABAAAAAAADAAcAAAABAAAAAAAEAAcAAAABAAAAAAAGAAcAAAABAAAAAAAHAAcAAAABAAAAAAAIAAcAAAABAAAAAAAJAAcAAAABAAAAAAAKAAcAAAABAAAAAAALAAcAAAABAAAAAAAMAAcAAAABAAAAAAAFAAcAAAABAAAAAAANAAUAAAABAAAAAGANAAYAAAABAAAAAGANAAQAAAABAAAAAGANAAMAAAABAAAAAGANAAIAAAABAAAAAGANAAEAAAABAAAAAGANAAAAAAABAAAAAGA=")
 tile_set = SubResource("TileSet_aoea4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=73753022]
@@ -221,6 +220,7 @@ collision = NodePath("../collision_recovery_component")
 shuffle = NodePath("../shuffle_component")
 polling = NodePath("../polling_component")
 focus = NodePath("../focus_bias_component")
+arrival_distance = 3.0
 
 [node name="collision_recovery_component" type="Node" parent="Count" unique_id=1718688772]
 script = ExtResource("6_ph1nn")
@@ -231,8 +231,9 @@ script = ExtResource("7_02wyt")
 [node name="focus_bias_component" type="Node" parent="Count" unique_id=1019625886]
 script = ExtResource("8_gf1ci")
 
-[node name="goal_queue_component" type="Node" parent="Count" unique_id=1895003697]
+[node name="goal_queue_component" type="Node" parent="Count" unique_id=1895003697 node_paths=PackedStringArray("target_nodes")]
 script = ExtResource("9_mihd1")
+target_nodes = [NodePath("../../Player")]
 
 [node name="movement_component" type="Node" parent="Count" unique_id=1435596771]
 script = ExtResource("10_pynlf")

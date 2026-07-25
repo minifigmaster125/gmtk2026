@@ -15,6 +15,7 @@ enum State {
 @export var focus: FocusBiasComponent
 
 @export var arrival_distance := 4.0
+@export var target_reset_time := 4.0
 
 var state := State.IDLE
 var current_goal := Vector2.INF
@@ -22,6 +23,10 @@ var current_goal := Vector2.INF
 
 func _process(delta):
 	collision.update(delta)
+
+	if polling.update(delta):
+		goals.clear_queue()
+		goals.queue_targets()
 
 	match state:
 
@@ -33,21 +38,21 @@ func _process(delta):
 
 
 func _idle_state():
-
+	# print("IDLE")
 	if polling.update(0):
 		pass # Placeholder for expensive AI/pathfinding updates
 
 	if goals.has_goal():
 		current_goal = goals.peek()
 		state = State.MOVING
-
+	#print("target global position: " + var_to_str(goals.peek().global_position))
 
 func _moving_state():
-
+	# print("MOVING")
 	if current_goal == Vector2.INF:
 		state = State.IDLE
 		return
-
+	# print("hasgoal: " + var_to_str(goals.has_goal()))
 	# Apply optional focus bias
 	if focus:
 		current_goal = focus.choose(current_goal)
@@ -57,11 +62,12 @@ func _moving_state():
 	# Arrived?
 	if body.global_position.distance_to(current_goal) <= arrival_distance:
 		goals.pop_first()
-
+	
 		if goals.has_goal():
 			current_goal = goals.peek()
 		else:
-			current_goal = Vector2.INF
+			goals.queue_targets()
+			# current_goal = Vector2.INF
 			movement.stop()
 			state = State.IDLE
 		return
@@ -76,6 +82,7 @@ func _moving_state():
 	movement.move_direction(step)
 
 	# Collision recovery
+	print("slide_collision_count: " + var_to_str(body.get_slide_collision_count()))
 	if body.get_slide_collision_count() > 0:
 		collision.record_collision(step)
 		shuffle.toggle()

@@ -2,6 +2,14 @@ extends Node
 class_name GoalQueueComponent
 
 var queue : Array[Vector2] = []
+@export var target_nodes : Array[Node2D] = []
+
+func _ready():
+	queue_targets()
+
+func queue_targets():
+	for target_node in target_nodes:
+		enqueue(target_node.global_position)
 
 func enqueue(goal: Vector2):
 	queue.push_back(goal)
