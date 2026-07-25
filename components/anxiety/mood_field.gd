@@ -60,7 +60,7 @@ func get_mood_breakdown_at(pos: Vector2i) -> Variant:
 		base_value = tile_id_to_mood(mood_map_layer.get_cell_atlas_coords(pos).x)
 		result.append({name="Environment", value=base_value})
 	if pos in dynamic_mood_map:
-		result.append({name="Count", value=dynamic_mood_map.get(pos)})
+		result.append({name="Count Nearby", value=dynamic_mood_map.get(pos)})
 	return result
 
 func get_mood_at(pos: Vector2i) -> float:

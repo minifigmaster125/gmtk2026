@@ -36,6 +36,3 @@ func end_level() -> void:
 
 	get_tree().change_scene_to_packed(next_scene)
 	
-
-
-	

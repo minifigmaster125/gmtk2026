@@ -25,11 +25,33 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -124.0
-offset_top = -24.0
-offset_bottom = -1.0
+offset_top = -40.0
+offset_bottom = -17.0
 grow_horizontal = 0
 theme_override_constants/outline_size = 16
 text = "Title of Location"
+
+[node name="subtitle" type="RichTextLabel" parent="." unique_id=255199249]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -179.0
+offset_top = -18.0
+offset_bottom = -1.0
+grow_horizontal = 0
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+bbcode_enabled = true
+text = "[i]text [/i]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
 
 [node name="ada" type="TextureRect" parent="." unique_id=406952656]
 visible = false
