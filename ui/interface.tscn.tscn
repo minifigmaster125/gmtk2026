@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://6alu5r5ilodh"]
 
 [ext_resource type="Script" uid="uid://diolpinj0mrby" path="res://ui/interface.tscn.gd" id="1_glb8h"]
+[ext_resource type="PackedScene" uid="uid://ciygg4qvsywqp" path="res://components/anxiety/anxiety_display_container.tscn" id="2_h45ss"]
 
 [node name="Interface" type="Control" unique_id=1098322984]
 layout_mode = 3
@@ -34,3 +35,6 @@ layout_mode = 2
 text = "⏱️ 20:00"
 fit_content = true
 autowrap_mode = 0
+
+[node name="anxiety_display_container" parent="." unique_id=845194437 instance=ExtResource("2_h45ss")]
+layout_mode = 1

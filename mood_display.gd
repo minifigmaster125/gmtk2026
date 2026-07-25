@@ -1,8 +1,8 @@
 extends VBoxContainer
 
-# Called when the node enters the scene tree for the first time.
+var label_scene = preload("res://components/anxiety/mood_breakdown_label.tscn")
+
 func _ready() -> void:
-	pass # Replace with function body.
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,10 +12,8 @@ func _process(delta: float) -> void:
 		n.queue_free()
 	var breakdown = GameManager.get_mood_breakdown()
 	for b in breakdown:
-		var lbl = Label.new()
+		var lbl = label_scene.instantiate()
 		lbl.text = b.name
 		lbl.add_theme_color_override("font_color", MoodUtil.mood_color(b.value))
-		lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		self.add_child(lbl)
-		
 		

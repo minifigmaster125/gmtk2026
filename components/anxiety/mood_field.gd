@@ -1,6 +1,5 @@
 class_name MoodField extends Node2D
 
-@export var debug_display := false
 @export var mood_map_layer : TileMapLayer
 
 const CELL_SIZE = 32
@@ -38,7 +37,7 @@ func update_mood(player_position: Vector2):
 
 func pos_to_xy(pos: Vector2) -> Vector2i:
 	@warning_ignore("narrowing_conversion")
-	return Vector2i((pos.x - 8.0)/CELL_SIZE, (pos.y - 8.0)/CELL_SIZE)
+	return Vector2i(pos.x/CELL_SIZE, pos.y/CELL_SIZE)
 
 func tile_id_to_mood(id: int) -> float:
 	match id:
@@ -73,12 +72,10 @@ func get_mood_at(pos: Vector2i) -> float:
 
 ## DEBUG DISPLAY FUNCTIONS ##
 
-var grid_size := Vector2i(8, 5)
+@export var grid_size := Vector2i(20, 20)
 
 # queue_redraw() to refresh
 func _draw():
-	if not debug_display:
-		return
 	for y in grid_size.y:
 		for x in grid_size.x:
 			var t = adjust_value(get_mood_at(Vector2i(x, y)))
