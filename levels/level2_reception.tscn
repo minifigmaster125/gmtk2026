@@ -36,6 +36,7 @@ animations = [{
 [node name="Level2" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_wj3gv")]
 player = NodePath("Player")
 next_scene = ExtResource("2_5hmib")
+level_num = 3
 
 [node name="Interface" parent="UI" parent_id_path=PackedInt32Array(1736348383) index="0" unique_id=1098322984]
 anchors_preset = 15

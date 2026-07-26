@@ -7,11 +7,13 @@ class_name Level
 @onready var level_timer := %LevelTimer as Timer
 @onready var cover_rect := %CoverRect as ColorRect
 
+@export var level_num : int
+
 func _ready():
 	assert(player != null)
 	assert(next_scene != null)
 	# player.process_mode = Node.PROCESS_MODE_DISABLED
-	
+
 	start_level()
 	# player.process_mode = Node.PROCESS_MODE_INHERIT
 
@@ -32,11 +34,15 @@ func start_level() -> void:
 	# fade to black
 	# save relevant stats
 	# transition to new scene
+	if GameManager.get_anxiety() <= 0:
+		GameManager.anxiety = 1280
 	var tween: Tween = create_tween()
 	cover_rect.visible = true
 	tween.tween_property(cover_rect, "modulate:a", 0, 5)
 	await tween.finished
 	cover_rect.visible = false
+
+const scene_3 = preload("res://levels/level3_ballroom.tscn")
 
 func end_level() -> void:
 	# stop input
@@ -50,5 +56,7 @@ func end_level() -> void:
 	tween.tween_property(cover_rect, "modulate:a", 1., 1.)
 	await tween.finished
 
-	get_tree().change_scene_to_packed(next_scene)
+	# get_tree().change_scene_to_packed(next_scene)
 	
+	if level_num == 3:
+		get_tree().change_scene_to_packed(scene_3)
