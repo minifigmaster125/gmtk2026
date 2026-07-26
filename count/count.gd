@@ -20,6 +20,7 @@ var dialog_instance : DialogControl  = null
 var _interested := false
 
 @onready var goal_queue_component := $GoalQueueComponent as GoalQueueComponent
+@onready var state_machine := $CharacterStateMachine as CharacterStateMachine
 
 func _ready() -> void:
 	interest_area.body_entered.connect(_on_body_entered)
@@ -37,6 +38,9 @@ func _process(delta: float):
 			GameManager.get_conversation_stage(character_name)
 			var stage = min(GameManager.get_conversation_stage(character_name), conversation_stage_limit)
 			dialog_instance.recieve_conversing_event(true, character_name + str(stage))
+
+		if dialog_instance:
+			state_machine._set_idle_state()
 
 		interest_progress.value += interest_rate * delta
 		GameManager.set_interaction_metric(character_name, interest_progress.value)

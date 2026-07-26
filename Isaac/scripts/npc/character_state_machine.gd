@@ -40,10 +40,12 @@ func _process(delta):
 
 func _set_idle_state():
 	time_since["moving"] = 0.0
+	time_since["idle"] = 0.0
 	state = State.IDLE
 
 func _set_moving_state():
 	time_since["idle"] = 0.0
+	time_since["moving"] = 0.0
 	state = State.MOVING
 	goals.enqueue(goals.pop_first())
 	pathfinding.update_target(goals.peek())

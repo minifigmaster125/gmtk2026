@@ -3,7 +3,7 @@ extends Node
 const FILE := "user://save.dat"
 var states:Dictionary = {}
 var time:float = 360.0
-var anxiety:float = 1280.0
+var anxiety:float = 3000.0
 
 var mood:float = 1.0
 

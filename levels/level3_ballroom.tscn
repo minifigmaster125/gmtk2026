@@ -33,6 +33,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hmib"]
+atlas = ExtResource("8_itgsl")
+region = Rect2(0, 288, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_45r7g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hmib")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level3" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_rsm7o")]
 player = NodePath("Player")
 next_scene = ExtResource("2_gwpor")
@@ -87,7 +102,7 @@ character_name = "Count_A"
 conversation_stage_limit = 12
 
 [node name="GoalQueueComponent" parent="CountA" index="6" unique_id=624143483 node_paths=PackedStringArray("target_nodes")]
-target_nodes = [NodePath("../../Marker3"), NodePath("../../Marker4"), NodePath("../../Player"), NodePath("../../Waiter")]
+target_nodes = [NodePath("../../Marker3"), NodePath("../../Marker4"), NodePath("../../Waiter"), NodePath("../../Marker1")]
 
 [node name="MoodField" parent="." index="8" unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer")]
 mood_map_layer = NodePath("../MoodMapLayer")
@@ -117,62 +132,72 @@ position = Vector2(368, 240)
 [node name="GoalQueueComponent" parent="Waiter2" index="5" unique_id=1733111446 node_paths=PackedStringArray("target_nodes")]
 target_nodes = [NodePath("../../Marker4"), NodePath("../../Marker1"), NodePath("../../Waiter"), NodePath("../../CountA")]
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="15" unique_id=1711032336]
+[node name="CountC" parent="." index="15" unique_id=1480981827 groups=["mood_affecting"] instance=ExtResource("7_v80s8")]
+position = Vector2(304, 400)
+character_name = "Count_C"
+
+[node name="AnimatedSprite2D" parent="CountC" index="2" unique_id=167535803]
+sprite_frames = SubResource("SpriteFrames_45r7g")
+
+[node name="GoalQueueComponent" parent="CountC" index="6" unique_id=624143483 node_paths=PackedStringArray("target_nodes")]
+target_nodes = [NodePath("../../Marker1"), NodePath("../../Marker3"), NodePath("../../CountB"), NodePath("../../CountA")]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="16" unique_id=1711032336]
 color = Color(0.1540784, 0.28745782, 0.30909222, 1)
 energy = 0.66
 blend_mode = 1
 
-[node name="CandleSet" parent="." index="16" unique_id=653206819 instance=ExtResource("11_45r7g")]
+[node name="CandleSet" parent="." index="17" unique_id=653206819 instance=ExtResource("11_45r7g")]
 position = Vector2(99, 248)
 
-[node name="CandleSet2" parent="." index="17" unique_id=77144083 instance=ExtResource("11_45r7g")]
+[node name="CandleSet2" parent="." index="18" unique_id=77144083 instance=ExtResource("11_45r7g")]
 position = Vector2(99, 505)
 
-[node name="CandleSet3" parent="." index="18" unique_id=693413729 instance=ExtResource("11_45r7g")]
+[node name="CandleSet3" parent="." index="19" unique_id=693413729 instance=ExtResource("11_45r7g")]
 position = Vector2(578, 246)
 
-[node name="CandleSet4" parent="." index="19" unique_id=1824651489 instance=ExtResource("11_45r7g")]
+[node name="CandleSet4" parent="." index="20" unique_id=1824651489 instance=ExtResource("11_45r7g")]
 position = Vector2(578, 504)
 
-[node name="ArmorSetPixeled" type="Sprite2D" parent="." index="20" unique_id=1225849986]
+[node name="ArmorSetPixeled" type="Sprite2D" parent="." index="21" unique_id=1225849986]
 position = Vector2(179, 35)
 texture = ExtResource("12_kktx4")
 
-[node name="ArmorSetPixeled2" type="Sprite2D" parent="." index="21" unique_id=1594409030]
+[node name="ArmorSetPixeled2" type="Sprite2D" parent="." index="22" unique_id=1594409030]
 position = Vector2(534, 32)
 texture = ExtResource("12_kktx4")
 
-[node name="GargoyleFacingRight" type="Sprite2D" parent="." index="22" unique_id=1748826710]
+[node name="GargoyleFacingRight" type="Sprite2D" parent="." index="23" unique_id=1748826710]
 position = Vector2(48, 448)
 texture = ExtResource("13_cwu0r")
 
-[node name="GargoyleFacingRight2" type="Sprite2D" parent="." index="23" unique_id=758862092]
+[node name="GargoyleFacingRight2" type="Sprite2D" parent="." index="24" unique_id=758862092]
 position = Vector2(48, 320)
 texture = ExtResource("13_cwu0r")
 
-[node name="VampressRight" type="Sprite2D" parent="." index="24" unique_id=174279535]
+[node name="VampressRight" type="Sprite2D" parent="." index="25" unique_id=174279535]
 position = Vector2(48, 383)
 texture = ExtResource("14_nr8aa")
 
-[node name="VampressLeft" type="Sprite2D" parent="." index="25" unique_id=1819691341]
+[node name="VampressLeft" type="Sprite2D" parent="." index="26" unique_id=1819691341]
 position = Vector2(656, 320)
 texture = ExtResource("15_la7qj")
 
-[node name="VampressLeft2" type="Sprite2D" parent="." index="26" unique_id=760898743]
+[node name="VampressLeft2" type="Sprite2D" parent="." index="27" unique_id=760898743]
 position = Vector2(656, 448)
 texture = ExtResource("15_la7qj")
 
-[node name="GargoyleFacingLeft" type="Sprite2D" parent="." index="27" unique_id=1439544385]
+[node name="GargoyleFacingLeft" type="Sprite2D" parent="." index="28" unique_id=1439544385]
 position = Vector2(655, 384)
 texture = ExtResource("16_u6bvp")
 
-[node name="CandleSet5" parent="." index="28" unique_id=1787478460 instance=ExtResource("11_45r7g")]
+[node name="CandleSet5" parent="." index="29" unique_id=1787478460 instance=ExtResource("11_45r7g")]
 position = Vector2(64, 118)
 
-[node name="CandleSet6" parent="." index="29" unique_id=1643294427 instance=ExtResource("11_45r7g")]
+[node name="CandleSet6" parent="." index="30" unique_id=1643294427 instance=ExtResource("11_45r7g")]
 position = Vector2(608, 120)
 
-[node name="BackgroundLoopAudioPlayer" type="AudioStreamPlayer" parent="." index="30" unique_id=1677887944]
+[node name="BackgroundLoopAudioPlayer" type="AudioStreamPlayer" parent="." index="31" unique_id=1677887944]
 stream = ExtResource("17_45r7g")
 volume_db = -3.291
 pitch_scale = 0.72
@@ -186,3 +211,4 @@ parameters/looping = true
 [editable path="CountA"]
 [editable path="Waiter"]
 [editable path="Waiter2"]
+[editable path="CountC"]

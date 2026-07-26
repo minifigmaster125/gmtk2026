@@ -34,7 +34,7 @@ func start_level() -> void:
 	# fade to black
 	# save relevant stats
 	# transition to new scene
-	GameManager.anxiety = 1280
+	GameManager.anxiety = 3000
 	var tween: Tween = create_tween()
 	cover_rect.visible = true
 	tween.tween_property(cover_rect, "modulate:a", 0, 5)
@@ -58,7 +58,7 @@ func end_level() -> void:
 	GameManager.set_interaction_metric("Count_A", 0)
 	GameManager.set_interaction_metric("Count_B", 0)
 	GameManager.set_interaction_metric("Count_C", 0)
-
+	GameManager.persistent_moods = []
 	# get_tree().change_scene_to_packed(next_scene)
 	
 	if level_num == 3:

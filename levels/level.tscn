@@ -27,7 +27,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="LevelTimer" type="Timer" parent="." unique_id=1776961197]
 unique_name_in_owner = true
-wait_time = 80.0
+wait_time = 160.0
 
 [node name="MoodField" parent="." unique_id=1876993409 instance=ExtResource("3_cwqvt")]
 visible = false

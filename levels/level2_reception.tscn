@@ -33,6 +33,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hmib"]
+atlas = ExtResource("8_0iss8")
+region = Rect2(0, 288, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aoea4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hmib")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level2" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_wj3gv")]
 player = NodePath("Player")
 next_scene = ExtResource("2_5hmib")
@@ -80,113 +95,123 @@ character_name = "Count_B"
 sprite_frames = SubResource("SpriteFrames_sh2vg")
 
 [node name="GoalQueueComponent" parent="CountB" index="6" unique_id=624143483 node_paths=PackedStringArray("target_nodes")]
-target_nodes = [NodePath("../../Marker1"), NodePath("../../Marker3"), NodePath("../../Waiter"), NodePath("../../Player")]
+target_nodes = [NodePath("../../Player"), NodePath("../../Marker1"), NodePath("../../Marker3"), NodePath("../../Waiter")]
 
 [node name="CountA" parent="." index="7" unique_id=191791242 groups=["mood_affecting"] instance=ExtResource("7_a5ij5")]
 position = Vector2(464, 208)
 character_name = "Count_A"
 
 [node name="GoalQueueComponent" parent="CountA" index="6" unique_id=624143483 node_paths=PackedStringArray("target_nodes")]
-target_nodes = [NodePath("../../Marker3"), NodePath("../../Marker4"), NodePath("../../Player"), NodePath("../../Waiter")]
+target_nodes = [NodePath("../../Marker3"), NodePath("../../Marker4"), NodePath("../../Waiter"), NodePath("../../CountC")]
 
-[node name="MoodField" parent="." index="8" unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer")]
+[node name="CountC" parent="." index="8" unique_id=647359791 groups=["mood_affecting"] instance=ExtResource("7_a5ij5")]
+position = Vector2(192, 368)
+character_name = "Count_C"
+
+[node name="AnimatedSprite2D" parent="CountC" index="2" unique_id=167535803]
+sprite_frames = SubResource("SpriteFrames_aoea4")
+
+[node name="GoalQueueComponent" parent="CountC" index="6" unique_id=624143483 node_paths=PackedStringArray("target_nodes")]
+target_nodes = [NodePath("../../Marker3"), NodePath("../../Marker4"), NodePath("../../Waiter"), NodePath("../../Marker1")]
+
+[node name="MoodField" parent="." index="9" unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer")]
 mood_map_layer = NodePath("../MoodMapLayer")
 grid_size = Vector2i(20, 20)
 
-[node name="Marker1" type="Marker2D" parent="." index="9" unique_id=1111866263]
-position = Vector2(177, 66)
+[node name="Marker1" type="Marker2D" parent="." index="10" unique_id=1111866263]
+position = Vector2(177, 67)
 
-[node name="Marker2" type="Marker2D" parent="." index="10" unique_id=772138462]
+[node name="Marker2" type="Marker2D" parent="." index="11" unique_id=772138462]
 position = Vector2(458, 66)
 
-[node name="Marker3" type="Marker2D" parent="." index="11" unique_id=1583340602]
-position = Vector2(560, 240)
+[node name="Marker3" type="Marker2D" parent="." index="12" unique_id=1583340602]
+position = Vector2(528, 272)
 
-[node name="Marker4" type="Marker2D" parent="." index="12" unique_id=1127878185]
-position = Vector2(97, 286)
+[node name="Marker4" type="Marker2D" parent="." index="13" unique_id=1127878185]
+position = Vector2(272, 432)
 
-[node name="Waiter" parent="." index="13" unique_id=924037808 instance=ExtResource("9_jsblw")]
+[node name="Waiter" parent="." index="14" unique_id=924037808 instance=ExtResource("9_jsblw")]
 position = Vector2(144, 144)
 
 [node name="GoalQueueComponent" parent="Waiter" index="5" unique_id=1733111446 node_paths=PackedStringArray("target_nodes")]
 target_nodes = [NodePath("../../Marker1"), NodePath("../../Marker2"), NodePath("../../Marker3"), NodePath("../../Marker4")]
 
-[node name="Waiter2" parent="." index="14" unique_id=825054822 instance=ExtResource("9_jsblw")]
+[node name="Waiter2" parent="." index="15" unique_id=825054822 instance=ExtResource("9_jsblw")]
 position = Vector2(368, 240)
 
 [node name="GoalQueueComponent" parent="Waiter2" index="5" unique_id=1733111446 node_paths=PackedStringArray("target_nodes")]
 target_nodes = [NodePath("../../Marker4"), NodePath("../../Marker1"), NodePath("../../Waiter"), NodePath("../../CountA")]
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="15" unique_id=452941030]
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="16" unique_id=452941030]
 color = Color(0.7997466, 0.6032066, 0.5256643, 1)
 energy = 0.67
 blend_mode = 1
 
-[node name="CandleSet" parent="." index="16" unique_id=192678174 instance=ExtResource("11_56wsy")]
+[node name="CandleSet" parent="." index="17" unique_id=192678174 instance=ExtResource("11_56wsy")]
 position = Vector2(130, 252)
 
-[node name="CandleSet2" parent="." index="17" unique_id=1783027677 instance=ExtResource("11_56wsy")]
+[node name="CandleSet2" parent="." index="18" unique_id=1783027677 instance=ExtResource("11_56wsy")]
 position = Vector2(130, 185)
 
-[node name="CandleSet3" parent="." index="18" unique_id=2106518650 instance=ExtResource("11_56wsy")]
+[node name="CandleSet3" parent="." index="19" unique_id=2106518650 instance=ExtResource("11_56wsy")]
 position = Vector2(193, 316)
 
-[node name="CandleSet4" parent="." index="19" unique_id=686887689 instance=ExtResource("11_56wsy")]
+[node name="CandleSet4" parent="." index="20" unique_id=686887689 instance=ExtResource("11_56wsy")]
 position = Vector2(353, 182)
 
-[node name="CandleSet5" parent="." index="20" unique_id=1858487880 instance=ExtResource("11_56wsy")]
+[node name="CandleSet5" parent="." index="21" unique_id=1858487880 instance=ExtResource("11_56wsy")]
 position = Vector2(193, 186)
 
-[node name="CandleSet6" parent="." index="21" unique_id=747531788 instance=ExtResource("11_56wsy")]
+[node name="CandleSet6" parent="." index="22" unique_id=747531788 instance=ExtResource("11_56wsy")]
 position = Vector2(193, 251)
 
-[node name="CandleSet7" parent="." index="22" unique_id=525144005 instance=ExtResource("11_56wsy")]
+[node name="CandleSet7" parent="." index="23" unique_id=525144005 instance=ExtResource("11_56wsy")]
 position = Vector2(351, 279)
 
-[node name="Cthulu" type="Sprite2D" parent="." index="23" unique_id=237681496]
+[node name="Cthulu" type="Sprite2D" parent="." index="24" unique_id=237681496]
 modulate = Color(1.7990248, 1.0941608, 2.138, 0.89)
 self_modulate = Color(1.380357, 1.380357, 1.380357, 1)
 position = Vector2(207, 48)
 scale = Vector2(0.78125, 0.75)
 texture = ExtResource("12_wvvck")
 
-[node name="VampireBatFront" type="Sprite2D" parent="." index="24" unique_id=46099944]
+[node name="VampireBatFront" type="Sprite2D" parent="." index="25" unique_id=46099944]
 position = Vector2(144, 47)
 texture = ExtResource("13_5hmib")
 
-[node name="VampireBatFront2" type="Sprite2D" parent="." index="25" unique_id=986519285]
+[node name="VampireBatFront2" type="Sprite2D" parent="." index="26" unique_id=986519285]
 position = Vector2(273, 48)
 texture = ExtResource("13_5hmib")
 
-[node name="VampireBatFront3" type="Sprite2D" parent="." index="26" unique_id=1031751437]
+[node name="VampireBatFront3" type="Sprite2D" parent="." index="27" unique_id=1031751437]
 position = Vector2(400, 46)
 texture = ExtResource("13_5hmib")
 
-[node name="VampressFront" type="Sprite2D" parent="." index="27" unique_id=865044118]
+[node name="VampressFront" type="Sprite2D" parent="." index="28" unique_id=865044118]
 position = Vector2(465, 33)
 texture = ExtResource("14_x67xp")
 
-[node name="ArmorSetPixeled" type="Sprite2D" parent="." index="28" unique_id=1227404771]
+[node name="ArmorSetPixeled" type="Sprite2D" parent="." index="29" unique_id=1227404771]
 position = Vector2(335, 32)
 texture = ExtResource("15_u50ql")
 
-[node name="GargoyleFacingRight" type="Sprite2D" parent="." index="29" unique_id=1855793374]
+[node name="GargoyleFacingRight" type="Sprite2D" parent="." index="30" unique_id=1855793374]
 position = Vector2(49, 384)
 texture = ExtResource("16_u6p6v")
 
-[node name="GargoyleFacingRight2" type="Sprite2D" parent="." index="30" unique_id=131314501]
+[node name="GargoyleFacingRight2" type="Sprite2D" parent="." index="31" unique_id=131314501]
 position = Vector2(48, 321)
 texture = ExtResource("16_u6p6v")
 
-[node name="GargoyleFacingRight3" type="Sprite2D" parent="." index="31" unique_id=13800651]
+[node name="GargoyleFacingRight3" type="Sprite2D" parent="." index="32" unique_id=13800651]
 position = Vector2(48, 256)
 texture = ExtResource("16_u6p6v")
 
-[node name="GargoyleFacingRight4" type="Sprite2D" parent="." index="32" unique_id=152257124]
+[node name="GargoyleFacingRight4" type="Sprite2D" parent="." index="33" unique_id=152257124]
 position = Vector2(48, 192)
 texture = ExtResource("16_u6p6v")
 
-[node name="BackgroundLoopAudioPlayer" type="AudioStreamPlayer" parent="." index="33" unique_id=888521208]
+[node name="BackgroundLoopAudioPlayer" type="AudioStreamPlayer" parent="." index="34" unique_id=888521208]
 stream = ExtResource("17_5hmib")
 volume_db = -3.291
 pitch_scale = 0.72
@@ -195,23 +220,24 @@ mix_target = 1
 max_polyphony = 3
 parameters/looping = true
 
-[node name="CandleSet8" parent="." index="34" unique_id=1091916809 instance=ExtResource("11_56wsy")]
+[node name="CandleSet8" parent="." index="35" unique_id=1091916809 instance=ExtResource("11_56wsy")]
 position = Vector2(129, 315)
 
-[node name="CandleSet9" parent="." index="35" unique_id=1134661452 instance=ExtResource("11_56wsy")]
+[node name="CandleSet9" parent="." index="36" unique_id=1134661452 instance=ExtResource("11_56wsy")]
 position = Vector2(195, 377)
 
-[node name="CandleSet10" parent="." index="36" unique_id=571129939 instance=ExtResource("11_56wsy")]
+[node name="CandleSet10" parent="." index="37" unique_id=571129939 instance=ExtResource("11_56wsy")]
 position = Vector2(353, 378)
 
-[node name="CandleSet11" parent="." index="37" unique_id=1641205351 instance=ExtResource("11_56wsy")]
+[node name="CandleSet11" parent="." index="38" unique_id=1641205351 instance=ExtResource("11_56wsy")]
 position = Vector2(511, 184)
 
-[node name="CandleSet12" parent="." index="38" unique_id=193498898 instance=ExtResource("11_56wsy")]
+[node name="CandleSet12" parent="." index="39" unique_id=193498898 instance=ExtResource("11_56wsy")]
 position = Vector2(510, 377)
 
 [editable path="Player"]
 [editable path="CountB"]
 [editable path="CountA"]
+[editable path="CountC"]
 [editable path="Waiter"]
 [editable path="Waiter2"]
