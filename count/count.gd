@@ -45,7 +45,8 @@ func _process(delta: float):
 		interest += interest_rate * delta
 		print(character_name)
 		GameManager.set_interaction_metric(character_name, interest)
-		interest_progress.value = interest
+
+	interest_progress.value = interest
 
 func _on_body_entered(body: Node2D):
 	if body is Player:

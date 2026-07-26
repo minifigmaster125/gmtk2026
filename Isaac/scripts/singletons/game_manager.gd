@@ -76,6 +76,9 @@ func conversation_completed(convo:String):
 	if has_interaction_metric(name):
 		print("RESET")
 		set_interaction_metric(name, 0)
+		for c in current_level.get_children():
+			if c is Count and c.character_name == name:
+				c.interest = 0
 
 	match current_level.level_num:
 		3:
