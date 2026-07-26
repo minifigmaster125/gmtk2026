@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cu8xpcl8cfvc5" path="res://Isaac/pixel_assets/statues/VampressFront.png" id="14_x67xp"]
 [ext_resource type="Texture2D" uid="uid://ykirofrj08gh" path="res://Isaac/pixel_assets/statues/ArmorSet_Pixeled.png" id="15_u50ql"]
 [ext_resource type="Texture2D" uid="uid://d0xfuakkeolbq" path="res://Isaac/pixel_assets/statues/GargoyleFacingRight.png" id="16_u6p6v"]
+[ext_resource type="AudioStream" uid="uid://do3k02teiu4ea" path="res://Isaac/audio/background/reception.mp3" id="17_5hmib"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l53as"]
 atlas = ExtResource("8_0iss8")
@@ -183,6 +184,15 @@ texture = ExtResource("16_u6p6v")
 [node name="GargoyleFacingRight4" type="Sprite2D" parent="." index="32" unique_id=152257124]
 position = Vector2(48, 192)
 texture = ExtResource("16_u6p6v")
+
+[node name="BackgroundLoopAudioPlayer" type="AudioStreamPlayer" parent="." index="33" unique_id=888521208]
+stream = ExtResource("17_5hmib")
+volume_db = -3.291
+pitch_scale = 0.72
+autoplay = true
+mix_target = 1
+max_polyphony = 3
+parameters/looping = true
 
 [editable path="Player"]
 [editable path="CountB"]

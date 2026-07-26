@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dxmn1rrfpvnhs" path="res://Isaac/pixel_assets/statues/VampressRight.png" id="14_nr8aa"]
 [ext_resource type="Texture2D" uid="uid://cisyigbparmvj" path="res://Isaac/pixel_assets/statues/VampressLeft.png" id="15_la7qj"]
 [ext_resource type="Texture2D" uid="uid://be3dynlsjnwdm" path="res://Isaac/pixel_assets/statues/GargoyleFacingLeft.png" id="16_u6bvp"]
+[ext_resource type="AudioStream" uid="uid://ru7ip3i2yt0h" path="res://Isaac/audio/background/ballroom.mp3" id="17_45r7g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l53as"]
 atlas = ExtResource("8_itgsl")
@@ -168,6 +169,15 @@ position = Vector2(64, 118)
 
 [node name="CandleSet6" parent="." index="29" unique_id=1643294427 instance=ExtResource("11_45r7g")]
 position = Vector2(608, 120)
+
+[node name="BackgroundLoopAudioPlayer" type="AudioStreamPlayer" parent="." index="30" unique_id=1677887944]
+stream = ExtResource("17_45r7g")
+volume_db = -3.291
+pitch_scale = 0.72
+autoplay = true
+mix_target = 1
+max_polyphony = 3
+parameters/looping = true
 
 [editable path="Player"]
 [editable path="CountB"]

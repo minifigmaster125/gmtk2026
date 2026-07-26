@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bbe5lsha2awc"
+uid="uid://dh74gltjqyds2"
 path="res://.godot/imported/Axolotl.ttf-40a9869faf9ab8a60442ff5bdcfc2756.fontdata"
 
 [deps]
@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Axolotl.ttf-40a9869faf9ab8a60442ff5bdcfc2756.
 [params]
 
 Rendering=null
-antialiasing=0
+antialiasing=1
 generate_mipmaps=false
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
@@ -27,16 +27,10 @@ subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
-fallbacks=[Resource("uid://cgsgamtmekria", "res://assets/font/NotoEmoji-Regular.ttf")]
+fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0),
-&"variation_embolden": 0.0
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}
