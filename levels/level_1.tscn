@@ -25,6 +25,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sk1a"]
+atlas = ExtResource("7_gwceb")
+region = Rect2(0, 288, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j05fo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sk1a")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level1" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_vn7o3")]
 player = NodePath("Player")
 next_scene = ExtResource("2_btoec")
@@ -110,8 +125,19 @@ color = Color(0.1540784, 0.28745782, 0.30909222, 1)
 energy = 0.66
 blend_mode = 1
 
+[node name="CountC" parent="." index="16" unique_id=433495399 instance=ExtResource("4_kx6l7")]
+position = Vector2(560, 80)
+character_name = "Count_C"
+
+[node name="AnimatedSprite2D" parent="CountC" index="2" unique_id=167535803]
+sprite_frames = SubResource("SpriteFrames_j05fo")
+
+[node name="GoalQueueComponent" parent="CountC" index="6" unique_id=624143483 node_paths=PackedStringArray("target_nodes")]
+target_nodes = [NodePath("../../Waiter2"), NodePath("../../Marker1"), NodePath("../../Marker4"), NodePath("../../Marker3")]
+
 [editable path="Player"]
 [editable path="CountB"]
 [editable path="CountA"]
 [editable path="Waiter"]
 [editable path="Waiter2"]
+[editable path="CountC"]
