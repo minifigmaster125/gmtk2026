@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0dg7lke1yg1p"
-path="res://.godot/imported/puppet.png-602a494f71639335face596c8cdae70e.ctex"
+uid="uid://b20wkoypegte4"
+path="res://.godot/imported/CastleGate1.jpg-03bacbd051b048f51755bffcfe1cd0d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/puppet.png"
-dest_files=["res://.godot/imported/puppet.png-602a494f71639335face596c8cdae70e.ctex"]
+source_file="res://Isaac/pixel_assets/game_tiles/CastleGate1.jpg"
+dest_files=["res://.godot/imported/CastleGate1.jpg-03bacbd051b048f51755bffcfe1cd0d2.ctex"]
 
 [params]
 

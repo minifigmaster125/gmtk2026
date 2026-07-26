@@ -79,6 +79,7 @@ target_nodes = [NodePath("../../Marker3"), NodePath("../../Marker4"), NodePath("
 
 [node name="MoodField" parent="." index="8" unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer")]
 mood_map_layer = NodePath("../MoodMapLayer")
+grid_size = Vector2i(20, 20)
 
 [node name="Marker1" type="Marker2D" parent="." index="9" unique_id=1111866263]
 position = Vector2(177, 66)

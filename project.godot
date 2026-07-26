@@ -47,6 +47,11 @@ folder_colors={
 [global_group]
 
 mood_affecting="Nodes in this group interact with MoodField"
+player=""
+
+[gui]
+
+theme/custom_font="uid://bbe5lsha2awc"
 
 [input]
 

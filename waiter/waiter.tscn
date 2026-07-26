@@ -12,9 +12,7 @@ script = ExtResource("2_aibbo")
 type = "count"
 metadata/_custom_type_script = "uid://dfxagt3t46gbe"
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aoea4"]
-custom_solver_bias = 1.0
-size = Vector2(32, 32)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y4dal"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64dco"]
 size = Vector2(80, 80)
@@ -40,7 +38,7 @@ interest_rate = 10
 mood_config = SubResource("Resource_g12r7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=867446343]
-shape = SubResource("RectangleShape2D_aoea4")
+shape = SubResource("CapsuleShape2D_y4dal")
 
 [node name="InterestArea2D" type="Area2D" parent="." unique_id=1297958067]
 
@@ -60,6 +58,7 @@ path_desired_distance = 0.1
 target_desired_distance = 64.0
 path_postprocessing = 1
 avoidance_enabled = true
+debug_enabled = true
 
 [node name="GoalQueueComponent" type="Node" parent="." unique_id=1733111446]
 script = ExtResource("8_xarj2")

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogTreeCollection" format=3 uid="uid://buvf2ccnhgnrc"]
+[gd_resource type="Resource" script_class="DialogTreeCollection" format=3 uid="uid://cnk445mw7f56b"]
 
 [ext_resource type="Script" uid="uid://dfsw2sdnstg1s" path="res://dialog/dialog_tree_collection.gd" id="1_wnf1w"]
 [ext_resource type="Script" uid="uid://cio25mowqx3qd" path="res://dialog/dialog_state.gd" id="2_k2gsb"]
@@ -86,31 +86,1516 @@ states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ulqtn")])
 [sub_resource type="Resource" id="Resource_ajk3r"]
 script = ExtResource("2_k2gsb")
 speaker = "Count_B1"
-choices = Array[String](["Hello I am The Count B, and this is conversation 1"])
-short_choices = Array[String](["Hello I am The Count B, and this is conversation 1"])
+choices = Array[String](["hehehehehehehehehehehehe!"])
+short_choices = Array[String](["hehehehehehehehehehehehe!"])
 states = Array[ExtResource("2_k2gsb")]([null])
 
 [sub_resource type="Resource" id="Resource_k21dl"]
 script = ExtResource("2_k2gsb")
-speaker = "Player"
-directions = Array[String](["thought1", "thought2"])
-choices = Array[String](["Hello I am the player, I do not get a choice in what to say here"])
-short_choices = Array[String](["Hello I am the player, I do not get a choice in what to say here"])
+speaker = "Count_B1"
+choices = Array[String](["Zero!"])
+short_choices = Array[String](["Zero!"])
 states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ajk3r")])
 
 [sub_resource type="Resource" id="Resource_hmaxr"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_k21dl")])
+
+[sub_resource type="Resource" id="Resource_28kue"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_hmaxr")])
+
+[sub_resource type="Resource" id="Resource_dpmqj"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_28kue")])
+
+[sub_resource type="Resource" id="Resource_8c0gf"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Four!"])
+short_choices = Array[String](["Four!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_dpmqj")])
+
+[sub_resource type="Resource" id="Resource_xj170"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_8c0gf")])
+
+[sub_resource type="Resource" id="Resource_2y4f8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_xj170")])
+
+[sub_resource type="Resource" id="Resource_0hlb3"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_2y4f8")])
+
+[sub_resource type="Resource" id="Resource_4mnn4"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_0hlb3")])
+
+[sub_resource type="Resource" id="Resource_q4js8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_4mnn4")])
+
+[sub_resource type="Resource" id="Resource_n5170"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_q4js8")])
+
+[sub_resource type="Resource" id="Resource_d1oy8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_n5170")])
+
+[sub_resource type="Resource" id="Resource_f3mba"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_d1oy8")])
+
+[sub_resource type="Resource" id="Resource_y5hsa"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_f3mba")])
+
+[sub_resource type="Resource" id="Resource_o2hrt"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_y5hsa")])
+
+[sub_resource type="Resource" id="Resource_qbv37"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_o2hrt")])
+
+[sub_resource type="Resource" id="Resource_mk4bh"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_qbv37")])
+
+[sub_resource type="Resource" id="Resource_54x1v"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_mk4bh")])
+
+[sub_resource type="Resource" id="Resource_yt2e5"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_54x1v")])
+
+[sub_resource type="Resource" id="Resource_kubm8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_yt2e5")])
+
+[sub_resource type="Resource" id="Resource_u1q6h"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_kubm8")])
+
+[sub_resource type="Resource" id="Resource_rdncp"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ah, excellent catch! We must start again."])
+short_choices = Array[String](["Ah, excellent catch! We must start again."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_u1q6h")])
+
+[sub_resource type="Resource" id="Resource_0xmxy"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["hehehehehehehehehehehehe!"])
+short_choices = Array[String](["hehehehehehehehehehehehe!"])
+states = Array[ExtResource("2_k2gsb")]([null])
+
+[sub_resource type="Resource" id="Resource_fdhut"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Zero!"])
+short_choices = Array[String](["Zero!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_0xmxy")])
+
+[sub_resource type="Resource" id="Resource_ofs64"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_fdhut")])
+
+[sub_resource type="Resource" id="Resource_0edsi"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ofs64")])
+
+[sub_resource type="Resource" id="Resource_6trci"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_0edsi")])
+
+[sub_resource type="Resource" id="Resource_wpo4t"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Four!"])
+short_choices = Array[String](["Four!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_6trci")])
+
+[sub_resource type="Resource" id="Resource_ugmyo"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_wpo4t")])
+
+[sub_resource type="Resource" id="Resource_74kt1"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ugmyo")])
+
+[sub_resource type="Resource" id="Resource_s4xnp"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_74kt1")])
+
+[sub_resource type="Resource" id="Resource_ev3ma"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_s4xnp")])
+
+[sub_resource type="Resource" id="Resource_68eba"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ev3ma")])
+
+[sub_resource type="Resource" id="Resource_wtlwx"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_68eba")])
+
+[sub_resource type="Resource" id="Resource_20y6q"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_wtlwx")])
+
+[sub_resource type="Resource" id="Resource_kgsga"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_20y6q")])
+
+[sub_resource type="Resource" id="Resource_jibbo"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_kgsga")])
+
+[sub_resource type="Resource" id="Resource_tds72"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jibbo")])
+
+[sub_resource type="Resource" id="Resource_awpyx"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_tds72")])
+
+[sub_resource type="Resource" id="Resource_uamew"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_awpyx")])
+
+[sub_resource type="Resource" id="Resource_heynr"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_uamew")])
+
+[sub_resource type="Resource" id="Resource_usequ"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_heynr")])
+
+[sub_resource type="Resource" id="Resource_xtybb"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_usequ")])
+
+[sub_resource type="Resource" id="Resource_c7r6u"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_xtybb")])
+
+[sub_resource type="Resource" id="Resource_dt5wg"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["We must start again."])
+short_choices = Array[String](["We must start again."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_c7r6u")])
+
+[sub_resource type="Resource" id="Resource_x24bv"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["✁&#✆☟-✈☠☼?%❒⌘^✰⌫!"])
+short_choices = Array[String](["✁&#✆☟-✈☠☼?%❒⌘^✰⌫!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_dt5wg")])
+
+[sub_resource type="Resource" id="Resource_euxgs"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Hang on, did I miss four?"])
+short_choices = Array[String](["Hang on, did I miss four?"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_x24bv")])
+
+[sub_resource type="Resource" id="Resource_o14sh"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_euxgs")])
+
+[sub_resource type="Resource" id="Resource_01nib"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_o14sh")])
+
+[sub_resource type="Resource" id="Resource_6vuss"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+choices = Array[String](["You missed four.", "..."])
+short_choices = Array[String](["You missed four.", "..."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_rdncp"), SubResource("Resource_01nib")])
+
+[sub_resource type="Resource" id="Resource_3acvn"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_6vuss")])
+
+[sub_resource type="Resource" id="Resource_tpc47"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_3acvn")])
+
+[sub_resource type="Resource" id="Resource_vnn3e"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_tpc47")])
+
+[sub_resource type="Resource" id="Resource_bucer"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_vnn3e")])
+
+[sub_resource type="Resource" id="Resource_b0511"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_bucer")])
+
+[sub_resource type="Resource" id="Resource_ohfna"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_b0511")])
+
+[sub_resource type="Resource" id="Resource_i5jon"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ohfna")])
+
+[sub_resource type="Resource" id="Resource_ijuse"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_i5jon")])
+
+[sub_resource type="Resource" id="Resource_mitnw"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ijuse")])
+
+[sub_resource type="Resource" id="Resource_jta38"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_mitnw")])
+
+[sub_resource type="Resource" id="Resource_yt2ty"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jta38")])
+
+[sub_resource type="Resource" id="Resource_gw6c0"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_yt2ty")])
+
+[sub_resource type="Resource" id="Resource_upxpl"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_gw6c0")])
+
+[sub_resource type="Resource" id="Resource_70f8y"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_upxpl")])
+
+[sub_resource type="Resource" id="Resource_g7k3m"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_70f8y")])
+
+[sub_resource type="Resource" id="Resource_p86d8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_g7k3m")])
+
+[sub_resource type="Resource" id="Resource_guxhl"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_p86d8")])
+
+[sub_resource type="Resource" id="Resource_jfacy"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["First, though, we must do our Countly duty."])
+short_choices = Array[String](["First, though, we must do our Countly duty."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_guxhl")])
+
+[sub_resource type="Resource" id="Resource_4yu87"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Yes, yes, you were off to talk to someone else, right?"])
+short_choices = Array[String](["Yes, yes, you were off to talk to someone else, right?"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jfacy")])
+
+[sub_resource type="Resource" id="Resource_npq3r"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["hehehehehehehehehehehehe!"])
+short_choices = Array[String](["hehehehehehehehehehehehe!"])
+states = Array[ExtResource("2_k2gsb")]([null])
+
+[sub_resource type="Resource" id="Resource_p76d4"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Zero!"])
+short_choices = Array[String](["Zero!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_npq3r")])
+
+[sub_resource type="Resource" id="Resource_utia4"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_p76d4")])
+
+[sub_resource type="Resource" id="Resource_hxx33"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_utia4")])
+
+[sub_resource type="Resource" id="Resource_ci6xl"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_hxx33")])
+
+[sub_resource type="Resource" id="Resource_m50vx"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Four!"])
+short_choices = Array[String](["Four!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ci6xl")])
+
+[sub_resource type="Resource" id="Resource_05bhj"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_m50vx")])
+
+[sub_resource type="Resource" id="Resource_efi8n"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_05bhj")])
+
+[sub_resource type="Resource" id="Resource_bjjnr"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_efi8n")])
+
+[sub_resource type="Resource" id="Resource_n1ss7"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_bjjnr")])
+
+[sub_resource type="Resource" id="Resource_0m5i7"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_n1ss7")])
+
+[sub_resource type="Resource" id="Resource_4gmks"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_0m5i7")])
+
+[sub_resource type="Resource" id="Resource_qf6tn"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_4gmks")])
+
+[sub_resource type="Resource" id="Resource_2mu5k"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_qf6tn")])
+
+[sub_resource type="Resource" id="Resource_jna32"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_2mu5k")])
+
+[sub_resource type="Resource" id="Resource_ivtlf"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jna32")])
+
+[sub_resource type="Resource" id="Resource_wr26u"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ivtlf")])
+
+[sub_resource type="Resource" id="Resource_xhsh8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_wr26u")])
+
+[sub_resource type="Resource" id="Resource_oll4q"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_xhsh8")])
+
+[sub_resource type="Resource" id="Resource_oogae"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_oll4q")])
+
+[sub_resource type="Resource" id="Resource_ra6uv"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_oogae")])
+
+[sub_resource type="Resource" id="Resource_ylu2j"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ra6uv")])
+
+[sub_resource type="Resource" id="Resource_oygl1"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ah, excellent catch! We must start again."])
+short_choices = Array[String](["Ah, excellent catch! We must start again."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ylu2j")])
+
+[sub_resource type="Resource" id="Resource_w8b5y"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["hehehehehehehehehehehehe!"])
+short_choices = Array[String](["hehehehehehehehehehehehe!"])
+states = Array[ExtResource("2_k2gsb")]([null])
+
+[sub_resource type="Resource" id="Resource_xnmtm"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Zero!"])
+short_choices = Array[String](["Zero!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_w8b5y")])
+
+[sub_resource type="Resource" id="Resource_y50rp"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_xnmtm")])
+
+[sub_resource type="Resource" id="Resource_ff06m"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_y50rp")])
+
+[sub_resource type="Resource" id="Resource_pq4j7"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ff06m")])
+
+[sub_resource type="Resource" id="Resource_vlvre"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Four!"])
+short_choices = Array[String](["Four!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_pq4j7")])
+
+[sub_resource type="Resource" id="Resource_u6aui"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_vlvre")])
+
+[sub_resource type="Resource" id="Resource_sjngp"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_u6aui")])
+
+[sub_resource type="Resource" id="Resource_srcy3"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_sjngp")])
+
+[sub_resource type="Resource" id="Resource_uefo0"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_srcy3")])
+
+[sub_resource type="Resource" id="Resource_m73kl"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_uefo0")])
+
+[sub_resource type="Resource" id="Resource_awjx0"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_m73kl")])
+
+[sub_resource type="Resource" id="Resource_cbfm3"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_awjx0")])
+
+[sub_resource type="Resource" id="Resource_pg3ks"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_cbfm3")])
+
+[sub_resource type="Resource" id="Resource_72e24"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_pg3ks")])
+
+[sub_resource type="Resource" id="Resource_e2jq7"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_72e24")])
+
+[sub_resource type="Resource" id="Resource_mgo82"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_e2jq7")])
+
+[sub_resource type="Resource" id="Resource_sl4od"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_mgo82")])
+
+[sub_resource type="Resource" id="Resource_nfru3"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_sl4od")])
+
+[sub_resource type="Resource" id="Resource_oxuo8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_nfru3")])
+
+[sub_resource type="Resource" id="Resource_fld2a"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_oxuo8")])
+
+[sub_resource type="Resource" id="Resource_eiqdf"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_fld2a")])
+
+[sub_resource type="Resource" id="Resource_evmx5"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["We must start again."])
+short_choices = Array[String](["We must start again."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_eiqdf")])
+
+[sub_resource type="Resource" id="Resource_vxqk8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["✁&#✆☟-✈☠☼?%❒⌘^✰⌫!"])
+short_choices = Array[String](["✁&#✆☟-✈☠☼?%❒⌘^✰⌫!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_evmx5")])
+
+[sub_resource type="Resource" id="Resource_26sts"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Hang on, did I miss four?"])
+short_choices = Array[String](["Hang on, did I miss four?"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_vxqk8")])
+
+[sub_resource type="Resource" id="Resource_6nyme"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_26sts")])
+
+[sub_resource type="Resource" id="Resource_3cx7t"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_6nyme")])
+
+[sub_resource type="Resource" id="Resource_ff2kd"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+choices = Array[String](["You missed four.", "..."])
+short_choices = Array[String](["You missed four.", "..."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_oygl1"), SubResource("Resource_3cx7t")])
+
+[sub_resource type="Resource" id="Resource_k6j05"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ff2kd")])
+
+[sub_resource type="Resource" id="Resource_jeqh1"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_k6j05")])
+
+[sub_resource type="Resource" id="Resource_87wg8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jeqh1")])
+
+[sub_resource type="Resource" id="Resource_h02dq"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_87wg8")])
+
+[sub_resource type="Resource" id="Resource_2aceh"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_h02dq")])
+
+[sub_resource type="Resource" id="Resource_h1ggb"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_2aceh")])
+
+[sub_resource type="Resource" id="Resource_y2kaf"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_h1ggb")])
+
+[sub_resource type="Resource" id="Resource_dnsrg"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_y2kaf")])
+
+[sub_resource type="Resource" id="Resource_o0rgx"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_dnsrg")])
+
+[sub_resource type="Resource" id="Resource_a171c"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_o0rgx")])
+
+[sub_resource type="Resource" id="Resource_mhm3n"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_a171c")])
+
+[sub_resource type="Resource" id="Resource_1lebg"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_mhm3n")])
+
+[sub_resource type="Resource" id="Resource_1jue4"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_1lebg")])
+
+[sub_resource type="Resource" id="Resource_l3ckl"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_1jue4")])
+
+[sub_resource type="Resource" id="Resource_xwpl7"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_l3ckl")])
+
+[sub_resource type="Resource" id="Resource_pgrh4"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_xwpl7")])
+
+[sub_resource type="Resource" id="Resource_gxurh"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_pgrh4")])
+
+[sub_resource type="Resource" id="Resource_70g01"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Now, let us do our Countly duty."])
+short_choices = Array[String](["Now, let us do our Countly duty."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_gxurh")])
+
+[sub_resource type="Resource" id="Resource_1bi3v"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["My, you are a charmer! I was just depilled before this!"])
+short_choices = Array[String](["My, you are a charmer! I was just depilled before this!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_70g01")])
+
+[sub_resource type="Resource" id="Resource_sy6sk"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["hehehehehehehehehehehehe!"])
+short_choices = Array[String](["hehehehehehehehehehehehe!"])
+states = Array[ExtResource("2_k2gsb")]([null])
+
+[sub_resource type="Resource" id="Resource_p15dq"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Zero!"])
+short_choices = Array[String](["Zero!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_sy6sk")])
+
+[sub_resource type="Resource" id="Resource_1ntk6"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_p15dq")])
+
+[sub_resource type="Resource" id="Resource_qtc1u"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_1ntk6")])
+
+[sub_resource type="Resource" id="Resource_ykvcj"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_qtc1u")])
+
+[sub_resource type="Resource" id="Resource_v0h3t"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Four!"])
+short_choices = Array[String](["Four!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ykvcj")])
+
+[sub_resource type="Resource" id="Resource_fujvx"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_v0h3t")])
+
+[sub_resource type="Resource" id="Resource_rx0cw"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_fujvx")])
+
+[sub_resource type="Resource" id="Resource_qnrdv"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_rx0cw")])
+
+[sub_resource type="Resource" id="Resource_voggs"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_qnrdv")])
+
+[sub_resource type="Resource" id="Resource_ilata"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_voggs")])
+
+[sub_resource type="Resource" id="Resource_jn4dm"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ilata")])
+
+[sub_resource type="Resource" id="Resource_tu0a8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jn4dm")])
+
+[sub_resource type="Resource" id="Resource_tx6g3"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_tu0a8")])
+
+[sub_resource type="Resource" id="Resource_u27nd"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_tx6g3")])
+
+[sub_resource type="Resource" id="Resource_4b0ux"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_u27nd")])
+
+[sub_resource type="Resource" id="Resource_m1hbj"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_4b0ux")])
+
+[sub_resource type="Resource" id="Resource_5gacn"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_m1hbj")])
+
+[sub_resource type="Resource" id="Resource_brvqo"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_5gacn")])
+
+[sub_resource type="Resource" id="Resource_q35ky"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_brvqo")])
+
+[sub_resource type="Resource" id="Resource_fk6nu"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_q35ky")])
+
+[sub_resource type="Resource" id="Resource_tycku"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_fk6nu")])
+
+[sub_resource type="Resource" id="Resource_85swc"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ah, excellent catch! We must start again."])
+short_choices = Array[String](["Ah, excellent catch! We must start again."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_tycku")])
+
+[sub_resource type="Resource" id="Resource_4adpg"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["hehehehehehehehehehehehe!"])
+short_choices = Array[String](["hehehehehehehehehehehehe!"])
+states = Array[ExtResource("2_k2gsb")]([null])
+
+[sub_resource type="Resource" id="Resource_puqn7"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Zero!"])
+short_choices = Array[String](["Zero!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_4adpg")])
+
+[sub_resource type="Resource" id="Resource_q1ai6"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_puqn7")])
+
+[sub_resource type="Resource" id="Resource_ayybt"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_q1ai6")])
+
+[sub_resource type="Resource" id="Resource_hky4a"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ayybt")])
+
+[sub_resource type="Resource" id="Resource_plqjh"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Four!"])
+short_choices = Array[String](["Four!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_hky4a")])
+
+[sub_resource type="Resource" id="Resource_e30t8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_plqjh")])
+
+[sub_resource type="Resource" id="Resource_2wmul"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_e30t8")])
+
+[sub_resource type="Resource" id="Resource_yi335"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_2wmul")])
+
+[sub_resource type="Resource" id="Resource_trqo8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_yi335")])
+
+[sub_resource type="Resource" id="Resource_tb37r"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_trqo8")])
+
+[sub_resource type="Resource" id="Resource_72v7e"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_tb37r")])
+
+[sub_resource type="Resource" id="Resource_a6u70"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_72v7e")])
+
+[sub_resource type="Resource" id="Resource_r1v3i"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_a6u70")])
+
+[sub_resource type="Resource" id="Resource_kx3sg"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_r1v3i")])
+
+[sub_resource type="Resource" id="Resource_jek1l"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_kx3sg")])
+
+[sub_resource type="Resource" id="Resource_cfgc5"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jek1l")])
+
+[sub_resource type="Resource" id="Resource_24ogt"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_cfgc5")])
+
+[sub_resource type="Resource" id="Resource_dh3qq"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_24ogt")])
+
+[sub_resource type="Resource" id="Resource_ayoo1"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_dh3qq")])
+
+[sub_resource type="Resource" id="Resource_4uhk7"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ayoo1")])
+
+[sub_resource type="Resource" id="Resource_nnvxi"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_4uhk7")])
+
+[sub_resource type="Resource" id="Resource_nqmga"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["We must start again."])
+short_choices = Array[String](["We must start again."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_nnvxi")])
+
+[sub_resource type="Resource" id="Resource_x0tpr"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["✁&#✆☟-✈☠☼?%❒⌘^✰⌫!"])
+short_choices = Array[String](["✁&#✆☟-✈☠☼?%❒⌘^✰⌫!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_nqmga")])
+
+[sub_resource type="Resource" id="Resource_aoxry"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Hang on, did I miss four?"])
+short_choices = Array[String](["Hang on, did I miss four?"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_x0tpr")])
+
+[sub_resource type="Resource" id="Resource_my22p"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_aoxry")])
+
+[sub_resource type="Resource" id="Resource_ow16h"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_my22p")])
+
+[sub_resource type="Resource" id="Resource_n7bqd"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+choices = Array[String](["You missed four.", "..."])
+short_choices = Array[String](["You missed four.", "..."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_85swc"), SubResource("Resource_ow16h")])
+
+[sub_resource type="Resource" id="Resource_44wcl"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_n7bqd")])
+
+[sub_resource type="Resource" id="Resource_jph7q"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_44wcl")])
+
+[sub_resource type="Resource" id="Resource_t5f53"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jph7q")])
+
+[sub_resource type="Resource" id="Resource_p6i7f"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_t5f53")])
+
+[sub_resource type="Resource" id="Resource_v0spb"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_p6i7f")])
+
+[sub_resource type="Resource" id="Resource_6p8d1"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_v0spb")])
+
+[sub_resource type="Resource" id="Resource_61crj"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_6p8d1")])
+
+[sub_resource type="Resource" id="Resource_py624"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_61crj")])
+
+[sub_resource type="Resource" id="Resource_kfved"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_py624")])
+
+[sub_resource type="Resource" id="Resource_wvwn1"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_kfved")])
+
+[sub_resource type="Resource" id="Resource_1rgdj"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_wvwn1")])
+
+[sub_resource type="Resource" id="Resource_jpovg"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_1rgdj")])
+
+[sub_resource type="Resource" id="Resource_52ndr"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jpovg")])
+
+[sub_resource type="Resource" id="Resource_vn0u4"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_52ndr")])
+
+[sub_resource type="Resource" id="Resource_53xue"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_vn0u4")])
+
+[sub_resource type="Resource" id="Resource_q5v2h"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_53xue")])
+
+[sub_resource type="Resource" id="Resource_ylnl4"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_q5v2h")])
+
+[sub_resource type="Resource" id="Resource_rr6wx"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Wonderful! But first, we must do our Countly duty."])
+short_choices = Array[String](["Wonderful! But first, we must do our Countly duty."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ylnl4")])
+
+[sub_resource type="Resource" id="Resource_tuis2"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+choices = Array[String](["Yes!"])
+short_choices = Array[String](["Yes!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_rr6wx")])
+
+[sub_resource type="Resource" id="Resource_q22wk"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["Excellent! Yes!
+My reputation as the life of the party must preceed me!
+You must be here to be regaled with tales of my work in early childhood education, no?"])
+short_choices = Array[String](["Excellent! Yes!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_tuis2")])
+
+[sub_resource type="Resource" id="Resource_1ngqs"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+choices = Array[String](["May I say that your felt looks absolutely radiant today?", "You're just the puppet I was looking for!"])
+short_choices = Array[String](["May I say that your felt looks absolutely radiant today?", "You're just the puppet I was looking for!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_1bi3v"), SubResource("Resource_q22wk")])
+
+[sub_resource type="Resource" id="Resource_d1una"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+choices = Array[String](["Ah, greetings. I was just about to...", "Salutations, Count Orlok."])
+short_choices = Array[String](["Ah, greetings. I was just about to...", "Salutations, Count Orlok."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_4yu87"), SubResource("Resource_1ngqs")])
+
+[sub_resource type="Resource" id="Resource_7vyxo"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+choices = Array[String](["HELLO! I am Count Orlok von Poppyseed! I'm absolutely THRILLED to be here, hehehehehe."])
+short_choices = Array[String](["HELLO! I am Count Orlok von Poppyseed! I'm absolutely THRILLED to be here, hehehehehe."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_d1una")])
+
+[sub_resource type="Resource" id="Resource_o1x8g"]
 script = ExtResource("2_k2gsb")
 speaker = "Count_B2"
 choices = Array[String](["Hello again"])
 short_choices = Array[String](["Hello again"])
 states = Array[ExtResource("2_k2gsb")]([null])
 
-[sub_resource type="Resource" id="Resource_28kue"]
+[sub_resource type="Resource" id="Resource_p10gs"]
 script = ExtResource("2_k2gsb")
 speaker = "Player"
 choices = Array[String](["Hello, Count B, Second Counversation"])
 short_choices = Array[String](["Hello, Count B, Second Counversation"])
-states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_hmaxr")])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_o1x8g")])
 
 [sub_resource type="Resource" id="Resource_2kqdf"]
 script = ExtResource("2_k2gsb")
@@ -175,8 +1660,8 @@ trees = Dictionary[String, ExtResource("2_k2gsb")]({
 "Count_A1": SubResource("Resource_4ok5h"),
 "Count_A2": SubResource("Resource_baedk"),
 "Count_A3": SubResource("Resource_8cglv"),
-"Count_B1": SubResource("Resource_k21dl"),
-"Count_B2": SubResource("Resource_28kue"),
+"Count_B1": SubResource("Resource_7vyxo"),
+"Count_B2": SubResource("Resource_p10gs"),
 "Count_B3": SubResource("Resource_h6an0"),
 "Count_C1": SubResource("Resource_ohava"),
 "Count_C2": SubResource("Resource_wgisc"),

@@ -7,6 +7,8 @@ var anxiety:float = 1280.0
 
 var mood:float = 1.0
 
+var persistent_moods = []
+
 var mood_breakdown = []
 
 var conversation_stages:Dictionary = {}
@@ -38,10 +40,14 @@ func get_mood():
 	return mood
 	
 func get_mood_breakdown():
-	return mood_breakdown
+	return persistent_moods + mood_breakdown
 	
 func set_mood_breakdown(breakdown):
 	self.mood_breakdown = breakdown
+	
+	self.mood = 0
+	for causes in get_mood_breakdown():
+		self.mood += causes.value
 	
 func set_mood(amt: float) -> float:
 	self.mood = amt

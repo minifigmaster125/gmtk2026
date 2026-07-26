@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ck2l4dayav4d3"]
+
+[node name="MainCamera" type="Camera2D" unique_id=587949611]
+offset = Vector2(16, 16)
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0

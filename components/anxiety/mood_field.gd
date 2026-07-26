@@ -13,7 +13,7 @@ func build_dynamic_mood_map():
 		var tf = node.get("transform")
 		var mood_config: MoodConfig = node.get("mood_config")
 		if mood_config.type == "count" and tf:
-			var xy = pos_to_xy(tf.origin)
+			var xy = pos_to_xy(tf.origin + Vector2(16, 16))
 			dynamic_mood_map.set(xy, 2.0)
 			dynamic_mood_map.set(xy + Vector2i(0, 1), 2.0)
 			dynamic_mood_map.set(xy + Vector2i(0, -1), 2.0)
@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 	
 func update_mood(player_position: Vector2):
 	var pos = pos_to_xy(player_position)
-	GameManager.set_mood(get_mood_at(pos))
+	#GameManager.set_mood(get_mood_at(pos))
 	GameManager.set_mood_breakdown(get_mood_breakdown_at(pos))
 
 func pos_to_xy(pos: Vector2) -> Vector2i:
@@ -68,7 +68,7 @@ func get_mood_at(pos: Vector2i) -> float:
 	if mood_map_layer:
 		base_value = tile_id_to_mood(mood_map_layer.get_cell_atlas_coords(pos).x)
 	if pos in dynamic_mood_map:
-		return max(dynamic_mood_map.get(pos), base_value)
+		return dynamic_mood_map.get(pos) + base_value
 	return base_value
 
 ## DEBUG DISPLAY FUNCTIONS ##
