@@ -8,3 +8,4 @@ func _on_body_entered(body):
 		print("player collision")
 		#if get_node("../..").keys >= get_node("../..").required_keys:
 		get_tree().change_scene_to_file.call_deferred(scene_path)
+

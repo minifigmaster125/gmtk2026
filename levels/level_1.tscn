@@ -53,7 +53,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAACAAAAAAAAAAEAAAACAAAAAAAAAAIAAAACAAA
 tile_set = ExtResource("3_n46q3")
 
 [node name="Player" parent="." index="5" unique_id=1713429650 node_paths=PackedStringArray("_mood_field") instance=ExtResource("3_bt44k")]
-position = Vector2(32, 32)
+position = Vector2(64, 64)
 _mood_field = NodePath("../MoodField")
 
 [node name="CountB" parent="." index="6" unique_id=91041238 groups=["mood_affecting"] instance=ExtResource("4_kx6l7")]

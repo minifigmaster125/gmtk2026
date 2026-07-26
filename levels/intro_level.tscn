@@ -118,9 +118,10 @@ position = Vector2(337, 49)
 [node name="CandleSet4" parent="." index="23" unique_id=2054205515 instance=ExtResource("6_u2ard")]
 position = Vector2(272, 48)
 
-[node name="LevelCompleteTrigga" type="Area2D" parent="." index="24" unique_id=1635210930]
+[node name="LevelCompleteTrigga" type="Area2D" parent="." index="24" unique_id=1635210930 node_paths=PackedStringArray("player")]
 priority = 1
 script = ExtResource("12_wjtbo")
+player = NodePath("../Player")
 scene_path = "uid://x7kyjoimh1t6"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelCompleteTrigga" index="0" unique_id=1733014617]
