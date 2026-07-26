@@ -33,7 +33,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Level1" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_rsm7o")]
+[node name="Level3" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_rsm7o")]
 player = NodePath("Player")
 next_scene = ExtResource("2_gwpor")
 
