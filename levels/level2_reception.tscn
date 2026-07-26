@@ -194,6 +194,21 @@ mix_target = 1
 max_polyphony = 3
 parameters/looping = true
 
+[node name="CandleSet8" parent="." index="34" unique_id=1091916809 instance=ExtResource("11_56wsy")]
+position = Vector2(129, 315)
+
+[node name="CandleSet9" parent="." index="35" unique_id=1134661452 instance=ExtResource("11_56wsy")]
+position = Vector2(195, 377)
+
+[node name="CandleSet10" parent="." index="36" unique_id=571129939 instance=ExtResource("11_56wsy")]
+position = Vector2(353, 378)
+
+[node name="CandleSet11" parent="." index="37" unique_id=1641205351 instance=ExtResource("11_56wsy")]
+position = Vector2(511, 184)
+
+[node name="CandleSet12" parent="." index="38" unique_id=193498898 instance=ExtResource("11_56wsy")]
+position = Vector2(510, 377)
+
 [editable path="Player"]
 [editable path="CountB"]
 [editable path="CountA"]
