@@ -7,8 +7,8 @@ func _process(delta: float) -> void:
 	var anxiety := int(GameManager.get_anxiety())
 	var modifier = ""
 	if anxiety < 0:
-		anxiety = -anxiety
-		modifier = "!-"
+		anxiety = 0
+		#modifier = "!-"
 		add_theme_color_override("font_color", Color("ff00ffff"))
 	else:
 		add_theme_color_override("font_color", MoodUtil.mood_color(GameManager.get_mood()))
