@@ -38,9 +38,9 @@ func build():
 	)
 	trees["Count_A1"] = DialogState.create(
 		'Player',
-		['thought1', 'thought2'],
-		['Hello I am the player, I do not get a choice in what to say here'],
-		['Hello I am the player, I do not get a choice in what to say here'],
+		[],
+		['Hello, I am the player, I do not get a choice in what to say here'],
+		['Hello, I am the player, I do not get a choice in what to say here'],
 		[
 			DialogState.create(
 				'Count_A1',
@@ -68,7 +68,7 @@ func build():
 										[
 											null
 										],
-										['commands'],
+										[],
 									),
 									DialogState.create(
 										'Player',
@@ -103,7 +103,7 @@ func build():
 	)
 	trees["Count_C1"] = DialogState.create(
 		'Player',
-		['thought1', 'thought2'],
+		[],
 		['Hello I am the player, I do not get a choice in what to say here'],
 		['Hello I am the player, I do not get a choice in what to say here'],
 		[
@@ -557,8 +557,8 @@ func build():
 																																																			DialogState.create(
 																																																				'Count_B1',
 																																																				[],
-																																																				['✁&#✆☟-✈☠☼?%❒⌘^✰⌫!'],
-																																																				['✁&#✆☟-✈☠☼?%❒⌘^✰⌫!'],
+																																																				['&#-*✈@☠?%^!'],
+																																																				['&#-*✈@☠?%^!'],
 																																																				[
 																																																					DialogState.create(
 																																																						'Count_B1',
@@ -1195,8 +1195,8 @@ func build():
 																																																					DialogState.create(
 																																																						'Count_B1',
 																																																						[],
-																																																						['✁&#✆☟-✈☠☼?%❒⌘^✰⌫!'],
-																																																						['✁&#✆☟-✈☠☼?%❒⌘^✰⌫!'],
+																																																						['&#-*✈@☠?%^!'],
+																																																						['&#-*✈@☠?%^!'],
 																																																						[
 																																																							DialogState.create(
 																																																								'Count_B1',
@@ -1833,8 +1833,8 @@ func build():
 																																																							DialogState.create(
 																																																								'Count_B1',
 																																																								[],
-																																																								['✁&#✆☟-✈☠☼?%❒⌘^✰⌫!'],
-																																																								['✁&#✆☟-✈☠☼?%❒⌘^✰⌫!'],
+																																																								['&#-*✈@☠?%^!'],
+																																																								['&#-*✈@☠?%^!'],
 																																																								[
 																																																									DialogState.create(
 																																																										'Count_B1',
