@@ -105,6 +105,11 @@ position = Vector2(368, 240)
 [node name="GoalQueueComponent" parent="Waiter2" index="5" unique_id=1733111446 node_paths=PackedStringArray("target_nodes")]
 target_nodes = [NodePath("../../Marker4"), NodePath("../../Marker1"), NodePath("../../Waiter"), NodePath("../../CountA")]
 
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="15" unique_id=1711032336]
+color = Color(0.1540784, 0.28745782, 0.30909222, 1)
+energy = 0.66
+blend_mode = 1
+
 [editable path="Player"]
 [editable path="CountB"]
 [editable path="CountA"]

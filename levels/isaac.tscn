@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="5_ai27o"]
 [ext_resource type="PackedScene" uid="uid://cjrvdsm7kxb3x" path="res://waiter/waiter.tscn" id="6_uplkv"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aoea4"]
+size = Vector2(32, 32)
+
 [node name="Level1" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_ionhw")]
 player = NodePath("Player")
 next_scene = ExtResource("2_t04xk")
@@ -29,18 +32,33 @@ tile_set = ExtResource("3_t04xk")
 position = Vector2(32, 32)
 _mood_field = NodePath("../MoodField")
 
+[node name="CollisionShape2D" parent="Player" index="1" unique_id=1483946653]
+shape = SubResource("RectangleShape2D_aoea4")
+
+[node name="up" parent="Player" index="2" unique_id=1772517389]
+position = Vector2(0, 0)
+
+[node name="down" parent="Player" index="3" unique_id=1283590060]
+position = Vector2(0, 0)
+
+[node name="left" parent="Player" index="4" unique_id=222016045]
+position = Vector2(0, 0)
+
+[node name="right" parent="Player" index="5" unique_id=166895126]
+position = Vector2(0, 0)
+
 [node name="CountB" parent="." index="6" unique_id=91041238 groups=["mood_affecting"] instance=ExtResource("5_ai27o")]
 position = Vector2(320, 96)
 character_name = "Count_B"
 
-[node name="goal_queue_component" parent="CountB" index="7" unique_id=168673157 node_paths=PackedStringArray("target_nodes")]
-target_nodes = [NodePath("../../Player")]
+[node name="NavigationAgent2D" parent="CountB" index="5" unique_id=342028157]
+debug_enabled = true
 
 [node name="Count" parent="." index="7" unique_id=191791242 groups=["mood_affecting"] instance=ExtResource("5_ai27o")]
 position = Vector2(448, 192)
 
-[node name="goal_queue_component" parent="Count" index="7" unique_id=168673157 node_paths=PackedStringArray("target_nodes")]
-target_nodes = [NodePath("../../Player"), NodePath("../../Player")]
+[node name="NavigationAgent2D" parent="Count" index="5" unique_id=342028157]
+debug_enabled = true
 
 [node name="MoodField" parent="." index="8" unique_id=1876993409 node_paths=PackedStringArray("mood_map_layer")]
 visible = true
@@ -49,8 +67,8 @@ mood_map_layer = NodePath("../MoodMapLayer")
 [node name="Waiter" parent="." index="9" unique_id=1261936139 instance=ExtResource("6_uplkv")]
 position = Vector2(82, 180)
 
-[node name="goal_queue_component" parent="Waiter" index="6" unique_id=168673157 node_paths=PackedStringArray("target_nodes")]
-target_nodes = [NodePath("../../Marker1"), NodePath("../../Marker2"), NodePath("../../Marker3"), NodePath("../../Marker4")]
+[node name="NavigationAgent2D" parent="Waiter" index="4" unique_id=1240016553]
+debug_enabled = true
 
 [node name="Marker1" type="Marker2D" parent="." index="10" unique_id=2112364249]
 position = Vector2(177, 66)

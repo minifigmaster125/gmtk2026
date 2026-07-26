@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dh74gltjqyds2"
-path="res://.godot/imported/Axolotl.ttf-40a9869faf9ab8a60442ff5bdcfc2756.fontdata"
+uid="uid://cgsgamtmekria"
+path="res://.godot/imported/NotoEmoji-Regular.ttf-9f371385d854da11074d521d7a24ef17.fontdata"
 
 [deps]
 
-source_file="res://Isaac/fonts/Axolotl.ttf"
-dest_files=["res://.godot/imported/Axolotl.ttf-40a9869faf9ab8a60442ff5bdcfc2756.fontdata"]
+source_file="res://assets/font/NotoEmoji-Regular.ttf"
+dest_files=["res://.godot/imported/NotoEmoji-Regular.ttf-9f371385d854da11074d521d7a24ef17.fontdata"]
 
 [params]
 
