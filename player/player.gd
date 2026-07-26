@@ -11,6 +11,7 @@ var _sprite_node_pos_tween: Tween
 @onready var _left =  $left as RayCast2D
 @onready var _right =  $right as RayCast2D
 @onready var _sprite := $AnimatedSprite2D as AnimatedSprite2D
+@onready var _audioplayer := $AudioStreamPlayer as AudioStreamPlayer
 
 func _ready() -> void:
 	velocity = Vector2.ZERO
@@ -20,23 +21,28 @@ func _physics_process(_delta: float) -> void:
 		self._mood_field.update_mood(transform.get_origin())
 	if !_sprite_node_pos_tween or !_sprite_node_pos_tween.is_running():
 		_sprite.stop()
+		_audioplayer.stop()
 		if (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_up_")) and !_up.is_colliding():
 			_move(Vector2(0, -1))
 			_sprite.play("walk_up")
+			_audioplayer.play()
 			return
 		if (Input.is_action_pressed("ui_down") or Input.is_action_pressed("ui_down_")) and !_down.is_colliding():
 			_move(Vector2(0, 1))
 			_sprite.play("walk_down")
+			_audioplayer.play()
 			return
 		if (Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_left_")) and !_left.is_colliding():
 			_move(Vector2(-1, 0))
 			_sprite.flip_h = true
 			_sprite.play("walk_right")
+			_audioplayer.play()
 			return
 		if (Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_right_")) and !_right.is_colliding():
 			_move(Vector2(1, 0))
 			_sprite.flip_h = false
 			_sprite.play("walk_right")
+			_audioplayer.play()
 			return
 
 func _move(dir: Vector2):

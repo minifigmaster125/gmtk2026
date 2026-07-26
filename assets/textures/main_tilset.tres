@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://bpg1vs2hkf2tw"]
 
-[ext_resource type="Texture2D" uid="uid://f3xyoxdv1tk8" path="res://assets/textures/texture_atlas.png" id="1_wsjko"]
+[ext_resource type="Texture2D" uid="uid://ce0md01crnujx" path="res://assets/textures/texture_atlas.png" id="1_wsjko"]
 [ext_resource type="Texture2D" uid="uid://dfk24q25dgyvq" path="res://assets/textures/16x32 All Animations-Sheet.png" id="2_bqlo4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_wsjko"]

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dakntcktnmrm5" path="res://Isaac/scripts/npc/character_state_machine.gd" id="3_hk5s0"]
 [ext_resource type="Script" uid="uid://c83g41crv4d43" path="res://components/pathfinder.gd" id="4_yfr3h"]
 [ext_resource type="Script" uid="uid://bku376mfdjmt3" path="res://Isaac/scripts/npc/goal_queue_component.gd" id="7_1lo26"]
-[ext_resource type="Texture2D" uid="uid://f3xyoxdv1tk8" path="res://assets/textures/texture_atlas.png" id="12_sh2vg"]
+[ext_resource type="Texture2D" uid="uid://ce0md01crnujx" path="res://assets/textures/texture_atlas.png" id="12_sh2vg"]
 
 [sub_resource type="Resource" id="Resource_g12r7"]
 script = ExtResource("2_o8fo6")
@@ -85,4 +85,5 @@ metadata/_custom_type_script = "uid://bku376mfdjmt3"
 script = ExtResource("3_hk5s0")
 goals = NodePath("../GoalQueueComponent")
 pathfinding = NodePath("../Pathfinder")
+idle_interval = 3.0
 metadata/_custom_type_script = "uid://dakntcktnmrm5"

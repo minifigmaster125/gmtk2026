@@ -1,70 +1,26 @@
 [gd_scene format=3 uid="uid://c34qy1bvchy88"]
 
 [ext_resource type="Script" uid="uid://blkktk1qlr71t" path="res://player/player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://dfk24q25dgyvq" path="res://assets/textures/16x32 All Animations-Sheet.png" id="3_g1dw6"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rkbax"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g1dw6"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rgyib"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hg6s5"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(96, 64, 32, 32)
+[ext_resource type="Texture2D" uid="uid://ce0md01crnujx" path="res://assets/textures/texture_atlas.png" id="2_g1dw6"]
+[ext_resource type="AudioStream" uid="uid://b2knsxskj1fb5" path="res://Isaac/audio/walkfootball.mp3" id="3_yw30f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yw30f"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(256, 64, 32, 32)
+atlas = ExtResource("2_g1dw6")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qjkh3"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(288, 64, 32, 32)
+atlas = ExtResource("2_g1dw6")
+region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g6k8r"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(320, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_boad6"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(352, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8t03j"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(512, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ieo8"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(544, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ebec5"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(576, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yllr7"]
-atlas = ExtResource("3_g1dw6")
-region = Rect2(608, 64, 32, 32)
+atlas = ExtResource("2_g1dw6")
+region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rgyib"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rkbax")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g1dw6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rgyib")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hg6s5")
+"texture": SubResource("AtlasTexture_yw30f")
 }],
 "loop": 1,
 "name": &"walk_down",
@@ -72,16 +28,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yw30f")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_qjkh3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g6k8r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_boad6")
 }],
 "loop": 1,
 "name": &"walk_right",
@@ -89,16 +36,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8t03j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2ieo8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ebec5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yllr7")
+"texture": SubResource("AtlasTexture_g6k8r")
 }],
 "loop": 1,
 "name": &"walk_up",
@@ -112,9 +50,7 @@ script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1332930609]
 sprite_frames = SubResource("SpriteFrames_rgyib")
-animation = &"walk_down"
-frame = 3
-frame_progress = 0.52705485
+animation = &"walk_up"
 speed_scale = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1483946653]
@@ -139,3 +75,9 @@ hit_from_inside = true
 position = Vector2(8, 0)
 target_position = Vector2(16, 0)
 hit_from_inside = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=786501622]
+stream = ExtResource("3_yw30f")
+volume_db = -12.0
+pitch_scale = 5.0
+parameters/looping = false
