@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bck38wk5fitw2" path="res://ground.gd" id="4_0eiq5"]
 [ext_resource type="TileSet" uid="uid://bclogxhrugtlt" path="res://components/anxiety/mood_map_tileset.tres" id="5_o1njg"]
 [ext_resource type="PackedScene" uid="uid://c34qy1bvchy88" path="res://player/player.tscn" id="6_2cuyq"]
+[ext_resource type="PackedScene" uid="uid://ck2l4dayav4d3" path="res://components/main_camera.tscn" id="7_6m45q"]
 [ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="7_a5ij5"]
 [ext_resource type="Texture2D" uid="uid://f3xyoxdv1tk8" path="res://assets/textures/texture_atlas.png" id="8_0iss8"]
 [ext_resource type="PackedScene" uid="uid://cjrvdsm7kxb3x" path="res://waiter/waiter.tscn" id="9_jsblw"]
@@ -35,7 +36,7 @@ anchor_bottom = 1.0
 
 [node name="CoverRect" parent="UI" parent_id_path=PackedInt32Array(1736348383) index="1" unique_id=337353824]
 visible = true
-modulate = Color(0, 0, 0, 1)
+modulate = Color(0, 0, 0, 0)
 
 [node name="LevelTimer" parent="." index="1" unique_id=1776961197]
 wait_time = 60.0
@@ -58,8 +59,10 @@ tile_map_data = PackedByteArray("AAAAAAAAAAACAAAAAAAAAAEAAAACAAAAAAAAAAIAAAACAAA
 tile_set = ExtResource("5_o1njg")
 
 [node name="Player" parent="." index="5" unique_id=1713429650 node_paths=PackedStringArray("_mood_field") instance=ExtResource("6_2cuyq")]
-position = Vector2(89, 87)
+position = Vector2(80, 80)
 _mood_field = NodePath("../MoodField")
+
+[node name="MainCamera" parent="Player" index="6" unique_id=587949611 instance=ExtResource("7_6m45q")]
 
 [node name="CountB" parent="." index="6" unique_id=91041238 groups=["mood_affecting"] instance=ExtResource("7_a5ij5")]
 position = Vector2(336, 112)

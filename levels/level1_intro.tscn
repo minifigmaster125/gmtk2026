@@ -31,7 +31,6 @@ next_scene = ExtResource("2_42mus")
 mouse_filter = 0
 
 [node name="CoverRect" parent="UI" parent_id_path=PackedInt32Array(1736348383) index="1" unique_id=337353824]
-modulate = Color(0, 0, 0, 1)
 mouse_filter = 0
 
 [node name="LevelTimer" parent="." index="1" unique_id=1776961197]
