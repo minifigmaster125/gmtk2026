@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dekeuetigcvd5" path="res://components/conversation/dialog_control.gd" id="1_kei4r"]
 [ext_resource type="Texture2D" uid="uid://dowphbjfi4ut2" path="res://assets/images/sunny.png" id="2_kwecx"]
 [ext_resource type="Texture2D" uid="uid://c0dg7lke1yg1p" path="res://assets/images/puppet.png" id="2_qxr4x"]
+[ext_resource type="FontFile" uid="uid://bbe5lsha2awc" path="res://Isaac/fonts/Axolotl.ttf" id="2_tltdc"]
 [ext_resource type="Texture2D" uid="uid://blylrknlm3fol" path="res://assets/images/man.png" id="4_vcx14"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt76e"]
@@ -29,7 +30,10 @@ offset_top = -40.0
 offset_bottom = -17.0
 grow_horizontal = 0
 theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_tltdc")
+theme_override_font_sizes/font_size = 32
 text = "Title of Location"
+horizontal_alignment = 2
 
 [node name="subtitle" type="RichTextLabel" parent="." unique_id=255199249]
 layout_mode = 1
@@ -41,10 +45,11 @@ offset_top = -18.0
 offset_bottom = -1.0
 grow_horizontal = 0
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/normal_font_size = 12
+theme_override_fonts/normal_font = ExtResource("2_tltdc")
+theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 12
 theme_override_font_sizes/bold_italics_font_size = 12
-theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 20
 theme_override_font_sizes/mono_font_size = 12
 bbcode_enabled = true
 text = "[i]text [/i]"

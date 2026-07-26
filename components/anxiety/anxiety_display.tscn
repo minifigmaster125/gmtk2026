@@ -3,5 +3,6 @@
 [ext_resource type="Script" uid="uid://ce035ght2gyl3" path="res://components/anxiety/anxiety_display.gd" id="1_sx254"]
 
 [node name="anxiety_display" type="Label" unique_id=85946941]
+theme_override_font_sizes/font_size = 24
 text = "🫀 1:11"
 script = ExtResource("1_sx254")

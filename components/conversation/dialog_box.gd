@@ -34,7 +34,7 @@ func _ready():
 
 func screen_size_changed():
 	if speech and not Engine.is_editor_hint():
-		self.speech.add_theme_font_size_override("normal_font_size", int(10 * 1))#Util.get_composite_text_scale()))
+		self.speech.add_theme_font_size_override("normal_font_size", int(18 * 1))#Util.get_composite_text_scale()))
 
 
 func _update_fields():
