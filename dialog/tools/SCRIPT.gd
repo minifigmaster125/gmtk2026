@@ -202,18 +202,37 @@ func build():
 		[],
 	)
 	trees["Count_C3"] = DialogState.create(
-		'Player',
+		'Count_C3',
 		[],
-		['Hello, Count C, third Counversation'],
-		['Hello, Count C, third Counversation'],
+		['So... You doing anything after the game ends?'],
+		['So... You doing anything after the game ends?'],
 		[
 			DialogState.create(
-				'Count_C3',
+				'Player',
 				[],
-				['Lemme get your number 👀'],
-				['Lemme get your number 👀'],
+				["I think I'm just going to not exist.", 'I think I come back and do this again?'],
+				["I think I'm just going to not exist.", 'I think I come back and do this again?'],
 				[
-					null
+					DialogState.create(
+						'Count_C3',
+						[],
+						['Hmm. Sounds fun to be honest.'],
+						['Hmm. Sounds fun to be honest.'],
+						[
+							null
+						],
+						[],
+					),
+					DialogState.create(
+						'Count_C3',
+						[],
+						["Maybe by then I'll have more going on."],
+						["Maybe by then I'll have more going on."],
+						[
+							null
+						],
+						[],
+					),
 				],
 				[],
 			),
@@ -379,16 +398,34 @@ func build():
 	trees["Count_C2"] = DialogState.create(
 		'Player',
 		[],
-		['Hello, Count C, Second Counversation'],
-		['Hello, Count C, Second Counversation'],
+		['So, how do you feel about being incomplete?'],
+		['So, how do you feel about being incomplete?'],
 		[
 			DialogState.create(
 				'Count_C2',
 				[],
-				['Hello again'],
-				['Hello again'],
+				["Oh y'know. It's kind of a bummer."],
+				["Oh y'know. It's kind of a bummer."],
 				[
-					null
+					DialogState.create(
+						'Player',
+						[],
+						['Well it is a game jam, so what did you expect?', 'Fair enough.'],
+						['Well it is a game jam, so what did you expect?', 'Fair enough.'],
+						[
+							DialogState.create(
+								'Count_C2',
+								[],
+								["I don't know, just a bit of effort? Despite all that."],
+								["I don't know, just a bit of effort? Despite all that."],
+								[
+									null
+								],
+								[],
+							),
+						],
+						[],
+					),
 				],
 				[],
 			),
