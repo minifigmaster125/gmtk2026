@@ -16,7 +16,9 @@ The flow is .convos -> Python models -> gdscript models -> tres file
 Alternatively we could generate the tres directly - but doing the intermediate
 steps makes things easier to debug, and doesn't add too much complexity
 
-Run with uv run python dialog/tools/convo_parser.py
+Run with
+uv run python dialog/tools/convo_parser.py
+godot4 --headless --script res://dialog/tools/SCRIPT.gd
 
 
 Notes:

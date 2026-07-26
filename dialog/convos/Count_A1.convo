@@ -1,12 +1,9 @@
-? thought1
-? thought2
-Player:: Hello I am the player, I do not get a choice in what to say here
+Player:: Hello, I am the player, I do not get a choice in what to say here
     Count_A1:: Hello I am The Count A, and this is conversation 1
         Count_A1:: I am saying two things, with a pause.
         Count_A1:: But this is said without a pause
             Player:: Hello The Count, I think you are an interesting person, or whatever you are, and I hope to get to know you more over the course of the weekend.
                 Count_A1:: asdfjilk
-                ~commands~
             Player:: BBB
                 Player:: CCC
                     Count_A1:: upiopououi
