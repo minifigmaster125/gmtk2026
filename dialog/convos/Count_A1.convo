@@ -1,9 +1,9 @@
-Player:: Hello, I am the player, I do not get a choice in what to say here
-    Count_A1:: Hello I am The Count A, and this is conversation 1
-        Count_A1:: I am saying two things, with a pause.
-        Count_A1:: But this is said without a pause
-            Player:: Hello The Count, I think you are an interesting person, or whatever you are, and I hope to get to know you more over the course of the weekend.
-                Count_A1:: asdfjilk
-            Player:: BBB
-                Player:: CCC
-                    Count_A1:: upiopououi
+Count_A1:: Hello, welcome to the Pan-Count Ball!
+    Player:: Th-
+        Count_A1:: The Pan-Count Ball is a yearly event hosted by one of the Counts in the community.
+            Player:: Ye-
+                Count_A1:: It's the perfect place to mix and mingle with other nobles, and maybe get to know a future friend!
+                    Count_A1:: I would love to stay and chat with you, but I must attend to the other guests.
+            Player:: I-
+                Count_A1:: You should be sure to chat with a lot of different people! Maybe one of them will take you home and elevate your status.
+                    Count_A1:: I would love to stay and chat with you, but I must attend to the other guests.
