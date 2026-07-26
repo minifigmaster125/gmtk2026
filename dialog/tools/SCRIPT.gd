@@ -202,18 +202,37 @@ func build():
 		[],
 	)
 	trees["Count_C3"] = DialogState.create(
-		'Player',
+		'Count_C3',
 		[],
-		['Hello, Count C, third Counversation'],
-		['Hello, Count C, third Counversation'],
+		['So... You doing anything after the game ends?'],
+		['So... You doing anything after the game ends?'],
 		[
 			DialogState.create(
-				'Count_C3',
+				'Player',
 				[],
-				['Lemme get your number 👀'],
-				['Lemme get your number 👀'],
+				["I think I'm just going to not exist.", 'I think I come back and do this again?'],
+				["I think I'm just going to not exist.", 'I think I come back and do this again?'],
 				[
-					null
+					DialogState.create(
+						'Count_C3',
+						[],
+						['Hmm. Sounds fun to be honest.'],
+						['Hmm. Sounds fun to be honest.'],
+						[
+							null
+						],
+						[],
+					),
+					DialogState.create(
+						'Count_C3',
+						[],
+						["Maybe by then I'll have more going on."],
+						["Maybe by then I'll have more going on."],
+						[
+							null
+						],
+						[],
+					),
 				],
 				[],
 			),
@@ -379,16 +398,34 @@ func build():
 	trees["Count_C2"] = DialogState.create(
 		'Player',
 		[],
-		['Hello, Count C, Second Counversation'],
-		['Hello, Count C, Second Counversation'],
+		['So, how do you feel about being incomplete?'],
+		['So, how do you feel about being incomplete?'],
 		[
 			DialogState.create(
 				'Count_C2',
 				[],
-				['Hello again'],
-				['Hello again'],
+				["Oh y'know. It's kind of a bummer."],
+				["Oh y'know. It's kind of a bummer."],
 				[
-					null
+					DialogState.create(
+						'Player',
+						[],
+						['Well it is a game jam, so what did you expect?', 'Fair enough.'],
+						['Well it is a game jam, so what did you expect?', 'Fair enough.'],
+						[
+							DialogState.create(
+								'Count_C2',
+								[],
+								["I don't know, just a bit of effort? Despite all that."],
+								["I don't know, just a bit of effort? Despite all that."],
+								[
+									null
+								],
+								[],
+							),
+						],
+						[],
+					),
 				],
 				[],
 			),
@@ -396,18 +433,82 @@ func build():
 		[],
 	)
 	trees["Count_B3"] = DialogState.create(
-		'Player',
+		'Count_B3',
 		[],
-		['Hello, Count B, third Counversation'],
-		['Hello, Count B, third Counversation'],
+		["I'm sure I must be imagining it, but I must ask - have you been avoiding me?"],
+		["I'm sure I must be imagining it, but I must ask - have you been avoiding me?"],
 		[
 			DialogState.create(
-				'Count_B3',
+				'Player',
 				[],
-				['Lemme get your number 👀'],
-				['Lemme get your number 👀'],
+				['Yes. When we first met you stood there and counted down for 20 seconds. Twice.', 'No I love counting. I am 5 years old.'],
+				['Yes. When we first met you stood there and counted down for 20 seconds. Twice.', 'No I love counting. I am 5 years old.'],
 				[
-					null
+					DialogState.create(
+						'Count_B3',
+						[],
+						["Well I AM a Count. That's part of the job."],
+						["Well I AM a Count. That's part of the job."],
+						[
+							DialogState.create(
+								'Player',
+								[],
+								['I think the counting is from your other job, not your title.'],
+								['I think the counting is from your other job, not your title.'],
+								[
+									null
+								],
+								[],
+							),
+						],
+						[],
+					),
+					DialogState.create(
+						'Count_B3',
+						[],
+						["I'm sorry, I think I just get nervous and lean to hard into the whole counting schtick."],
+						["I'm sorry, I think I just get nervous and lean to hard into the whole counting schtick."],
+						[
+							DialogState.create(
+								'Count_B3',
+								[],
+								["Even though I've been to hundreds of these balls, I still get nervous."],
+								["Even though I've been to hundreds of these balls, I still get nervous."],
+								[
+									DialogState.create(
+										'Count_B3',
+										[],
+										["The whole puppet situation doesn't help either - I've almost never seen a fellow felted."],
+										["The whole puppet situation doesn't help either - I've almost never seen a fellow felted."],
+										[
+											DialogState.create(
+												'Player',
+												[],
+												["So you've got felt skin, and there's just a guy's arm inside you? Piloting things? Who even is he? What's his deal?", 'Yeah. I know what you mean. Or something similar at least.'],
+												["So you've got felt skin, and there's just a guy's arm inside you? Piloting things? Who even is he? What's his deal?", 'Yeah. I know what you mean. Or something similar at least.'],
+												[
+													DialogState.create(
+														'Count_B3',
+														[],
+														["Guiseppe? He's my manservant. Same as any other count."],
+														["Guiseppe? He's my manservant. Same as any other count."],
+														[
+															null
+														],
+														[],
+													),
+												],
+												[],
+											),
+										],
+										[],
+									),
+								],
+								[],
+							),
+						],
+						[],
+					),
 				],
 				[],
 			),
@@ -2347,18 +2448,637 @@ func build():
 		[],
 	)
 	trees["Count_B2"] = DialogState.create(
-		'Player',
+		'Count_B2',
 		[],
-		['Hello, Count B, Second Counversation'],
-		['Hello, Count B, Second Counversation'],
+		['Hello again!'],
+		['Hello again!'],
 		[
 			DialogState.create(
-				'Count_B2',
+				'Player',
 				[],
-				['Hello again'],
-				['Hello again'],
+				['Ugh.', 'Hi Orlok.'],
+				['Ugh.', 'Hi Orlok.'],
 				[
-					null
+					DialogState.create(
+						'Count_B2',
+						[],
+						["You know what time it is! But this time, we're doing an advanced countdown."],
+						["You know what time it is! But this time, we're doing an advanced countdown."],
+						[
+							DialogState.create(
+								'Player',
+								[],
+								['Yay!', 'Yay.'],
+								['Yay!', 'Yay.'],
+								[
+									DialogState.create(
+										'Count_B2',
+										[],
+										['ONE HUNDRED!'],
+										['ONE HUNDRED!'],
+										[
+											DialogState.create(
+												'Count_B2',
+												[],
+												['Ninety nine!'],
+												['Ninety nine!'],
+												[
+													DialogState.create(
+														'Count_B2',
+														[],
+														['Ninety eight!'],
+														['Ninety eight!'],
+														[
+															DialogState.create(
+																'Count_B2',
+																[],
+																['Ninety seven!'],
+																['Ninety seven!'],
+																[
+																	DialogState.create(
+																		'Player',
+																		[],
+																		['Are you actually going to count down from 100?', '...'],
+																		['Are you actually going to count down from 100?', '...'],
+																		[
+																			DialogState.create(
+																				'Count_B2',
+																				[],
+																				['Nope! See ya!'],
+																				['Nope! See ya!'],
+																				[
+																					null
+																				],
+																				[],
+																			),
+																			DialogState.create(
+																				'Count_B2',
+																				[],
+																				['Ninety six!'],
+																				['Ninety six!'],
+																				[
+																					DialogState.create(
+																						'Count_B2',
+																						[],
+																						['Ninety five!'],
+																						['Ninety five!'],
+																						[
+																							DialogState.create(
+																								'Count_B2',
+																								[],
+																								['Ninety four!'],
+																								['Ninety four!'],
+																								[
+																									DialogState.create(
+																										'Count_B2',
+																										[],
+																										['Ninety three!'],
+																										['Ninety three!'],
+																										[
+																											DialogState.create(
+																												'Count_B2',
+																												[],
+																												['Ninety two!'],
+																												['Ninety two!'],
+																												[
+																													DialogState.create(
+																														'Count_B2',
+																														[],
+																														['Ninety one!'],
+																														['Ninety one!'],
+																														[
+																															DialogState.create(
+																																'Count_B2',
+																																[],
+																																['Ninety-oh!'],
+																																['Ninety-oh!'],
+																																[
+																																	DialogState.create(
+																																		'Count_B2',
+																																		[],
+																																		['Eighty eight!'],
+																																		['Eighty eight!'],
+																																		[
+																																			DialogState.create(
+																																				'Count_B2',
+																																				[],
+																																				['*cough* *cough*'],
+																																				['*cough* *cough*'],
+																																				[
+																																					DialogState.create(
+																																						'Count_B2',
+																																						[],
+																																						['Excuse me.'],
+																																						['Excuse me.'],
+																																						[
+																																							null
+																																						],
+																																						[],
+																																					),
+																																				],
+																																				[],
+																																			),
+																																		],
+																																		[],
+																																	),
+																																],
+																																[],
+																															),
+																														],
+																														[],
+																													),
+																												],
+																												[],
+																											),
+																										],
+																										[],
+																									),
+																								],
+																								[],
+																							),
+																						],
+																						[],
+																					),
+																				],
+																				[],
+																			),
+																		],
+																		[],
+																	),
+																],
+																[],
+															),
+														],
+														[],
+													),
+												],
+												[],
+											),
+										],
+										[],
+									),
+									DialogState.create(
+										'Count_B2',
+										[],
+										['ONE HUNDRED!'],
+										['ONE HUNDRED!'],
+										[
+											DialogState.create(
+												'Count_B2',
+												[],
+												['Ninety nine!'],
+												['Ninety nine!'],
+												[
+													DialogState.create(
+														'Count_B2',
+														[],
+														['Ninety eight!'],
+														['Ninety eight!'],
+														[
+															DialogState.create(
+																'Count_B2',
+																[],
+																['Ninety seven!'],
+																['Ninety seven!'],
+																[
+																	DialogState.create(
+																		'Player',
+																		[],
+																		['Are you actually going to count down from 100?', '...'],
+																		['Are you actually going to count down from 100?', '...'],
+																		[
+																			DialogState.create(
+																				'Count_B2',
+																				[],
+																				['Nope! See ya!'],
+																				['Nope! See ya!'],
+																				[
+																					null
+																				],
+																				[],
+																			),
+																			DialogState.create(
+																				'Count_B2',
+																				[],
+																				['Ninety six!'],
+																				['Ninety six!'],
+																				[
+																					DialogState.create(
+																						'Count_B2',
+																						[],
+																						['Ninety five!'],
+																						['Ninety five!'],
+																						[
+																							DialogState.create(
+																								'Count_B2',
+																								[],
+																								['Ninety four!'],
+																								['Ninety four!'],
+																								[
+																									DialogState.create(
+																										'Count_B2',
+																										[],
+																										['Ninety three!'],
+																										['Ninety three!'],
+																										[
+																											DialogState.create(
+																												'Count_B2',
+																												[],
+																												['Ninety two!'],
+																												['Ninety two!'],
+																												[
+																													DialogState.create(
+																														'Count_B2',
+																														[],
+																														['Ninety one!'],
+																														['Ninety one!'],
+																														[
+																															DialogState.create(
+																																'Count_B2',
+																																[],
+																																['Ninety-oh!'],
+																																['Ninety-oh!'],
+																																[
+																																	DialogState.create(
+																																		'Count_B2',
+																																		[],
+																																		['Eighty eight!'],
+																																		['Eighty eight!'],
+																																		[
+																																			DialogState.create(
+																																				'Count_B2',
+																																				[],
+																																				['*cough* *cough*'],
+																																				['*cough* *cough*'],
+																																				[
+																																					DialogState.create(
+																																						'Count_B2',
+																																						[],
+																																						['Excuse me.'],
+																																						['Excuse me.'],
+																																						[
+																																							null
+																																						],
+																																						[],
+																																					),
+																																				],
+																																				[],
+																																			),
+																																		],
+																																		[],
+																																	),
+																																],
+																																[],
+																															),
+																														],
+																														[],
+																													),
+																												],
+																												[],
+																											),
+																										],
+																										[],
+																									),
+																								],
+																								[],
+																							),
+																						],
+																						[],
+																					),
+																				],
+																				[],
+																			),
+																		],
+																		[],
+																	),
+																],
+																[],
+															),
+														],
+														[],
+													),
+												],
+												[],
+											),
+										],
+										[],
+									),
+								],
+								[],
+							),
+						],
+						[],
+					),
+					DialogState.create(
+						'Count_B2',
+						[],
+						["You know what time it is! But this time, we're doing an advanced countdown."],
+						["You know what time it is! But this time, we're doing an advanced countdown."],
+						[
+							DialogState.create(
+								'Player',
+								[],
+								['Yay!', 'Yay.'],
+								['Yay!', 'Yay.'],
+								[
+									DialogState.create(
+										'Count_B2',
+										[],
+										['ONE HUNDRED!'],
+										['ONE HUNDRED!'],
+										[
+											DialogState.create(
+												'Count_B2',
+												[],
+												['Ninety nine!'],
+												['Ninety nine!'],
+												[
+													DialogState.create(
+														'Count_B2',
+														[],
+														['Ninety eight!'],
+														['Ninety eight!'],
+														[
+															DialogState.create(
+																'Count_B2',
+																[],
+																['Ninety seven!'],
+																['Ninety seven!'],
+																[
+																	DialogState.create(
+																		'Player',
+																		[],
+																		['Are you actually going to count down from 100?', '...'],
+																		['Are you actually going to count down from 100?', '...'],
+																		[
+																			DialogState.create(
+																				'Count_B2',
+																				[],
+																				['Nope! See ya!'],
+																				['Nope! See ya!'],
+																				[
+																					null
+																				],
+																				[],
+																			),
+																			DialogState.create(
+																				'Count_B2',
+																				[],
+																				['Ninety six!'],
+																				['Ninety six!'],
+																				[
+																					DialogState.create(
+																						'Count_B2',
+																						[],
+																						['Ninety five!'],
+																						['Ninety five!'],
+																						[
+																							DialogState.create(
+																								'Count_B2',
+																								[],
+																								['Ninety four!'],
+																								['Ninety four!'],
+																								[
+																									DialogState.create(
+																										'Count_B2',
+																										[],
+																										['Ninety three!'],
+																										['Ninety three!'],
+																										[
+																											DialogState.create(
+																												'Count_B2',
+																												[],
+																												['Ninety two!'],
+																												['Ninety two!'],
+																												[
+																													DialogState.create(
+																														'Count_B2',
+																														[],
+																														['Ninety one!'],
+																														['Ninety one!'],
+																														[
+																															DialogState.create(
+																																'Count_B2',
+																																[],
+																																['Ninety-oh!'],
+																																['Ninety-oh!'],
+																																[
+																																	DialogState.create(
+																																		'Count_B2',
+																																		[],
+																																		['Eighty eight!'],
+																																		['Eighty eight!'],
+																																		[
+																																			DialogState.create(
+																																				'Count_B2',
+																																				[],
+																																				['*cough* *cough*'],
+																																				['*cough* *cough*'],
+																																				[
+																																					DialogState.create(
+																																						'Count_B2',
+																																						[],
+																																						['Excuse me.'],
+																																						['Excuse me.'],
+																																						[
+																																							null
+																																						],
+																																						[],
+																																					),
+																																				],
+																																				[],
+																																			),
+																																		],
+																																		[],
+																																	),
+																																],
+																																[],
+																															),
+																														],
+																														[],
+																													),
+																												],
+																												[],
+																											),
+																										],
+																										[],
+																									),
+																								],
+																								[],
+																							),
+																						],
+																						[],
+																					),
+																				],
+																				[],
+																			),
+																		],
+																		[],
+																	),
+																],
+																[],
+															),
+														],
+														[],
+													),
+												],
+												[],
+											),
+										],
+										[],
+									),
+									DialogState.create(
+										'Count_B2',
+										[],
+										['ONE HUNDRED!'],
+										['ONE HUNDRED!'],
+										[
+											DialogState.create(
+												'Count_B2',
+												[],
+												['Ninety nine!'],
+												['Ninety nine!'],
+												[
+													DialogState.create(
+														'Count_B2',
+														[],
+														['Ninety eight!'],
+														['Ninety eight!'],
+														[
+															DialogState.create(
+																'Count_B2',
+																[],
+																['Ninety seven!'],
+																['Ninety seven!'],
+																[
+																	DialogState.create(
+																		'Player',
+																		[],
+																		['Are you actually going to count down from 100?', '...'],
+																		['Are you actually going to count down from 100?', '...'],
+																		[
+																			DialogState.create(
+																				'Count_B2',
+																				[],
+																				['Nope! See ya!'],
+																				['Nope! See ya!'],
+																				[
+																					null
+																				],
+																				[],
+																			),
+																			DialogState.create(
+																				'Count_B2',
+																				[],
+																				['Ninety six!'],
+																				['Ninety six!'],
+																				[
+																					DialogState.create(
+																						'Count_B2',
+																						[],
+																						['Ninety five!'],
+																						['Ninety five!'],
+																						[
+																							DialogState.create(
+																								'Count_B2',
+																								[],
+																								['Ninety four!'],
+																								['Ninety four!'],
+																								[
+																									DialogState.create(
+																										'Count_B2',
+																										[],
+																										['Ninety three!'],
+																										['Ninety three!'],
+																										[
+																											DialogState.create(
+																												'Count_B2',
+																												[],
+																												['Ninety two!'],
+																												['Ninety two!'],
+																												[
+																													DialogState.create(
+																														'Count_B2',
+																														[],
+																														['Ninety one!'],
+																														['Ninety one!'],
+																														[
+																															DialogState.create(
+																																'Count_B2',
+																																[],
+																																['Ninety-oh!'],
+																																['Ninety-oh!'],
+																																[
+																																	DialogState.create(
+																																		'Count_B2',
+																																		[],
+																																		['Eighty eight!'],
+																																		['Eighty eight!'],
+																																		[
+																																			DialogState.create(
+																																				'Count_B2',
+																																				[],
+																																				['*cough* *cough*'],
+																																				['*cough* *cough*'],
+																																				[
+																																					DialogState.create(
+																																						'Count_B2',
+																																						[],
+																																						['Excuse me.'],
+																																						['Excuse me.'],
+																																						[
+																																							null
+																																						],
+																																						[],
+																																					),
+																																				],
+																																				[],
+																																			),
+																																		],
+																																		[],
+																																	),
+																																],
+																																[],
+																															),
+																														],
+																														[],
+																													),
+																												],
+																												[],
+																											),
+																										],
+																										[],
+																									),
+																								],
+																								[],
+																							),
+																						],
+																						[],
+																					),
+																				],
+																				[],
+																			),
+																		],
+																		[],
+																	),
+																],
+																[],
+															),
+														],
+														[],
+													),
+												],
+												[],
+											),
+										],
+										[],
+									),
+								],
+								[],
+							),
+						],
+						[],
+					),
 				],
 				[],
 			),

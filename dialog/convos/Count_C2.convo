@@ -1,2 +1,5 @@
-Player:: Hello, Count C, Second Counversation
-    Count_C2:: Hello again
+Player:: So, how do you feel about being incomplete?
+    Count_C2:: Oh y'know. It's kind of a bummer.
+        Player:: Well it is a game jam, so what did you expect?
+            Count_C2:: I don't know, just a bit of effort? Despite all that.
+        Player:: Fair enough.
