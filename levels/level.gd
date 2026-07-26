@@ -34,8 +34,7 @@ func start_level() -> void:
 	# fade to black
 	# save relevant stats
 	# transition to new scene
-	if GameManager.get_anxiety() <= 0:
-		GameManager.anxiety = 1280
+	GameManager.anxiety = 1280
 	var tween: Tween = create_tween()
 	cover_rect.visible = true
 	tween.tween_property(cover_rect, "modulate:a", 0, 5)

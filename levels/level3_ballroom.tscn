@@ -84,6 +84,7 @@ target_nodes = [NodePath("../../Marker1"), NodePath("../../Marker3"), NodePath("
 [node name="CountA" parent="." index="7" unique_id=191791242 groups=["mood_affecting"] instance=ExtResource("7_v80s8")]
 position = Vector2(464, 208)
 character_name = "Count_A"
+conversation_stage_limit = 12
 
 [node name="GoalQueueComponent" parent="CountA" index="6" unique_id=624143483 node_paths=PackedStringArray("target_nodes")]
 target_nodes = [NodePath("../../Marker3"), NodePath("../../Marker4"), NodePath("../../Player"), NodePath("../../Waiter")]
