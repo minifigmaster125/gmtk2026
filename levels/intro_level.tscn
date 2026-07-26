@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://b0f5vjvf3nptc" path="res://Isaac/scripts/scene_change.gd" id="12_wjtbo"]
 [ext_resource type="Texture2D" uid="uid://dujinup1b8roa" path="res://Isaac/pixel_assets/main_menu/bloodmoon_Pixeled.png" id="13_jfa7v"]
 [ext_resource type="AudioStream" uid="uid://crckpbskjighm" path="res://Isaac/audio/background/neutral-search.mp3" id="14_jfa7v"]
+[ext_resource type="Texture2D" uid="uid://b20wkoypegte4" path="res://Isaac/pixel_assets/game_tiles/CastleGate1.jpg" id="15_t2b8k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atulg"]
 size = Vector2(64.25, 31.25)
@@ -54,7 +55,7 @@ mood_map_layer = NodePath("../MoodMapLayer")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="7" unique_id=967494192]
 color = Color(0.8084046, 0.594813, 0.4866588, 1)
-energy = 0.76
+energy = 1.13
 blend_mode = 1
 
 [node name="CandleSet" parent="." index="8" unique_id=191791242 instance=ExtResource("6_u2ard")]
@@ -148,6 +149,12 @@ autoplay = true
 mix_target = 1
 max_polyphony = 3
 parameters/looping = true
+
+[node name="CastleGate1" type="Sprite2D" parent="." index="28" unique_id=1844438225]
+self_modulate = Color(2.602298, 2.602298, 2.602298, 0.5411765)
+position = Vector2(319.99997, -22.000002)
+scale = Vector2(0.9197709, 0.78751147)
+texture = ExtResource("15_t2b8k")
 
 [connection signal="body_entered" from="LevelCompleteTrigga" to="LevelCompleteTrigga" method="_on_body_entered"]
 
