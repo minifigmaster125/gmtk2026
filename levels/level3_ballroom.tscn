@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c34qy1bvchy88" path="res://player/player.tscn" id="6_supb0"]
 [ext_resource type="PackedScene" uid="uid://ck2l4dayav4d3" path="res://components/main_camera.tscn" id="7_itgsl"]
 [ext_resource type="PackedScene" uid="uid://kg0urtaf46hp" path="res://count/count.tscn" id="7_v80s8"]
-[ext_resource type="Texture2D" uid="uid://f3xyoxdv1tk8" path="res://assets/textures/texture_atlas.png" id="8_itgsl"]
+[ext_resource type="Texture2D" uid="uid://ce0md01crnujx" path="res://assets/textures/texture_atlas.png" id="8_itgsl"]
 [ext_resource type="PackedScene" uid="uid://cjrvdsm7kxb3x" path="res://waiter/waiter.tscn" id="9_45r7g"]
 [ext_resource type="PackedScene" uid="uid://b6n2mdc2a55cg" path="res://waiter/candleset.tscn" id="11_45r7g"]
 [ext_resource type="Texture2D" uid="uid://ykirofrj08gh" path="res://Isaac/pixel_assets/statues/ArmorSet_Pixeled.png" id="12_kktx4"]
@@ -36,6 +36,7 @@ animations = [{
 [node name="Level3" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_rsm7o")]
 player = NodePath("Player")
 next_scene = ExtResource("2_gwpor")
+level_num = 4
 
 [node name="Interface" parent="UI" parent_id_path=PackedInt32Array(1736348383) index="0" unique_id=1098322984]
 anchors_preset = 15

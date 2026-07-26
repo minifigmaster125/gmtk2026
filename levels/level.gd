@@ -43,6 +43,7 @@ func start_level() -> void:
 	cover_rect.visible = false
 
 const scene_3 = preload("res://levels/level3_ballroom.tscn")
+const final_scene = preload("res://levels/final_scene.tscn")
 
 func end_level() -> void:
 	# stop input
@@ -55,8 +56,14 @@ func end_level() -> void:
 	cover_rect.visible = true
 	tween.tween_property(cover_rect, "modulate:a", 1., 1.)
 	await tween.finished
+	GameManager.set_interaction_metric("Count_A", 0)
+	GameManager.set_interaction_metric("Count_B", 0)
+	GameManager.set_interaction_metric("Count_C", 0)
 
 	# get_tree().change_scene_to_packed(next_scene)
 	
 	if level_num == 3:
 		get_tree().change_scene_to_packed(scene_3)
+
+	if level_num == 4:
+		get_tree().change_scene_to_packed(final_scene)

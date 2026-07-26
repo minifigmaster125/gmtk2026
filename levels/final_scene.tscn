@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://cya4aaxcsbxd4"]
 
+[ext_resource type="Script" uid="uid://qks5vgjcichi" path="res://levels/final_scene.gd" id="1_33pb0"]
 [ext_resource type="Texture2D" uid="uid://dowphbjfi4ut2" path="res://assets/images/sunny.png" id="1_ck6bu"]
+[ext_resource type="Texture2D" uid="uid://c0dg7lke1yg1p" path="res://assets/images/puppet.png" id="2_iroug"]
 
 [node name="FinalScene" type="Node2D" unique_id=1880286541]
+script = ExtResource("1_33pb0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=561102342]
 
@@ -14,7 +17,8 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1580469670]
+[node name="YouWin" type="MarginContainer" parent="CanvasLayer" unique_id=1580469670]
+visible = false
 custom_minimum_size = Vector2(320, 0)
 custom_maximum_size = Vector2(-1, 360)
 anchors_preset = 15
@@ -23,21 +27,55 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=1919780499]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/YouWin" unique_id=1919780499]
 layout_mode = 2
 size_flags_vertical = 0
-alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=451036775]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-text = "Well aren't you the sweetest thing? Listen, I really enjoyed getting to know you this weekend. Would you mind if I invited you to my private cottage? I'll send somebody to pick you up ;)"
-fit_content = true
-autowrap_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" unique_id=1275503931]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/YouWin/HBoxContainer" unique_id=1275503931]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("1_ck6bu")
 expand_mode = 4
 stretch_mode = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/YouWin/HBoxContainer" unique_id=527261883]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/YouWin/HBoxContainer/CenterContainer" unique_id=451036775]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Ada found your company compelling! She's very interested in getting to know you better. "
+fit_content = true
+autowrap_mode = 2
+
+[node name="YouLose" type="MarginContainer" parent="CanvasLayer" unique_id=1191846199]
+custom_minimum_size = Vector2(320, 0)
+custom_maximum_size = Vector2(-1, 360)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/YouLose" unique_id=1179643314]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/YouLose/HBoxContainer" unique_id=1220939328]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_iroug")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/YouLose/HBoxContainer" unique_id=1286383209]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/YouLose/HBoxContainer/CenterContainer" unique_id=1060395997]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Ada wasn't  all that interested in you. However, you and Orlok can count down the days together!"
+fit_content = true
+autowrap_mode = 2
