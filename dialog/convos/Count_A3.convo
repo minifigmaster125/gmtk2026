@@ -1,2 +1,10 @@
-Player:: Hello, Count A, third Counversation
-    Count_A3:: Lemme get your number 👀
+Count_A3:: Hey! Good to see you.
+    Player:: It's good to see you too.
+        Player:: I've loved getting to know you.
+            Count_A3:: I feel like I barely know anything about you - I don't even know where your estate is!
+                Player:: Well...
+                    Count_A3:: I'm kidding, I know who you are.
+                        Count_A3:: I am the host after all, I have to know these things.
+                            Player:: I can-
+                                Count_A3:: Please, don't worry. I know you must have gotten over a lot of nerves to navigate a party like this.
+                                    Count_A3:: Maybe another day you can come around again and we can get to know each other better?
