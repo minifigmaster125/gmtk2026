@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dxmn1rrfpvnhs" path="res://Isaac/pixel_assets/statues/VampressRight.png" id="11_t2b8k"]
 [ext_resource type="Script" uid="uid://b0f5vjvf3nptc" path="res://Isaac/scripts/scene_change.gd" id="12_wjtbo"]
 [ext_resource type="Texture2D" uid="uid://dujinup1b8roa" path="res://Isaac/pixel_assets/main_menu/bloodmoon_Pixeled.png" id="13_jfa7v"]
+[ext_resource type="AudioStream" uid="uid://crckpbskjighm" path="res://Isaac/audio/background/neutral-search.mp3" id="14_jfa7v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atulg"]
 size = Vector2(64.25, 31.25)
@@ -122,7 +123,7 @@ script = ExtResource("12_wjtbo")
 scene_path = "uid://x7kyjoimh1t6"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelCompleteTrigga" index="0" unique_id=1733014617]
-position = Vector2(320, 56)
+position = Vector2(320, 40)
 shape = SubResource("RectangleShape2D_atulg")
 
 [node name="BloodmoonPixeled1" type="Sprite2D" parent="." index="25" unique_id=1879129709]
@@ -138,6 +139,15 @@ self_modulate = Color(2.4061394, 2.4061394, 2.4061394, 0.49411765)
 position = Vector2(146, 167)
 scale = Vector2(7.671, 8)
 texture = ExtResource("13_jfa7v")
+
+[node name="BackgroundLoopAudioPlayer" type="AudioStreamPlayer" parent="." index="27" unique_id=1390547431]
+stream = ExtResource("14_jfa7v")
+volume_db = -3.291
+pitch_scale = 0.72
+autoplay = true
+mix_target = 1
+max_polyphony = 3
+parameters/looping = true
 
 [connection signal="body_entered" from="LevelCompleteTrigga" to="LevelCompleteTrigga" method="_on_body_entered"]
 

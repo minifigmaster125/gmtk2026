@@ -485,7 +485,7 @@ grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_lock_ = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8" unique_id=1026103203]
+[node name="BackgroundLoopAudioPlayer" type="AudioStreamPlayer" parent="." index="8" unique_id=1026103203]
 stream = ExtResource("11_wjegv")
 volume_db = -3.291
 autoplay = true
