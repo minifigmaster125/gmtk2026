@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Count
 
 @export_range(0, 20) var interest_rate := 20
 @export var character_name := "Count"
@@ -18,11 +19,20 @@ var dialog_instance: DialogControl  = null
 
 var _interested := false
 
+@onready var pathfinder_component := $Pathfinder as PathfinderComponent
+@onready var goal_queue_component := $GoalQueueComponent as GoalQueueComponent
+
 func _ready() -> void:
 	interest_area.body_entered.connect(_on_body_entered)
 	interest_area.body_exited.connect(_on_body_exited)
 	if GameManager.has_interaction_metric(character_name):
 		interest_progress.value = GameManager.get_interaction_metric(character_name)
+
+	pathfinder_component.pathfinding_finished.connect(_on_pathfinding_finished)
+
+func _on_pathfinding_finished():
+	print("FINITO")
+	pathfinder_component.update_target(goal_queue_component.peek())
 
 func _process(delta: float):
 	if _interested:

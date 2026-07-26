@@ -92,9 +92,9 @@ func recieve_conversing_event(conversing: bool, partner: String):
 			count_subtitle.append_text("[i]90% felt, 0% vampire, 10% human arm [/i]")
 		elif current_partner.begins_with("Count_C"):
 			count_c.visible = true
-			count_name.text = "Count C von NotDone"
+			count_name.text = "Count Edmond von Notdone"
 			count_subtitle.clear()
-			count_subtitle.append_text("[i]Definitely a completed character [/i]")
+			count_subtitle.append_text("[i]Much like this character, I left the book unfinished [/i]")
 		
 		self.dialog_tree = ConversationSingleton.get_conversation(partner)
 		if self.dialog_tree == null:
