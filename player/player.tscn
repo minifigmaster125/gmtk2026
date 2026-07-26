@@ -49,8 +49,9 @@ animations = [{
 script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1332930609]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_rgyib")
-animation = &"walk_up"
+animation = &"walk_down"
 speed_scale = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1483946653]
