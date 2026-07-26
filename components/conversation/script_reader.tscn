@@ -33,7 +33,7 @@ popup/item_0/text = "Ada"
 popup/item_0/id = 0
 popup/item_1/text = "Orlok"
 popup/item_1/id = 1
-popup/item_2/text = "Count"
+popup/item_2/text = "Edmond"
 popup/item_2/id = 2
 
 [node name="convo1" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=2029874437]

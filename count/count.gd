@@ -15,7 +15,7 @@ class_name Count
 @export var conversation_stage_limit: int = 2
 
 var dialog_scene = preload("res://components/conversation/dialog_control.tscn")
-var dialog_instance = null
+var dialog_instance : DialogControl  = null
 
 var _interested := false
 
@@ -31,7 +31,9 @@ func _process(delta: float):
 	if _interested:
 		if dialog_instance == null and (DEBUG_skip_interest or interest_progress.value == interest_progress.max_value):
 			dialog_instance = dialog_scene.instantiate()
-			get_tree().root.add_child(dialog_instance)
+			var layer = CanvasLayer.new()
+			layer.add_child(dialog_instance)
+			get_tree().root.add_child(layer)
 			GameManager.get_conversation_stage(character_name)
 			var stage = min(GameManager.get_conversation_stage(character_name), conversation_stage_limit)
 			dialog_instance.recieve_conversing_event(true, character_name + str(stage))
@@ -47,4 +49,5 @@ func _on_body_exited(body: Node2D):
 	if body is Player:
 		_interested = false
 		if dialog_instance != null:
+			GameManager.persistent_moods = [{name="Rudely Left Conversation", value=2.0}]
 			dialog_instance._exit_pressed()
