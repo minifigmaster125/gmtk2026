@@ -15,6 +15,8 @@ extends Control
 
 var conversation = []
 
+var pause: bool = false
+
 var dialog_tree: DialogState
 var current_partner = ""
 
@@ -34,6 +36,7 @@ func execute_tree():
 		return
 
 	if dialog_tree.speaker != current_partner:
+		pause = true
 		for i in range(dialog_tree.short_choices.size()):
 			var btn = dialog_option_button.instantiate()
 			#btn.add_theme_font_size_override("font_size", int(10 * 1))#Util.get_composite_text_scale()))
@@ -47,7 +50,10 @@ func execute_tree():
 		buttonBox.add_child(filler)
 		
 	else:
-		await get_tree().create_timer(1).timeout
+		if pause:
+			await get_tree().create_timer(1).timeout
+		else:
+			pause = true
 		var i = randi_range(0, dialog_tree.choices.size() - 1)
 		add_speech(dialog_tree.speaker, dialog_tree.choices[i])
 		dialog_tree = dialog_tree.states[i]

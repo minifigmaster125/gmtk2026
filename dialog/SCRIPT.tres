@@ -1,11 +1,30 @@
-[gd_resource type="Resource" script_class="DialogTreeCollection" format=3 uid="uid://buvf2ccnhgnrc"]
+[gd_resource type="Resource" script_class="DialogTreeCollection" load_steps=107 format=3]
 
-[ext_resource type="Script" uid="uid://dfsw2sdnstg1s" path="res://dialog/dialog_tree_collection.gd" id="1_wnf1w"]
-[ext_resource type="Script" uid="uid://cio25mowqx3qd" path="res://dialog/dialog_state.gd" id="2_k2gsb"]
+[ext_resource type="Script" path="res://dialog/dialog_tree_collection.gd" id="1_wnf1w"]
+[ext_resource type="Script" path="res://dialog/dialog_state.gd" id="2_k2gsb"]
+
+[sub_resource type="Resource" id="Resource_ulqtn"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_A3"
+directions = Array[String]([])
+choices = Array[String](["Lemme get your number 👀"])
+short_choices = Array[String](["Lemme get your number 👀"])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_8cglv"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String]([])
+choices = Array[String](["Hello, Count A, third Counversation"])
+short_choices = Array[String](["Hello, Count A, third Counversation"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ulqtn")])
+side_effects = []
 
 [sub_resource type="Resource" id="Resource_qvos8"]
 script = ExtResource("2_k2gsb")
 speaker = "Count_A1"
+directions = Array[String]([])
 choices = Array[String](["asdfjilk"])
 short_choices = Array[String](["asdfjilk"])
 states = Array[ExtResource("2_k2gsb")]([null])
@@ -14,38 +33,48 @@ side_effects = ["commands"]
 [sub_resource type="Resource" id="Resource_0yc67"]
 script = ExtResource("2_k2gsb")
 speaker = "Count_A1"
+directions = Array[String]([])
 choices = Array[String](["upiopououi"])
 short_choices = Array[String](["upiopououi"])
 states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
 
 [sub_resource type="Resource" id="Resource_jgjeo"]
 script = ExtResource("2_k2gsb")
 speaker = "Player"
+directions = Array[String]([])
 choices = Array[String](["CCC"])
 short_choices = Array[String](["CCC"])
 states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_0yc67")])
+side_effects = []
 
 [sub_resource type="Resource" id="Resource_xofoe"]
 script = ExtResource("2_k2gsb")
 speaker = "Player"
+directions = Array[String]([])
 choices = Array[String](["Hello The Count, I think you are an interesting person, or whatever you are, and I hope to get to know you more over the course of the weekend.", "BBB"])
 short_choices = Array[String](["Hello The Count, I think you are an interesting person, or whatever you are, and I hope to get to know you more over the course of the weekend.", "BBB"])
 states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_qvos8"), SubResource("Resource_jgjeo")])
+side_effects = []
 
 [sub_resource type="Resource" id="Resource_fljf2"]
 script = ExtResource("2_k2gsb")
 speaker = "Count_A1"
+directions = Array[String]([])
 choices = Array[String](["I am saying two things, with a pause.
 But this is said without a pause"])
 short_choices = Array[String](["I am saying two things, with a pause."])
 states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_xofoe")])
+side_effects = []
 
 [sub_resource type="Resource" id="Resource_d2ur6"]
 script = ExtResource("2_k2gsb")
 speaker = "Count_A1"
+directions = Array[String]([])
 choices = Array[String](["Hello I am The Count A, and this is conversation 1"])
 short_choices = Array[String](["Hello I am The Count A, and this is conversation 1"])
 states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_fljf2")])
+side_effects = []
 
 [sub_resource type="Resource" id="Resource_4ok5h"]
 script = ExtResource("2_k2gsb")
@@ -54,84 +83,16 @@ directions = Array[String](["thought1", "thought2"])
 choices = Array[String](["Hello I am the player, I do not get a choice in what to say here"])
 short_choices = Array[String](["Hello I am the player, I do not get a choice in what to say here"])
 states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_d2ur6")])
-
-[sub_resource type="Resource" id="Resource_33fl8"]
-script = ExtResource("2_k2gsb")
-speaker = "Count_A2"
-choices = Array[String](["Hello again"])
-short_choices = Array[String](["Hello again"])
-states = Array[ExtResource("2_k2gsb")]([null])
-
-[sub_resource type="Resource" id="Resource_baedk"]
-script = ExtResource("2_k2gsb")
-speaker = "Player"
-choices = Array[String](["Hello, Count A, Second Counversation"])
-short_choices = Array[String](["Hello, Count A, Second Counversation"])
-states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_33fl8")])
-
-[sub_resource type="Resource" id="Resource_ulqtn"]
-script = ExtResource("2_k2gsb")
-speaker = "Count_A3"
-choices = Array[String](["Lemme get your number 👀"])
-short_choices = Array[String](["Lemme get your number 👀"])
-states = Array[ExtResource("2_k2gsb")]([null])
-
-[sub_resource type="Resource" id="Resource_8cglv"]
-script = ExtResource("2_k2gsb")
-speaker = "Player"
-choices = Array[String](["Hello, Count A, third Counversation"])
-short_choices = Array[String](["Hello, Count A, third Counversation"])
-states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ulqtn")])
-
-[sub_resource type="Resource" id="Resource_ajk3r"]
-script = ExtResource("2_k2gsb")
-speaker = "Count_B1"
-choices = Array[String](["Hello I am The Count B, and this is conversation 1"])
-short_choices = Array[String](["Hello I am The Count B, and this is conversation 1"])
-states = Array[ExtResource("2_k2gsb")]([null])
-
-[sub_resource type="Resource" id="Resource_k21dl"]
-script = ExtResource("2_k2gsb")
-speaker = "Player"
-directions = Array[String](["thought1", "thought2"])
-choices = Array[String](["Hello I am the player, I do not get a choice in what to say here"])
-short_choices = Array[String](["Hello I am the player, I do not get a choice in what to say here"])
-states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ajk3r")])
-
-[sub_resource type="Resource" id="Resource_hmaxr"]
-script = ExtResource("2_k2gsb")
-speaker = "Count_B2"
-choices = Array[String](["Hello again"])
-short_choices = Array[String](["Hello again"])
-states = Array[ExtResource("2_k2gsb")]([null])
-
-[sub_resource type="Resource" id="Resource_28kue"]
-script = ExtResource("2_k2gsb")
-speaker = "Player"
-choices = Array[String](["Hello, Count B, Second Counversation"])
-short_choices = Array[String](["Hello, Count B, Second Counversation"])
-states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_hmaxr")])
-
-[sub_resource type="Resource" id="Resource_2kqdf"]
-script = ExtResource("2_k2gsb")
-speaker = "Count_B3"
-choices = Array[String](["Lemme get your number 👀"])
-short_choices = Array[String](["Lemme get your number 👀"])
-states = Array[ExtResource("2_k2gsb")]([null])
-
-[sub_resource type="Resource" id="Resource_h6an0"]
-script = ExtResource("2_k2gsb")
-speaker = "Player"
-choices = Array[String](["Hello, Count B, third Counversation"])
-short_choices = Array[String](["Hello, Count B, third Counversation"])
-states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_2kqdf")])
+side_effects = []
 
 [sub_resource type="Resource" id="Resource_whxpe"]
 script = ExtResource("2_k2gsb")
 speaker = "Count_C1"
+directions = Array[String]([])
 choices = Array[String](["Hello I am The Count C, and this is conversation 1"])
 short_choices = Array[String](["Hello I am The Count C, and this is conversation 1"])
 states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
 
 [sub_resource type="Resource" id="Resource_ohava"]
 script = ExtResource("2_k2gsb")
@@ -140,34 +101,973 @@ directions = Array[String](["thought1", "thought2"])
 choices = Array[String](["Hello I am the player, I do not get a choice in what to say here"])
 short_choices = Array[String](["Hello I am the player, I do not get a choice in what to say here"])
 states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_whxpe")])
-
-[sub_resource type="Resource" id="Resource_wkth4"]
-script = ExtResource("2_k2gsb")
-speaker = "Count_C2"
-choices = Array[String](["Hello again"])
-short_choices = Array[String](["Hello again"])
-states = Array[ExtResource("2_k2gsb")]([null])
-
-[sub_resource type="Resource" id="Resource_wgisc"]
-script = ExtResource("2_k2gsb")
-speaker = "Player"
-choices = Array[String](["Hello, Count C, Second Counversation"])
-short_choices = Array[String](["Hello, Count C, Second Counversation"])
-states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_wkth4")])
+side_effects = []
 
 [sub_resource type="Resource" id="Resource_desdr"]
 script = ExtResource("2_k2gsb")
 speaker = "Count_C3"
+directions = Array[String]([])
 choices = Array[String](["Lemme get your number 👀"])
 short_choices = Array[String](["Lemme get your number 👀"])
 states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
 
 [sub_resource type="Resource" id="Resource_mqv4w"]
 script = ExtResource("2_k2gsb")
 speaker = "Player"
+directions = Array[String]([])
 choices = Array[String](["Hello, Count C, third Counversation"])
 short_choices = Array[String](["Hello, Count C, third Counversation"])
 states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_desdr")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_33fl8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_A2"
+directions = Array[String]([])
+choices = Array[String](["Hello again"])
+short_choices = Array[String](["Hello again"])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_baedk"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String]([])
+choices = Array[String](["Hello, Count A, Second Counversation"])
+short_choices = Array[String](["Hello, Count A, Second Counversation"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_33fl8")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_wkth4"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_C2"
+directions = Array[String]([])
+choices = Array[String](["Hello again"])
+short_choices = Array[String](["Hello again"])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_wgisc"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String]([])
+choices = Array[String](["Hello, Count C, Second Counversation"])
+short_choices = Array[String](["Hello, Count C, Second Counversation"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_wkth4")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_2kqdf"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B3"
+directions = Array[String]([])
+choices = Array[String](["Lemme get your number 👀"])
+short_choices = Array[String](["Lemme get your number 👀"])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_h6an0"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String]([])
+choices = Array[String](["Hello, Count B, third Counversation"])
+short_choices = Array[String](["Hello, Count B, third Counversation"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_2kqdf")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_ajk3r"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["hehehehehehehehehehehehe!"])
+short_choices = Array[String](["hehehehehehehehehehehehe!"])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_k21dl"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Zero!"])
+short_choices = Array[String](["Zero!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ajk3r")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_hmaxr"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_k21dl")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_28kue"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_hmaxr")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_dpmqj"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_28kue")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_8c0gf"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Four!"])
+short_choices = Array[String](["Four!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_dpmqj")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_xj170"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_8c0gf")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_2y4f8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_xj170")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_0hlb3"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_2y4f8")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_4mnn4"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_0hlb3")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_q4js8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_4mnn4")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_n5170"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_q4js8")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_d1oy8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_n5170")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_f3mba"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_d1oy8")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_y5hsa"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_f3mba")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_o2hrt"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_y5hsa")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_qbv37"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_o2hrt")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_mk4bh"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_qbv37")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_54x1v"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_mk4bh")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_yt2e5"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_54x1v")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_kubm8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_yt2e5")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_u1q6h"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_kubm8")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_rdncp"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Ah, excellent catch! We must start again."])
+short_choices = Array[String](["Ah, excellent catch! We must start again."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_u1q6h")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_0xmxy"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["hehehehehehehehehehehehe!"])
+short_choices = Array[String](["hehehehehehehehehehehehe!"])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_fdhut"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Zero!"])
+short_choices = Array[String](["Zero!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_0xmxy")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_ofs64"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_fdhut")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_0edsi"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ofs64")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_6trci"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_0edsi")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_wpo4t"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Four!"])
+short_choices = Array[String](["Four!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_6trci")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_ugmyo"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_wpo4t")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_74kt1"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ugmyo")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_s4xnp"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_74kt1")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_ev3ma"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_s4xnp")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_68eba"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ev3ma")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_wtlwx"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_68eba")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_20y6q"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_wtlwx")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_kgsga"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_20y6q")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_jibbo"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_kgsga")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_tds72"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jibbo")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_awpyx"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_tds72")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_uamew"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_awpyx")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_heynr"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_uamew")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_usequ"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_heynr")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_xtybb"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_usequ")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_c7r6u"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_xtybb")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_dt5wg"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["We must start again."])
+short_choices = Array[String](["We must start again."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_c7r6u")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_x24bv"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["✁&#✆☟-✈☠☼?%❒⌘^✰⌫!"])
+short_choices = Array[String](["✁&#✆☟-✈☠☼?%❒⌘^✰⌫!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_dt5wg")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_euxgs"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Hang on, did I miss four?"])
+short_choices = Array[String](["Hang on, did I miss four?"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_x24bv")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_o14sh"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["One!"])
+short_choices = Array[String](["One!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_euxgs")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_01nib"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Two!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_o14sh")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_6vuss"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String]([])
+choices = Array[String](["You missed four.", "..."])
+short_choices = Array[String](["You missed four.", "..."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_rdncp"), SubResource("Resource_01nib")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_3acvn"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Three!"])
+short_choices = Array[String](["Three!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_6vuss")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_tpc47"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Five!"])
+short_choices = Array[String](["Five!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_3acvn")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_vnn3e"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Six!"])
+short_choices = Array[String](["Six!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_tpc47")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_bucer"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Seven!"])
+short_choices = Array[String](["Seven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_vnn3e")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_b0511"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Eight!"])
+short_choices = Array[String](["Eight!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_bucer")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_ohfna"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Nine!"])
+short_choices = Array[String](["Nine!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_b0511")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_i5jon"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Ten!"])
+short_choices = Array[String](["Ten!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ohfna")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_ijuse"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Eleven!"])
+short_choices = Array[String](["Eleven!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_i5jon")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_mitnw"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Twelve!"])
+short_choices = Array[String](["Twelve!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ijuse")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_jta38"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Thirteen!"])
+short_choices = Array[String](["Thirteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_mitnw")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_yt2ty"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Fourteen!"])
+short_choices = Array[String](["Fourteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jta38")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_gw6c0"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Fifteen!"])
+short_choices = Array[String](["Fifteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_yt2ty")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_upxpl"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Sixteen!"])
+short_choices = Array[String](["Sixteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_gw6c0")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_70f8y"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Seventeen!"])
+short_choices = Array[String](["Seventeen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_upxpl")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_g7k3m"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Eighteen!"])
+short_choices = Array[String](["Eighteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_70f8y")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_p86d8"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Nineteen!"])
+short_choices = Array[String](["Nineteen!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_g7k3m")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_guxhl"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Twenty!"])
+short_choices = Array[String](["Twenty!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_p86d8")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_jfacy"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["First, though, we must do our Countly duty."])
+short_choices = Array[String](["First, though, we must do our Countly duty."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_guxhl")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_4yu87"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Yes, yes, you were off to talk to someone else, right?"])
+short_choices = Array[String](["Yes, yes, you were off to talk to someone else, right?"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_jfacy")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_npq3r"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Ah, excellent catch! We must start again.
+Twenty!
+Nineteen!
+Eighteen!
+Seventeen!
+Sixteen!
+Fifteen!
+Fourteen!
+Thirteen!
+Twelve!
+Eleven!
+Ten!
+Nine!
+Eight!
+Seven!
+Six!
+Five!
+Three!
+Two!
+One!
+Zero!
+hehehehehehehehehehehehe!"])
+short_choices = Array[String](["Ah, excellent catch! We must start again."])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_p76d4"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Two!
+One!
+Hang on, did I miss four?
+✁&#✆☟-✈☠☼?%❒⌘^✰⌫!
+We must start again.
+Twenty!
+Nineteen!
+Eighteen!
+Seventeen!
+Sixteen!
+Fifteen!
+Fourteen!
+Thirteen!
+Twelve!
+Eleven!
+Ten!
+Nine!
+Eight!
+Seven!
+Six!
+Five!
+Three!
+Two!
+One!
+Zero!
+hehehehehehehehehehehehe!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_utia4"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String]([])
+choices = Array[String](["You missed four.", "..."])
+short_choices = Array[String](["You missed four.", "..."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_npq3r"), SubResource("Resource_p76d4")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_hxx33"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["My, you are a charmer! I was just depilled before this!
+Now, let us do our Countly duty.
+Twenty!
+Nineteen!
+Eighteen!
+Seventeen!
+Sixteen!
+Fifteen!
+Fourteen!
+Thirteen!
+Twelve!
+Eleven!
+Ten!
+Nine!
+Eight!
+Seven!
+Six!
+Five!
+Three!"])
+short_choices = Array[String](["My, you are a charmer! I was just depilled before this!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_utia4")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_ci6xl"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Ah, excellent catch! We must start again.
+Twenty!
+Nineteen!
+Eighteen!
+Seventeen!
+Sixteen!
+Fifteen!
+Fourteen!
+Thirteen!
+Twelve!
+Eleven!
+Ten!
+Nine!
+Eight!
+Seven!
+Six!
+Five!
+Three!
+Two!
+One!
+Zero!
+hehehehehehehehehehehehe!"])
+short_choices = Array[String](["Ah, excellent catch! We must start again."])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_m50vx"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Two!
+One!
+Hang on, did I miss four?
+✁&#✆☟-✈☠☼?%❒⌘^✰⌫!
+We must start again.
+Twenty!
+Nineteen!
+Eighteen!
+Seventeen!
+Sixteen!
+Fifteen!
+Fourteen!
+Thirteen!
+Twelve!
+Eleven!
+Ten!
+Nine!
+Eight!
+Seven!
+Six!
+Five!
+Three!
+Two!
+One!
+Zero!
+hehehehehehehehehehehehe!"])
+short_choices = Array[String](["Two!"])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_05bhj"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String]([])
+choices = Array[String](["You missed four.", "..."])
+short_choices = Array[String](["You missed four.", "..."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_ci6xl"), SubResource("Resource_m50vx")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_efi8n"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Wonderful! But first, we must do our Countly duty.
+Twenty!
+Nineteen!
+Eighteen!
+Seventeen!
+Sixteen!
+Fifteen!
+Fourteen!
+Thirteen!
+Twelve!
+Eleven!
+Ten!
+Nine!
+Eight!
+Seven!
+Six!
+Five!
+Three!"])
+short_choices = Array[String](["Wonderful! But first, we must do our Countly duty."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_05bhj")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_bjjnr"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String]([])
+choices = Array[String](["Yes!"])
+short_choices = Array[String](["Yes!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_efi8n")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_n1ss7"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["Excellent! Yes!
+My reputation as the life of the party must preceed me!
+You must be here to be regaled with tales of my work in early childhood education, no?"])
+short_choices = Array[String](["Excellent! Yes!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_bjjnr")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_0m5i7"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String]([])
+choices = Array[String](["May I say that your felt looks absolutely radiant today?", "You're just the puppet I was looking for!"])
+short_choices = Array[String](["May I say that your felt looks absolutely radiant today?", "You're just the puppet I was looking for!"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_hxx33"), SubResource("Resource_n1ss7")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_4gmks"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String]([])
+choices = Array[String](["Ah, greetings. I was just about to...", "Salutations, Count Orlok."])
+short_choices = Array[String](["Ah, greetings. I was just about to...", "Salutations, Count Orlok."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_4yu87"), SubResource("Resource_0m5i7")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_qf6tn"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B1"
+directions = Array[String]([])
+choices = Array[String](["HELLO! I am Count Orlok von Poppyseed! I'm absolutely THRILLED to be here, hehehehehe."])
+short_choices = Array[String](["HELLO! I am Count Orlok von Poppyseed! I'm absolutely THRILLED to be here, hehehehehe."])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_4gmks")])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_2mu5k"]
+script = ExtResource("2_k2gsb")
+speaker = "Count_B2"
+directions = Array[String]([])
+choices = Array[String](["Hello again"])
+short_choices = Array[String](["Hello again"])
+states = Array[ExtResource("2_k2gsb")]([null])
+side_effects = []
+
+[sub_resource type="Resource" id="Resource_jna32"]
+script = ExtResource("2_k2gsb")
+speaker = "Player"
+directions = Array[String]([])
+choices = Array[String](["Hello, Count B, Second Counversation"])
+short_choices = Array[String](["Hello, Count B, Second Counversation"])
+states = Array[ExtResource("2_k2gsb")]([SubResource("Resource_2mu5k")])
+side_effects = []
 
 [resource]
 script = ExtResource("1_wnf1w")
@@ -175,8 +1075,8 @@ trees = Dictionary[String, ExtResource("2_k2gsb")]({
 "Count_A1": SubResource("Resource_4ok5h"),
 "Count_A2": SubResource("Resource_baedk"),
 "Count_A3": SubResource("Resource_8cglv"),
-"Count_B1": SubResource("Resource_k21dl"),
-"Count_B2": SubResource("Resource_28kue"),
+"Count_B1": SubResource("Resource_qf6tn"),
+"Count_B2": SubResource("Resource_jna32"),
 "Count_B3": SubResource("Resource_h6an0"),
 "Count_C1": SubResource("Resource_ohava"),
 "Count_C2": SubResource("Resource_wgisc"),
