@@ -34,7 +34,6 @@ mouse_filter = 0
 mouse_filter = 0
 
 [node name="LevelTimer" parent="." index="1" unique_id=1776961197]
-wait_time = 67.0
 one_shot = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." index="2" unique_id=1439520737]

@@ -57,11 +57,7 @@ level_num = 4
 anchors_preset = 15
 anchor_bottom = 1.0
 
-[node name="CoverRect" parent="UI" parent_id_path=PackedInt32Array(1736348383) index="1" unique_id=337353824]
-visible = true
-
 [node name="LevelTimer" parent="." index="1" unique_id=1776961197]
-wait_time = 60.0
 one_shot = true
 
 [node name="Ground" type="TileMapLayer" parent="." index="2" unique_id=1439520737 node_paths=PackedStringArray("other_layers")]

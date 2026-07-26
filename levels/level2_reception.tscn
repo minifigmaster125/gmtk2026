@@ -62,7 +62,6 @@ visible = true
 modulate = Color(0, 0, 0, 0)
 
 [node name="LevelTimer" parent="." index="1" unique_id=1776961197]
-wait_time = 60.0
 one_shot = true
 
 [node name="Ground" type="TileMapLayer" parent="." index="2" unique_id=1439520737 node_paths=PackedStringArray("other_layers")]

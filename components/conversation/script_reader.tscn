@@ -75,5 +75,5 @@ theme_override_constants/margin_bottom = 12
 [node name="script_view" type="Label" parent="VBoxContainer/color/scrollbar/margin" unique_id=1193722402]
 custom_minimum_size = Vector2(580, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 16
 text = "Select the conversation script you'd like to view, or return to the main menu."

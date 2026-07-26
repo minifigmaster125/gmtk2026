@@ -14,7 +14,6 @@ signal pathfinding_finished()
 # must be called in _physics_process
 func _ready() -> void:
 	agent = get_parent()
-	print(agent.name)
 	navigation_agent_2d.velocity_computed.connect(Callable(_on_velocity_computed))
 
 func _physics_process(delta: float) -> void:
