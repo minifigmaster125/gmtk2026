@@ -6,6 +6,7 @@ class_name Level
 
 @onready var level_timer := %LevelTimer as Timer
 @onready var cover_rect := %CoverRect as ColorRect
+@onready var transition_text := %TTLabel as Label
 
 @export var level_num : int
 
@@ -51,9 +52,14 @@ func end_level() -> void:
 	# transition to new scene
 	player.process_mode = Node.PROCESS_MODE_DISABLED
 
+	var tween_duration := 1.
+	if level_num == 3:
+		transition_text.text = "At the ball that night..."
+		tween_duration = 2
+		
 	var tween: Tween = create_tween()
 	cover_rect.visible = true
-	tween.tween_property(cover_rect, "modulate:a", 1., 1.)
+	tween.tween_property(cover_rect, "modulate:a", 1., tween_duration)
 	await tween.finished
 	GameManager.set_interaction_metric("Count_A", 0)
 	GameManager.set_interaction_metric("Count_B", 0)
@@ -62,7 +68,11 @@ func end_level() -> void:
 	# get_tree().change_scene_to_packed(next_scene)
 	
 	if level_num == 3:
+		# transition to endgame
+		transition_text.visible = true
+		await get_tree().create_timer(2).timeout
 		get_tree().change_scene_to_packed(scene_3)
 
 	if level_num == 4:
+		#transition to overview
 		get_tree().change_scene_to_packed(final_scene)
