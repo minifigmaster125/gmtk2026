@@ -18,7 +18,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="YouWin" type="MarginContainer" parent="CanvasLayer" unique_id=1580469670]
-visible = false
 custom_minimum_size = Vector2(320, 0)
 custom_maximum_size = Vector2(-1, 360)
 anchors_preset = 15
@@ -45,6 +44,7 @@ size_flags_horizontal = 3
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/YouWin/HBoxContainer/CenterContainer" unique_id=451036775]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
 text = "Ada found your company compelling! She's very interested in getting to know you better. "
 fit_content = true
 autowrap_mode = 2
@@ -76,6 +76,7 @@ size_flags_horizontal = 3
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/YouLose/HBoxContainer/CenterContainer" unique_id=1060395997]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
 text = "Ada wasn't  all that interested in you. However, you and Orlok can count down the days together!"
 fit_content = true
 autowrap_mode = 2

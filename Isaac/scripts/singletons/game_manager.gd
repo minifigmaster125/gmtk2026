@@ -72,8 +72,18 @@ func conversation_completed(convo:String):
 	var name = convo.substr(0, convo.length()-1)
 	var stage = convo.substr(convo.length()-1, convo.length()).to_int()
 	self.set_conversation_stage(name, stage+1)
-	if name == "Count_A":
-		current_level.end_level()
+	print(has_interaction_metric(name))
+	if has_interaction_metric(name):
+		print("RESET")
+		set_interaction_metric(name, 0)
+
+	match current_level.level_num:
+		3:
+			if name == "Count_A" and stage == 1:
+				current_level.end_level()
+		4:
+			if name == "Count_A" and stage == 3:
+				current_level.end_level()
 
 func save():
 	FileAccess.open(FILE, FileAccess.WRITE).store_var(states)
