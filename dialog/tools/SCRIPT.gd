@@ -18,18 +18,90 @@ func build():
 	var collection = DialogTreeCollection.new()
 	var trees: Dictionary[String, DialogState] = {}
 	trees["Count_A3"] = DialogState.create(
-		'Player',
+		'Count_A3',
 		[],
-		['Hello, Count A, third Counversation'],
-		['Hello, Count A, third Counversation'],
+		['Hey! Good to see you.'],
+		['Hey! Good to see you.'],
 		[
 			DialogState.create(
-				'Count_A3',
+				'Player',
 				[],
-				['Lemme get your number 👀'],
-				['Lemme get your number 👀'],
+				["It's good to see you too."],
+				["It's good to see you too."],
 				[
-					null
+					DialogState.create(
+						'Player',
+						[],
+						["I've loved getting to know you."],
+						["I've loved getting to know you."],
+						[
+							DialogState.create(
+								'Count_A3',
+								[],
+								["I feel like I barely know anything about you - I don't even know where your estate is!"],
+								["I feel like I barely know anything about you - I don't even know where your estate is!"],
+								[
+									DialogState.create(
+										'Player',
+										[],
+										['Well...'],
+										['Well...'],
+										[
+											DialogState.create(
+												'Count_A3',
+												[],
+												["I'm kidding, I know who you are."],
+												["I'm kidding, I know who you are."],
+												[
+													DialogState.create(
+														'Count_A3',
+														[],
+														['I am the host after all, I have to know these things.'],
+														['I am the host after all, I have to know these things.'],
+														[
+															DialogState.create(
+																'Player',
+																[],
+																['I can-'],
+																['I can-'],
+																[
+																	DialogState.create(
+																		'Count_A3',
+																		[],
+																		["Please, don't worry. I know you must have gotten over a lot of nerves to navigate a party like this."],
+																		["Please, don't worry. I know you must have gotten over a lot of nerves to navigate a party like this."],
+																		[
+																			DialogState.create(
+																				'Count_A3',
+																				[],
+																				['Maybe another day you can come around again and we can get to know each other better?'],
+																				['Maybe another day you can come around again and we can get to know each other better?'],
+																				[
+																					null
+																				],
+																				[],
+																			),
+																		],
+																		[],
+																	),
+																],
+																[],
+															),
+														],
+														[],
+													),
+												],
+												[],
+											),
+										],
+										[],
+									),
+								],
+								[],
+							),
+						],
+						[],
+					),
 				],
 				[],
 			),
@@ -149,7 +221,7 @@ func build():
 		[],
 	)
 	trees["Count_A2"] = DialogState.create(
-		'Count_A1',
+		'Count_A2',
 		[],
 		['Hello again! Hosting is such busy work.'],
 		['Hello again! Hosting is such busy work.'],
@@ -161,13 +233,13 @@ func build():
 				['Do you not host events often?', "Absolutely LOVE the yellow on you, it's giving sunflower."],
 				[
 					DialogState.create(
-						'Count_A1',
+						'Count_A2',
 						[],
 						["No, when I'm not doing research I'm usually out in nature. Between my books and the wild world outside the estate I don't really have the energy for event coordination."],
 						["No, when I'm not doing research I'm usually out in nature. Between my books and the wild world outside the estate I don't really have the energy for event coordination."],
 						[
 							DialogState.create(
-								'Count_A1',
+								'Count_A2',
 								[],
 								["This sort of gathering was really more of my sister's kind of thing."],
 								["This sort of gathering was really more of my sister's kind of thing."],
@@ -179,7 +251,7 @@ func build():
 										['...', 'So what sort of research do you do?'],
 										[
 											DialogState.create(
-												'Count_A1',
+												'Count_A2',
 												[],
 												["We all miss her a lot, but I think I'm managing to put on an event that would've made her proud while still being true to me."],
 												["We all miss her a lot, but I think I'm managing to put on an event that would've made her proud while still being true to me."],
@@ -189,49 +261,49 @@ func build():
 												[],
 											),
 											DialogState.create(
-												'Count_A1',
+												'Count_A2',
 												[],
 												['You do NOT know what you just got into.'],
 												['You do NOT know what you just got into.'],
 												[
 													DialogState.create(
-														'Count_A1',
+														'Count_A2',
 														[],
 														["So you know math, right? Numbers and all of that? If you've met Count Orlok you would know."],
 														["So you know math, right? Numbers and all of that? If you've met Count Orlok you would know."],
 														[
 															DialogState.create(
-																'Count_A1',
+																'Count_A2',
 																[],
 																['Numbers can be in sequences - which are special lists of numbers with certain properties.'],
 																['Numbers can be in sequences - which are special lists of numbers with certain properties.'],
 																[
 																	DialogState.create(
-																		'Count_A1',
+																		'Count_A2',
 																		[],
 																		['One of those sequences is called the Bernoulli numbers.'],
 																		['One of those sequences is called the Bernoulli numbers.'],
 																		[
 																			DialogState.create(
-																				'Count_A1',
+																				'Count_A2',
 																				[],
 																				["Normally I'm all about counting down, but the Bernoulli numbers count up and down."],
 																				["Normally I'm all about counting down, but the Bernoulli numbers count up and down."],
 																				[
 																					DialogState.create(
-																						'Count_A1',
+																						'Count_A2',
 																						[],
 																						["Now suppose you had a machine, like a loom, that moved regularly and could have it's motion be configured."],
 																						["Now suppose you had a machine, like a loom, that moved regularly and could have it's motion be configured."],
 																						[
 																							DialogState.create(
-																								'Count_A1',
+																								'Count_A2',
 																								[],
 																								["I don't actually have this machine, but given the mathematical definition of it, and a set of steps given as configuration, you could then use that machine to compute the sequence of Bernoulli numbers!"],
 																								["I don't actually have this machine, but given the mathematical definition of it, and a set of steps given as configuration, you could then use that machine to compute the sequence of Bernoulli numbers!"],
 																								[
 																									DialogState.create(
-																										'Count_A1',
+																										'Count_A2',
 																										[],
 																										["It's absoluely amazing!"],
 																										["It's absoluely amazing!"],
@@ -271,19 +343,19 @@ func build():
 						[],
 					),
 					DialogState.create(
-						'Count_A1',
+						'Count_A2',
 						[],
 						["Thank you so much! It's my favorite color."],
 						["Thank you so much! It's my favorite color."],
 						[
 							DialogState.create(
-								'Count_A1',
+								'Count_A2',
 								[],
 								['Reminds me of so many flowers as well.'],
 								['Reminds me of so many flowers as well.'],
 								[
 									DialogState.create(
-										'Count_A1',
+										'Count_A2',
 										[],
 										["You're looking quite... appropriately dressed! Following the dress code is important, and you did it!"],
 										["You're looking quite... appropriately dressed! Following the dress code is important, and you did it!"],

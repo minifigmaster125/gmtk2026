@@ -1,19 +1,19 @@
-Count_A1:: Hello again! Hosting is such busy work.
+Count_A2:: Hello again! Hosting is such busy work.
     Player:: Do you not host events often?
-        Count_A1:: No, when I'm not doing research I'm usually out in nature. Between my books and the wild world outside the estate I don't really have the energy for event coordination.
-            Count_A1:: This sort of gathering was really more of my sister's kind of thing.
+        Count_A2:: No, when I'm not doing research I'm usually out in nature. Between my books and the wild world outside the estate I don't really have the energy for event coordination.
+            Count_A2:: This sort of gathering was really more of my sister's kind of thing.
                 Player:: ...
-                    Count_A1:: We all miss her a lot, but I think I'm managing to put on an event that would've made her proud while still being true to me.
+                    Count_A2:: We all miss her a lot, but I think I'm managing to put on an event that would've made her proud while still being true to me.
                 Player:: So what sort of research do you do?
-                    Count_A1:: You do NOT know what you just got into.
-                        Count_A1:: So you know math, right? Numbers and all of that? If you've met Count Orlok you would know.
-                            Count_A1:: Numbers can be in sequences - which are special lists of numbers with certain properties.
-                                Count_A1:: One of those sequences is called the Bernoulli numbers.
-                                    Count_A1:: Normally I'm all about counting down, but the Bernoulli numbers count up and down.
-                                        Count_A1:: Now suppose you had a machine, like a loom, that moved regularly and could have it's motion be configured.
-                                            Count_A1:: I don't actually have this machine, but given the mathematical definition of it, and a set of steps given as configuration, you could then use that machine to compute the sequence of Bernoulli numbers!
-                                                Count_A1:: It's absoluely amazing!
+                    Count_A2:: You do NOT know what you just got into.
+                        Count_A2:: So you know math, right? Numbers and all of that? If you've met Count Orlok you would know.
+                            Count_A2:: Numbers can be in sequences - which are special lists of numbers with certain properties.
+                                Count_A2:: One of those sequences is called the Bernoulli numbers.
+                                    Count_A2:: Normally I'm all about counting down, but the Bernoulli numbers count up and down.
+                                        Count_A2:: Now suppose you had a machine, like a loom, that moved regularly and could have it's motion be configured.
+                                            Count_A2:: I don't actually have this machine, but given the mathematical definition of it, and a set of steps given as configuration, you could then use that machine to compute the sequence of Bernoulli numbers!
+                                                Count_A2:: It's absoluely amazing!
     Player:: Absolutely LOVE the yellow on you, it's giving sunflower.
-        Count_A1:: Thank you so much! It's my favorite color.
-            Count_A1:: Reminds me of so many flowers as well.
-                Count_A1:: You're looking quite... appropriately dressed! Following the dress code is important, and you did it!
+        Count_A2:: Thank you so much! It's my favorite color.
+            Count_A2:: Reminds me of so many flowers as well.
+                Count_A2:: You're looking quite... appropriately dressed! Following the dress code is important, and you did it!
