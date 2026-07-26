@@ -371,7 +371,7 @@ offset_bottom = 69.0
 theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
 theme_override_fonts/font = ExtResource("5_wjegv")
 theme_override_font_sizes/font_size = 22
-text = "Down, For the Count"
+text = "Down For the Count"
 auto_update = false
 
 [node name="SubTitleMargin" parent="MenuContainer" parent_id_path=PackedInt32Array(785053879) index="1" unique_id=893436372]

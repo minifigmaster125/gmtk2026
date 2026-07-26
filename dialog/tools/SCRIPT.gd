@@ -183,18 +183,27 @@ func build():
 		[],
 	)
 	trees["Count_C1"] = DialogState.create(
-		'Player',
+		'Count_C1',
 		[],
-		['Hello I am the player, I do not get a choice in what to say here'],
-		['Hello I am the player, I do not get a choice in what to say here'],
+		["Hey. I'm not done."],
+		["Hey. I'm not done."],
 		[
 			DialogState.create(
-				'Count_C1',
+				'Player',
 				[],
-				['Hello I am The Count C, and this is conversation 1'],
-				['Hello I am The Count C, and this is conversation 1'],
+				["Oh, that's a shame, I wish I could get to know you."],
+				["Oh, that's a shame, I wish I could get to know you."],
 				[
-					null
+					DialogState.create(
+						'Count_C1',
+						[],
+						['Yeah. Well..'],
+						['Yeah. Well..'],
+						[
+							null
+						],
+						[],
+					),
 				],
 				[],
 			),
