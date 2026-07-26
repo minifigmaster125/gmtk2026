@@ -76,7 +76,6 @@ path_desired_distance = 0.1
 target_desired_distance = 64.0
 path_postprocessing = 1
 avoidance_enabled = true
-debug_enabled = true
 
 [node name="GoalQueueComponent" type="Node" parent="." unique_id=624143483]
 script = ExtResource("7_1lo26")
