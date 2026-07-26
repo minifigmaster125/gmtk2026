@@ -28,7 +28,9 @@ func _process(delta: float):
 	if _interested:
 		if dialog_instance == null and (DEBUG_skip_interest or interest_progress.value == interest_progress.max_value):
 			dialog_instance = dialog_scene.instantiate()
-			get_tree().root.add_child(dialog_instance)
+			var layer = CanvasLayer.new()
+			layer.add_child(dialog_instance)
+			get_tree().root.add_child(layer)
 			GameManager.get_conversation_stage(character_name)
 			var stage = min(GameManager.get_conversation_stage(character_name), conversation_stage_limit)
 			dialog_instance.recieve_conversing_event(true, character_name + str(stage))

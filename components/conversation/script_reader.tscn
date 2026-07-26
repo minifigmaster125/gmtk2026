@@ -77,4 +77,3 @@ custom_minimum_size = Vector2(580, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
 text = "Select the conversation script you'd like to view, or return to the main menu."
-autowrap_mode = 3
