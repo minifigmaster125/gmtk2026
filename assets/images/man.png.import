@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0dg7lke1yg1p"
-path="res://.godot/imported/puppet.png-602a494f71639335face596c8cdae70e.ctex"
+uid="uid://blylrknlm3fol"
+path="res://.godot/imported/man.png-a902d0b9362ab6c19cf2091a08e4c541.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/puppet.png"
-dest_files=["res://.godot/imported/puppet.png-602a494f71639335face596c8cdae70e.ctex"]
+source_file="res://assets/images/man.png"
+dest_files=["res://.godot/imported/man.png-a902d0b9362ab6c19cf2091a08e4c541.ctex"]
 
 [params]
 
