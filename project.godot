@@ -47,6 +47,7 @@ folder_colors={
 [global_group]
 
 mood_affecting="Nodes in this group interact with MoodField"
+player=""
 
 [input]
 
