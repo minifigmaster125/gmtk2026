@@ -1,3 +1,4 @@
+class_name DialogControl
 extends Control
 
 @onready var exit: Button = $exit

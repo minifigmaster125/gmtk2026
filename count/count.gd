@@ -14,7 +14,7 @@ extends CharacterBody2D
 @export var conversation_stage_limit: int = 2
 
 var dialog_scene = preload("res://components/conversation/dialog_control.tscn")
-var dialog_instance = null
+var dialog_instance: DialogControl  = null
 
 var _interested := false
 
@@ -46,4 +46,6 @@ func _on_body_exited(body: Node2D):
 	if body is Player:
 		_interested = false
 		if dialog_instance != null:
+			if dialog_instance.dialog_tree != null:
+				GameManager.persistent_moods = [{name="Rudely Left Conversation", value=2.0}]
 			dialog_instance._exit_pressed()
