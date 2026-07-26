@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://d3cgaa8wyluct"]
 
 [ext_resource type="PackedScene" uid="uid://cay4i0o44ar6r" path="res://levels/level.tscn" id="1_c7dqw"]
-[ext_resource type="PackedScene" uid="uid://x7kyjoimh1t6" path="res://levels/level3_ballroom.tscn" id="2_42mus"]
+[ext_resource type="PackedScene" uid="uid://gt8usmnr0iyr" path="res://levels/level2_reception.tscn" id="2_42mus"]
 [ext_resource type="TileSet" uid="uid://bpg1vs2hkf2tw" path="res://assets/textures/main_tilset.tres" id="3_omlcj"]
 [ext_resource type="TileSet" uid="uid://bclogxhrugtlt" path="res://components/anxiety/mood_map_tileset.tres" id="4_mkpka"]
 [ext_resource type="PackedScene" uid="uid://c34qy1bvchy88" path="res://player/player.tscn" id="5_46hn3"]
@@ -23,7 +23,7 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atulg"]
 size = Vector2(64.25, 31.25)
 
-[node name="intro_level" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_c7dqw")]
+[node name="Level1" unique_id=339098249 node_paths=PackedStringArray("player") instance=ExtResource("1_c7dqw")]
 player = NodePath("Player")
 next_scene = ExtResource("2_42mus")
 

@@ -10,9 +10,11 @@ class_name Level
 func _ready():
 	assert(player != null)
 	assert(next_scene != null)
-	player.process_mode = Node.PROCESS_MODE_DISABLED
+	# player.process_mode = Node.PROCESS_MODE_DISABLED
+	
 	start_level()
-	player.process_mode = Node.PROCESS_MODE_INHERIT
+	# player.process_mode = Node.PROCESS_MODE_INHERIT
+
 	GameManager.current_level = self
 	level_timer.timeout.connect(_on_level_timer_timeout)
 	level_timer.start()
