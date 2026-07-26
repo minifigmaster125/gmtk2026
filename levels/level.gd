@@ -10,6 +10,9 @@ class_name Level
 func _ready():
 	assert(player != null)
 	assert(next_scene != null)
+	player.process_mode = Node.PROCESS_MODE_DISABLED
+	start_level()
+	player.process_mode = Node.PROCESS_MODE_INHERIT
 	GameManager.current_level = self
 	level_timer.timeout.connect(_on_level_timer_timeout)
 	level_timer.start()
@@ -21,6 +24,17 @@ func _process(delta: float) -> void:
 
 func _on_level_timer_timeout():
 	end_level()
+	
+func start_level() -> void:
+	# stop input
+	# fade to black
+	# save relevant stats
+	# transition to new scene
+	var tween: Tween = create_tween()
+	cover_rect.visible = true
+	tween.tween_property(cover_rect, "modulate:a", 0, 5)
+	await tween.finished
+	cover_rect.visible = false
 
 func end_level() -> void:
 	# stop input

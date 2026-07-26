@@ -12,6 +12,9 @@ var _sprite_node_pos_tween: Tween
 @onready var _right =  $right as RayCast2D
 @onready var _sprite := $AnimatedSprite2D as AnimatedSprite2D
 
+func _ready() -> void:
+	velocity = Vector2.ZERO
+
 func _physics_process(_delta: float) -> void:
 	if self._mood_field != null:
 		self._mood_field.update_mood(transform.get_origin())
