@@ -113,10 +113,10 @@ position = Vector2(497, 160)
 texture = ExtResource("11_t2b8k")
 
 [node name="CandleSet3" parent="." index="22" unique_id=273041298 instance=ExtResource("6_u2ard")]
-position = Vector2(352, 48)
+position = Vector2(337, 49)
 
 [node name="CandleSet4" parent="." index="23" unique_id=2054205515 instance=ExtResource("6_u2ard")]
-position = Vector2(257, 48)
+position = Vector2(272, 48)
 
 [node name="LevelCompleteTrigga" type="Area2D" parent="." index="24" unique_id=1635210930]
 priority = 1
