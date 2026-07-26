@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://blylrknlm3fol" path="res://assets/images/man.png" id="4_vcx14"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt76e"]
-bg_color = Color(0.537833, 0.53, 1, 0.278431)
+bg_color = Color(0, 0, 0, 0.7490196)
 
 [node name="dialog" type="Control" unique_id=1897536590]
 propagate_maximum_size = true
@@ -112,7 +112,7 @@ text = "Exit"
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 0.7
+anchor_bottom = 0.67
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qt76e")
 follow_focus = true
@@ -124,13 +124,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="DialogBox" parent="logScroll/logContainer" unique_id=1000713501 instance_placeholder="res://components/conversation/dialog_box.tscn"]
-custom_minimum_size = Vector2(1865, 0)
+custom_minimum_size = Vector2(1694, 0)
 custom_maximum_size = Vector2(400, -1)
 layout_mode = 2
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 [node name="DialogBox2" parent="logScroll/logContainer" unique_id=277577379 instance_placeholder="res://components/conversation/dialog_box.tscn"]
-custom_minimum_size = Vector2(1865, 0)
+custom_minimum_size = Vector2(1694, 0)
 layout_mode = 2
 alignment = 2
 alignment = 2
